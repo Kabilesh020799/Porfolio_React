@@ -8,7 +8,6 @@ import Skills from "./components/Skills/Skills";
 import Experience from "./components/Experience/Experience";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
-import Education from "./components/Education/Education";
 function App() {
   return (
     <div className="App">
@@ -16,7 +15,6 @@ function App() {
       <Home className="cls" />
       <About className="cls" />
       <Skills className="cls" />
-      <Education />
       <Experience className="cls" />
       <Projects className="cls" />
       <Contact className="cls" />
