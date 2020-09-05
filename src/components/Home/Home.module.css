@@ -1,0 +1,17 @@
+.body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.heading {
+  margin-top: 10rem;
+  font-size: 80px;
+  font-family: "Vollkorn", serif;
+  letter-spacing: 5px;
+  animation: shine ease 0.5s both infinite;
+}
+.heading1 {
+  color: aliceblue;
+  font-size: 30px;
+  height: 40px;
+}
