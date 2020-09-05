@@ -72,6 +72,18 @@ function Navigation() {
           </li>
           <li class="nav-item">
             <Link
+              to="education"
+              spy={true}
+              smooth={true}
+              offset={-50}
+              duration={500}
+              onClick={clicked}
+            >
+              Education
+            </Link>
+          </li>
+          <li class="nav-item">
+            <Link
               to="experience"
               spy={true}
               smooth={true}

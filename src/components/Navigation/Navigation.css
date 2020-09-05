@@ -71,9 +71,8 @@ h2 {
 
 .navbar ul {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  justify-self: end;
+  display: flex;
+  justify-content: space-around;
 }
 
 .nav-item a {
@@ -209,7 +208,7 @@ h2 {
 
 /* Mobile Devices - Phones/Tablets */
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 1080px) {
   .features {
     flex-direction: column;
     padding: 50px;
