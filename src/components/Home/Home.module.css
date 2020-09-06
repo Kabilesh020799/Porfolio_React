@@ -1,11 +1,14 @@
 .body {
   height: 100vh;
+  text-align: center;
   display: flex;
+  align-items: center;
   flex-direction: column;
 }
 .heading {
   margin-top: 10rem;
   font-size: 80px;
+  text-align: center;
   font-family: "Vollkorn", serif;
   letter-spacing: 5px;
   animation: shine ease 0.5s both infinite;
@@ -14,4 +17,12 @@
   color: aliceblue;
   font-size: 30px;
   height: 40px;
+}
+@media screen and (max-width: 900px) {
+  .heading1 {
+    font-size: 25px;
+  }
+  .heading {
+    font-size: 50px;
+  }
 }
