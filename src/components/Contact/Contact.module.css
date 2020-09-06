@@ -23,6 +23,9 @@
   background-color: #0a192f;
   border-radius: 5px;
   margin: 5px;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
   text-align-last: left;
   height: 40px;
   border: 2px solid grey;
@@ -31,6 +34,8 @@
   background-color: #0a192f;
   text-align-last: left;
   margin: 5px;
+  color: white;
+  font-size: 17px;
   border-radius: 5px;
   width: 100%;
 }
@@ -96,4 +101,8 @@
   .tiles {
     margin-top: 10px;
   }
+}
+.send:disabled {
+  display: none;
+  background-color: grey;
 }

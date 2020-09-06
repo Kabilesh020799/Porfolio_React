@@ -1,8 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Fade from "react-reveal/Fade";
 import classes from "./Contact.module.css";
+import emailjs from "emailjs-com";
 
 function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [msg, setMsg] = useState("");
+  const [empty, setEmpty] = useState(true);
+
+  useEffect(() => {
+    if (name && email && msg) {
+      setEmpty(false);
+    }
+  }, [name, email, msg]);
+
+  const submit = (e) => {
+    e.preventDefault();
+    const templateParams = {
+      from_name: email,
+      to_name: "Kabilesh",
+      message: msg,
+    };
+    emailjs
+      .send(
+        "default_service",
+        "template_a8oyhen",
+        templateParams,
+        "user_mwBwu7UjglI9ydLfin6Wf"
+      )
+      .then((res) => console.log("success"))
+      .catch((err) => console.log(err));
+  };
   return (
     <Fade left>
       <div className={classes.Contact} id="contact">
@@ -14,20 +43,36 @@ function Contact() {
                 type="text"
                 placeholder="NAME"
                 className={classes.input}
-                value=""
+                value={name}
+                onChange={(e) => {
+                  setName(e.target.value);
+                }}
               />
               <input
                 type="email"
                 placeholder="E-MAIL"
                 className={classes.input}
-                value=""
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
               />
               <textarea
                 rows="10"
                 placeholder="MESSAGE"
                 className={classes.textarea}
+                value={msg}
+                onChange={(e) => {
+                  setMsg(e.target.value);
+                }}
               />
-              <button className={classes.send}>SEND</button>
+              <button
+                className={classes.send}
+                onClick={submit}
+                disabled={empty}
+              >
+                SEND
+              </button>
             </form>
             <ul className={classes.contactlist}>
               <li className={classes.list}>
