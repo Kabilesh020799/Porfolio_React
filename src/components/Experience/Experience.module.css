@@ -1,3 +1,58 @@
 .Experience {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 8%;
+}
+.expbody {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 20px;
+  width: 95%;
+}
+.heading {
+  text-transform: uppercase;
+}
+.exphead {
+  font-size: 20px;
+  font-weight: bolder;
+  animation: change 2s ease-out both infinite;
+}
+.expcontent {
+  font-size: 15px;
+  margin-top: 20px;
+}
+@keyframes change {
+  0% {
+    color: white;
+  }
+  25% {
+    color: #daa520;
+  }
+  50% {
+    color: white;
+  }
+  75% {
+    color: #daa520;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .Experience {
+    margin-top: 5%;
+  }
+  .exphead {
+    font-size: 30px;
+    text-align: left;
+    margin-left: 30px;
+  }
+  .expcontent {
+    margin-left: 30px;
+    text-align: left;
+    font-size: 20px;
+  }
 }
