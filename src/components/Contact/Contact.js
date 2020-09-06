@@ -33,7 +33,7 @@ function Contact() {
       .catch((err) => console.log(err));
   };
   return (
-    <Fade left>
+    <Fade bottom>
       <div className={classes.Contact} id="contact">
         <div className={classes.cont}>
           <h1 className={classes.header1}>CONTACT</h1>

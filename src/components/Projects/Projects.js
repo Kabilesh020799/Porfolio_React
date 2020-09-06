@@ -69,7 +69,7 @@ function Projects() {
     },
   ]);
   return (
-    <Fade left>
+    <Fade bottom>
       <div>
         <h1>Some Of My works!</h1>
         <div className={classes.Projects} id="projects">

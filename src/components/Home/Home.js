@@ -7,7 +7,7 @@ import { Link } from "react-scroll";
 
 function Body() {
   return (
-    <Fade left>
+    <Fade bottom>
       <div className={classes.body} id="home">
         <h1 className={classes.heading}>KABILESH</h1>
         <h3 className={classes.heading1}>

@@ -4,7 +4,7 @@ import Fade from "react-reveal/Fade";
 import img from "./../../assets/profile.png";
 function About() {
   return (
-    <Fade left>
+    <Fade bottom>
       <div className={classes.About} id="about">
         <h1 className={classes.heading}>About</h1>
         <div className={classes.container}>
