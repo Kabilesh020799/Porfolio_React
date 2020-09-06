@@ -24,8 +24,6 @@ function Body() {
               1000,
               "Freelancer 🤖",
               1000,
-              "Coding Instructor 🧑‍",
-              1000,
               "Cricketer 🏏",
               1000,
             ]}
