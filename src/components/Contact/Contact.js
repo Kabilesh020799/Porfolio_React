@@ -19,7 +19,7 @@ function Contact() {
     e.preventDefault();
     const templateParams = {
       from_name: email,
-      to_name: "Kabilesh",
+      to_name: name,
       message: msg,
     };
     emailjs
@@ -29,8 +29,11 @@ function Contact() {
         templateParams,
         "user_mwBwu7UjglI9ydLfin6Wf"
       )
-      .then((res) => console.log("success"))
+      .then((res) => prompt("Thanks for the submission"))
       .catch((err) => console.log(err));
+    setEmail("");
+    setMsg("");
+    setName("");
   };
   return (
     <Fade bottom>
