@@ -101,7 +101,7 @@ function Navigation() {
               to="projects"
               spy={true}
               smooth={true}
-              offset={-50}
+              offset={-110}
               duration={500}
               onClick={clicked}
             >
