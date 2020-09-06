@@ -23,7 +23,21 @@ function Navigation() {
     <div class={`nav-wrapper ${show && "nav_back"}`}>
       <div class="grad-bar"></div>
       <nav class="navbar">
-        <h1 className={`heading ${show && "head_gold"}`}>KABILESH</h1>
+        <Link
+          to="home"
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-50}
+          onClick={clicked}
+        >
+          <h1
+            style={{ cursor: "pointer" }}
+            className={`heading ${show && "head_gold"}`}
+          >
+            KABILESH
+          </h1>
+        </Link>
         <div
           class={`menu-toggle ${click ? "is-active" : ""}`}
           id="mobile-menu"

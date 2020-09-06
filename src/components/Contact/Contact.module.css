@@ -9,8 +9,8 @@
 }
 .down {
   width: 90%;
-  display: flex;
   margin-top: 80px;
+  display: flex;
   justify-content: space-between;
 }
 .Form {
@@ -69,9 +69,31 @@
 .tiles {
   margin-top: 40px;
 }
+.copyright {
+  color: white;
+  font-weight: bold;
+}
 @media screen and (max-width: 908px) {
   .down {
     display: flex;
-    justify-content: column;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .tag {
+    font-size: 1.1rem;
+  }
+  .Form {
+    width: 80%;
+  }
+  .contactlist {
+    width: 80%;
+  }
+  .list {
+    margin-top: 20px;
+  }
+  .tiles {
+    margin-top: 10px;
   }
 }

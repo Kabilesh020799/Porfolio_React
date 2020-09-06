@@ -58,6 +58,30 @@ ul.social-icons {
 .fa-facebook:hover {
   background-color: #3d5b99;
 }
+.fa-instagram {
+  padding: 10px 14px;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: transparent;
+}
+.fa-instagram:hover {
+  background-color: #c62d91;
+}
+.fa-hackerrank {
+  padding: 10px 14px;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: transparent;
+}
+.fa-hackerrank:hover {
+  background-color: #1ba94c;
+}
 .fa-twitter {
   padding: 10px 12px;
   -o-transition: 0.5s;

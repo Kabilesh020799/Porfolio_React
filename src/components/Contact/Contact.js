@@ -74,43 +74,55 @@ function Contact() {
             <div class="footer-social-icons">
               <ul class="social-icons">
                 <li>
-                  <a href="" class="social-icon">
+                  <a
+                    href="https://www.facebook.com/ravichandran.kabilesh/"
+                    class="social-icon"
+                  >
                     {" "}
                     <i class="fa fa-facebook ls"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="" class="social-icon">
+                  <a
+                    href="https://www.instagram.com/kabilesh_ravichandran/"
+                    class="social-icon"
+                  >
                     {" "}
-                    <i class="fa fa-twitter ls"></i>
+                    <i class="fab fa-instagram ls"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="" class="social-icon">
-                    {" "}
-                    <i class="fa fa-rss ls"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="" class="social-icon">
-                    {" "}
-                    <i class="fa fa-youtube ls"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="" class="social-icon">
+                  <a
+                    href="https://www.linkedin.com/in/kabileshravi27/"
+                    class="social-icon"
+                  >
                     {" "}
                     <i class="fa fa-linkedin ls"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="" class="social-icon">
+                  <a
+                    href="https://github.com/Kabilesh020799"
+                    class="social-icon"
+                  >
                     {" "}
                     <i class="fa fa-github ls"></i>
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="https://www.hackerrank.com/itsmekabilesh"
+                    class="social-icon"
+                  >
+                    {" "}
+                    <i class="fab fa-hackerrank ls"></i>
+                  </a>
+                </li>
               </ul>
             </div>
+          </div>
+          <div className={classes.copyright}>
+            &copy; ALL OF THE RIGHTS RESERVED
           </div>
         </div>
       </div>
