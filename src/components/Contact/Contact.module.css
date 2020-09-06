@@ -1,0 +1,77 @@
+.Contact {
+  min-height: 100vh;
+  height: fit-content;
+}
+.cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.down {
+  width: 90%;
+  display: flex;
+  margin-top: 80px;
+  justify-content: space-between;
+}
+.Form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.input {
+  width: 100%;
+  background-color: #0a192f;
+  border-radius: 5px;
+  margin: 5px;
+  text-align-last: left;
+  height: 40px;
+  border: 2px solid grey;
+}
+.textarea {
+  background-color: #0a192f;
+  text-align-last: left;
+  margin: 5px;
+  border-radius: 5px;
+  width: 100%;
+}
+.send {
+  width: 100%;
+  margin: 5px;
+  background-color: #0a192f;
+  border-radius: 5px;
+  color: white;
+  border: 2px solid grey;
+  font-weight: bold;
+}
+.send:hover {
+  background-color: #0084ff;
+}
+.contactlist {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.list {
+  display: flex;
+  justify-content: space-between;
+}
+.tag {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  align-self: center;
+  text-align: center;
+  overflow: hidden;
+  font-weight: bold;
+}
+.tiles {
+  margin-top: 40px;
+}
+@media screen and (max-width: 908px) {
+  .down {
+    display: flex;
+    justify-content: column;
+  }
+}

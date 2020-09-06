@@ -36,37 +36,37 @@ function Body() {
             <li>
               <a href="" class="social-icon">
                 {" "}
-                <i class="fa fa-facebook"></i>
+                <i class="fa fa-facebook ls"></i>
               </a>
             </li>
             <li>
               <a href="" class="social-icon">
                 {" "}
-                <i class="fa fa-twitter"></i>
+                <i class="fa fa-twitter ls"></i>
               </a>
             </li>
             <li>
               <a href="" class="social-icon">
                 {" "}
-                <i class="fa fa-rss"></i>
+                <i class="fa fa-rss ls"></i>
               </a>
             </li>
             <li>
               <a href="" class="social-icon">
                 {" "}
-                <i class="fa fa-youtube"></i>
+                <i class="fa fa-youtube ls"></i>
               </a>
             </li>
             <li>
               <a href="" class="social-icon">
                 {" "}
-                <i class="fa fa-linkedin"></i>
+                <i class="fa fa-linkedin ls"></i>
               </a>
             </li>
             <li>
               <a href="" class="social-icon">
                 {" "}
-                <i class="fa fa-github"></i>
+                <i class="fa fa-github ls"></i>
               </a>
             </li>
           </ul>

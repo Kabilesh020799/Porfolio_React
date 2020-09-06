@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
-a {
+.social-icon {
   text-decoration: none;
   color: #fff;
 }
@@ -50,7 +50,6 @@ ul.social-icons {
   padding: 10px 14px;
   -o-transition: 0.5s;
   -ms-transition: 0.5s;
-  border: 2px solid grey;
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -65,7 +64,6 @@ ul.social-icons {
   -ms-transition: 0.5s;
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
-  border: 2px solid grey;
   transition: 0.5s;
   background-color: transparent;
 }
@@ -77,7 +75,6 @@ ul.social-icons {
   -o-transition: 0.5s;
   -ms-transition: 0.5s;
   -moz-transition: 0.5s;
-  border: 2px solid grey;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   background-color: transparent;
@@ -88,7 +85,6 @@ ul.social-icons {
 .fa-youtube {
   padding: 10px 14px;
   -o-transition: 0.5s;
-  border: 2px solid grey;
   -ms-transition: 0.5s;
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
@@ -102,7 +98,6 @@ ul.social-icons {
   padding: 10px 14px;
   -o-transition: 0.5s;
   -ms-transition: 0.5s;
-  border: 2px solid grey;
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -114,7 +109,6 @@ ul.social-icons {
 .fa-github {
   padding: 10px 14px;
   -o-transition: 0.5s;
-  border: 2px solid grey;
   -ms-transition: 0.5s;
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
@@ -124,7 +118,9 @@ ul.social-icons {
 .fa-github:hover {
   background-color: #5a32a3;
 }
-
+.ls {
+  border: 2px solid grey;
+}
 .container-arrow {
   margin-top: -20px;
   font-weight: bold;
