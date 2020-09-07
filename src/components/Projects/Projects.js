@@ -43,9 +43,9 @@ function Projects() {
       ur: "https://github.com/Kabilesh020799/Credit-Card-Fraud-Predictor",
     },
     {
-      title: "Netflix Cone",
+      title: "Netflix Clone",
       content:
-        "This a Responsive website clone of the Netflix website version.It is build using the TMDB movie Api.This website plays the trailer of every movies in Netflix.This is also build with some CSS animations.",
+        "This is a Responsive website clone of the Netflix website version.It was build using the TMDB movie Api.This website plays the trailer of every movies in Netflix.This is also build with some CSS animations.",
       tile: " HTML5  CSS3  React Js",
       giturl:
         "https://github.com/Kabilesh020799/Web-App-Clones-in-React/tree/master/Netflix%20UI%20Clone",
