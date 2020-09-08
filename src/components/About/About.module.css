@@ -1,5 +1,6 @@
 .About {
-  height: 100vh;
+  min-height: 100vh;
+  height: fit-content;
   font-family: "Roboto", sans-serif;
 }
 .heading {
