@@ -84,9 +84,7 @@ function Contact() {
                   style={{ color: "#327D7A" }}
                   className={classes.icon}
                 ></i>
-                <span className={classes.tag}>
-                  Chennai | TamilNaduu | INDIA
-                </span>
+                <span className={classes.tag}>Chennai | TamilNadu | INDIA</span>
               </li>
               <li className={classes.list}>
                 <i

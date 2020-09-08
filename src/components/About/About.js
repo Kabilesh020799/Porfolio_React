@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./About.module.css";
 import Fade from "react-reveal/Fade";
-import img from "./../../assets/profile.png";
+import img from "./../../assets/Dp.JPG";
 function About() {
   return (
     <Fade bottom>
