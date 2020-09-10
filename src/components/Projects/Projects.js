@@ -64,7 +64,7 @@ function Projects() {
     {
       title: "Weather Information App",
       content:
-        "This is a dynaic weather information Web Application that is build using OpenWeather Api.It is build over HTML and CSS.The dynamic updates and changes are handles by Vue Js.",
+        "This is a dynamic weather information Web Application that is build using OpenWeather Api.It is build over HTML and CSS.The dynamic updates and changes are handles by Vue Js.",
       tile: "HTML5  CSS3  Vue Js",
     },
   ]);
