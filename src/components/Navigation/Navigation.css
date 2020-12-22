@@ -250,7 +250,13 @@ h2 {
     transition: all 0.5s ease-out;
     text-align: center;
     overflow: hidden;
+  }
+  .ul_normal {
     background-color: #0a192f;
+  }
+
+  .ul_tomato {
+    background-color: tomato;
   }
 
   .navbar li {

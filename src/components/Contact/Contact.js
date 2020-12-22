@@ -3,7 +3,7 @@ import Fade from "react-reveal/Fade";
 import classes from "./Contact.module.css";
 import emailjs from "emailjs-com";
 
-function Contact() {
+function Contact({ checkedB }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [msg, setMsg] = useState("");
@@ -45,7 +45,9 @@ function Contact() {
               <input
                 type="text"
                 placeholder="NAME"
-                className={classes.input}
+                className={`${classes.input} ${
+                  !checkedB ? classes.input_tomato : null
+                }`}
                 value={name}
                 onChange={(e) => {
                   setName(e.target.value);
@@ -54,7 +56,9 @@ function Contact() {
               <input
                 type="email"
                 placeholder="E-MAIL"
-                className={classes.input}
+                className={`${classes.input} ${
+                  !checkedB ? classes.input_tomato : null
+                }`}
                 value={email}
                 onChange={(e) => {
                   setEmail(e.target.value);
@@ -63,7 +67,14 @@ function Contact() {
               <textarea
                 rows="10"
                 placeholder="MESSAGE"
-                className={classes.textarea}
+                style={
+                  checkedB
+                    ? { backgroundColor: "#0a192f" }
+                    : { backgroundColor: "tomato" }
+                }
+                className={`${classes.textarea} ${
+                  !checkedB ? classes.input_tomato : null
+                }`}
                 value={msg}
                 onChange={(e) => {
                   setMsg(e.target.value);

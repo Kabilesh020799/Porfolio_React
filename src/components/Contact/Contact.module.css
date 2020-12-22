@@ -31,8 +31,10 @@
   height: 40px;
   border: 2px solid grey;
 }
+.input_tomato {
+  background-color: tomato;
+}
 .textarea {
-  background-color: #0a192f;
   text-align-last: left;
   margin: 5px;
   color: white;
