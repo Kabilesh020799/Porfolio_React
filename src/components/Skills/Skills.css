@@ -450,6 +450,48 @@
     width: 40%;
   }
 }
+#Skill-DART {
+  animation: Animate-DEEP 4s;
+  -webkit-animation: Animate-DEEP 4s;
+  -moz-animation: Animate-DEEP 4s;
+  -o-animation: Animate-DEEP 4s;
+  width: 40%;
+  height: 50px;
+  position: absolute;
+  background-color: #5aa669;
+}
+@keyframes Animate-DART {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 40%;
+  }
+}
+@-webkit-keyframes Animate-DART {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 40%;
+  }
+}
+@-moz-keyframes Animate-DART {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 40%;
+  }
+}
+@-o-keyframes Animate-DART {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 40%;
+  }
+}
 #Skill-SQL {
   animation: Animate-SQL 4s;
   -webkit-animation: Animate-SQL 4s;
@@ -497,7 +539,7 @@
   -webkit-animation: Animate-MONGO 4s;
   -moz-animation: Animate-MONGO 4s;
   -o-animation: Animate-MONGO 4s;
-  width: 30%;
+  width: 50%;
   height: 50px;
   position: absolute;
   background-color: #f8a51e;
@@ -507,7 +549,7 @@
     width: 10px;
   }
   to {
-    width: 30%;
+    width: 50%;
   }
 }
 @-webkit-keyframes Animate-MONGO {
@@ -515,7 +557,7 @@
     width: 10px;
   }
   to {
-    width: 30%;
+    width: 50%;
   }
 }
 @-moz-keyframes Animate-MONGO {
@@ -523,7 +565,7 @@
     width: 10px;
   }
   to {
-    width: 30%;
+    width: 50%;
   }
 }
 @-o-keyframes Animate-MONGO {
@@ -531,57 +573,16 @@
     width: 10px;
   }
   to {
-    width: 30%;
+    width: 50%;
   }
 }
-#Skill-GRAPH {
-  animation: Animate-GRAPH 4s;
-  -webkit-animation: Animate-GRAPH 4s;
-  -moz-animation: Animate-GRAPH 4s;
-  -o-animation: Animate-GRAPH 4s;
-  width: 30%;
-  height: 50px;
-  position: absolute;
-  background-color: #f8a51e;
-}
-@keyframes Animate-GRAPH {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 30%;
-  }
-}
-@-webkit-keyframes Animate-GRAPH {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 30%;
-  }
-}
-@-moz-keyframes Animate-GRAPH {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 30%;
-  }
-}
-@-o-keyframes Animate-GRAPH {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 30%;
-  }
-}
+
 #Skill-MACHINE {
   animation: Animate-MACHINE 4s;
   -webkit-animation: Animate-MACHINE 4s;
   -moz-animation: Animate-MACHINE 4s;
   -o-animation: Animate-MACHINE 4s;
-  width: 70%;
+  width: 60%;
   height: 50px;
   position: absolute;
   background-color: lightblue;
@@ -591,7 +592,7 @@
     width: 10px;
   }
   to {
-    width: 70%;
+    width: 60%;
   }
 }
 @-webkit-keyframes Animate-MACHINE {
@@ -599,7 +600,7 @@
     width: 10px;
   }
   to {
-    width: 70%;
+    width: 60%;
   }
 }
 @-moz-keyframes Animate-MACHINE {
@@ -607,7 +608,7 @@
     width: 10px;
   }
   to {
-    width: 70%;
+    width: 60%;
   }
 }
 @-o-keyframes Animate-MACHINE {
@@ -615,51 +616,10 @@
     width: 10px;
   }
   to {
-    width: 70%;
+    width: 60%;
   }
 }
-#Skill-DEEP {
-  animation: Animate-DEEP 4s;
-  -webkit-animation: Animate-DEEP 4s;
-  -moz-animation: Animate-DEEP 4s;
-  -o-animation: Animate-DEEP 4s;
-  width: 40%;
-  height: 50px;
-  position: absolute;
-  background-color: lightblue;
-}
-@keyframes Animate-DEEP {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 40%;
-  }
-}
-@-webkit-keyframes Animate-DEEP {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 40%;
-  }
-}
-@-moz-keyframes Animate-DEEP {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 40%;
-  }
-}
-@-o-keyframes Animate-DEEP {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 40%;
-  }
-}
+
 .Skill-Area {
   z-index: 1;
   float: left;

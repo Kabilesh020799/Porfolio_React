@@ -13,6 +13,14 @@ function Projects() {
       url: "https://github.com/Kabilesh020799/killawatt",
     },
     {
+      title: "ACE(Association Of Computer Engineers) Website",
+      content:
+        "Website designed for the Association of Computer Engineers,SVCE to showcase their upcoming and past events and the results of every events to students.This was build along with a team of 5 members",
+      url: "https://acesvce.in/",
+      giturl: "https://acesvce.in/",
+      tile: "HTML5 CSS3 React Js",
+    },
+    {
       title: "Obstacle Detector",
       content:
         "This project is designed for blind people,it detects the object in front of them and warns them that there is n object in front of them at a specific distance,so the blind person could be aware of things in front of him.This is done using Arduino and Ultrasonic Sensor",
@@ -26,14 +34,14 @@ function Projects() {
       giturl: "https://github.com/Kabilesh020799/Object-Detection1",
       url: "https://github.com/Kabilesh020799/Object-Detection1",
     },
-    {
-      title: "Motion Detection",
-      content:
-        "This project is build to detect if there is any motion in the given video footage or in a live cctv camera.This model marks the motion and records the timestamp of the motion and gives a report to the user.This model can be used for survivallence in high threat places like banks,etc",
-      tile: "ComputerVision  Python",
-      giturl: "https://github.com/Kabilesh020799/Motion-Detection1",
-      url: "https://github.com/Kabilesh020799/Motion-Detection1",
-    },
+    // {
+    //   title: "Motion Detection",
+    //   content:
+    //     "This project is build to detect if there is any motion in the given video footage or in a live cctv camera.This model marks the motion and records the timestamp of the motion and gives a report to the user.This model can be used for survivallence in high threat places like banks,etc",
+    //   tile: "ComputerVision  Python",
+    //   giturl: "https://github.com/Kabilesh020799/Motion-Detection1",
+    //   url: "https://github.com/Kabilesh020799/Motion-Detection1",
+    // },
     {
       title: "Credit Card Fraud Predictor",
       content:

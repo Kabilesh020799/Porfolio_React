@@ -55,7 +55,11 @@ function Skills() {
                   <span class="Skill-Area ">Express JS </span>
                 </div>
               </div>
-
+              <div class="SkillBar">
+                <div id="Skill-DART">
+                  <span class="Skill-Area ">DART</span>
+                </div>
+              </div>
               <div class="SkillBar">
                 <div id="Skill-SQL">
                   <span class="Skill-Area ">SQL</span>
@@ -64,11 +68,6 @@ function Skills() {
               <div class="SkillBar">
                 <div id="Skill-MONGO">
                   <span class="Skill-Area ">Mongo Db</span>
-                </div>
-              </div>
-              <div class="SkillBar">
-                <div id="Skill-GRAPH">
-                  <span class="Skill-Area ">GRAPH QL</span>
                 </div>
               </div>
               <div class="SkillBar">
@@ -85,11 +84,6 @@ function Skills() {
               <div class="SkillBar">
                 <div id="Skill-MACHINE">
                   <span class="Skill-Area ">MACHINE LEARNING</span>
-                </div>
-              </div>
-              <div class="SkillBar">
-                <div id="Skill-DEEP">
-                  <span class="Skill-Area ">DEEP LEARNING</span>
                 </div>
               </div>
             </div>
