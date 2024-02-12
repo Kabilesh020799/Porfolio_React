@@ -1,0 +1,15 @@
+.labels {
+  background: #F0AD4E;
+  width: 100px;
+  padding: 5px;
+  font-family: "Inconsolata", monospace;
+  border-radius: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.done {
+  background: #5CB85B;
+}

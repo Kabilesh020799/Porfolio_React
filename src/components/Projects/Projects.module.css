@@ -63,8 +63,15 @@
 }
 .tile {
   color: #fff;
-  margin-top: 15px;
   text-align: left;
-  margin-left: 20px;
   font-family: "Inconsolata", monospace;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 10px 0px 20px;
+  color: #fff;
+  font-family: "Inconsolata", monospace;
+  align-items: center;
 }

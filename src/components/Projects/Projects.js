@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import classes from "./Projects.module.css";
 import Fade from "react-reveal/Fade";
+import Labels from "./components/labels/labels";
 
 function Projects() {
   const [project, setProject] = useState([
@@ -11,6 +12,7 @@ function Projects() {
       tile: "IOT  Android",
       giturl: "https://github.com/Kabilesh020799/killawatt",
       url: "https://github.com/Kabilesh020799/killawatt",
+      type: 'done',
     },
     {
       title: "ACE(Association Of Computer Engineers) Website",
@@ -19,12 +21,14 @@ function Projects() {
       url: "https://acesvce.in/",
       giturl: "https://acesvce.in/",
       tile: "HTML5 CSS3 React Js",
+      type: 'done',
     },
     {
       title: "Obstacle Detector",
       content:
         "This project is designed for blind people,it detects the object in front of them and warns them that there is n object in front of them at a specific distance,so the blind person could be aware of things in front of him.This is done using Arduino and Ultrasonic Sensor",
       tile: "IOT",
+      type: 'done',
     },
     {
       title: "Object Detection",
@@ -33,6 +37,7 @@ function Projects() {
       tile: "ComputerVision  Python",
       giturl: "https://github.com/Kabilesh020799/Object-Detection1",
       url: "https://github.com/Kabilesh020799/Object-Detection1",
+      type: 'done',
     },
     // {
     //   title: "Motion Detection",
@@ -49,6 +54,7 @@ function Projects() {
       tile: "Machine Learning",
       giturl: "https://github.com/Kabilesh020799/Credit-Card-Fraud-Predictor",
       ur: "https://github.com/Kabilesh020799/Credit-Card-Fraud-Predictor",
+      type: 'done',
     },
     {
       title: "Netflix Clone",
@@ -58,22 +64,13 @@ function Projects() {
       giturl:
         "https://github.com/Kabilesh020799/Web-App-Clones-in-React/tree/master/Netflix%20UI%20Clone",
       url: "https://netflix-clone-6401b.web.app/",
+      type: 'done',
     },
     {
-      title: "Instagram Clone",
-      content:
-        "This is a Mobile Responsive site of Instagram build over HTML and CSS.This website gives the basic functionalities of Instagram like uploading a post and comment on a post.This website is also build using the firebase authentication",
-      tile: "HTML5  CSS3  React Js FireBase",
-      giturl:
-        "https://github.com/Kabilesh020799/Basic-Instagram-Clone-React-JS-and-Firebase-",
-      url:
-        "https://github.com/Kabilesh020799/Basic-Instagram-Clone-React-JS-and-Firebase-",
-    },
-    {
-      title: "Weather Information App",
-      content:
-        "This is a dynamic weather information Web Application that is build using OpenWeather Api.It is build over HTML and CSS.The dynamic updates and changes are handles by Vue Js.",
-      tile: "HTML5  CSS3  Vue Js",
+      title: 'NutriNova',
+      content: 'NutriNova is a comprehensive application designed to help users lead healthier lifestyles. With features such as personalized health dashboards, activity tracking, and nutrition planning, users can easily monitor and improve their overall well-being.',
+      type: 'on-going',
+      tile: 'Vue JS Spring JAVA Mongo DB',
     },
   ]);
   return (
@@ -107,7 +104,10 @@ function Projects() {
                 <h3 className={classes.bodyhead}>{proj.title}</h3>
                 <p className={classes.bodycon}>{proj.content}</p>
               </div>
-              <div className={classes.tile}>{proj.tile}</div>
+              <div className={classes.footer}>
+                <div className={classes.tile}>{proj.tile}</div>
+                <div><Labels type={proj.type} /></div>
+              </div>
             </div>
           ))}
         </div>
