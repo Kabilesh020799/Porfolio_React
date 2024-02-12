@@ -1,0 +1,21 @@
+.skill-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(33.33% - 10px);
+  margin-bottom: 40px;
+  border-radius: 8px;
+  border: 1px solid var(--Bordes, #3D3D3D);
+  background: var(--Rellenos, #1F1F21);
+  height: 304px;
+  justify-content: center;
+}
+.skill-box-name {
+  font-size: 30px;
+  color: white;
+}
+
+.fa-react::before {
+  color: #47D16E;
+  font-size: 40px;
+}

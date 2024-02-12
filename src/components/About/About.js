@@ -6,13 +6,11 @@ function About() {
   return (
     <Fade bottom>
       <div className={classes.About} id="about">
-        <h1 className={classes.heading}>About</h1>
         <div className={classes.container}>
           <img src={img} className={classes.img} />
           <h3 className={classes.heading2}>Hi There!Let me intoduce myself.</h3>
           <p className={classes.para}>
-            I am a <u>Web Developer</u> and a <u>Data Analyst</u> from Chennai,
-            TamilNadu, India. I love to build creative and productive websites.
+            I am a <b className={classes.green}>Web Developer</b> and a <b className={classes.green}>Data Analyst</b> from <b className={classes.green}>Halifax, Nova Scotia, Canada</b>. I love to build creative and productive websites.
             From the time I started my Bachelor's degree I have come across many
             domains but Web Development and Machine Learning makes me super
             interested while working on them. The World is moving towards

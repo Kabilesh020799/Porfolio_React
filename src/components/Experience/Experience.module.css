@@ -21,25 +21,11 @@
 .exphead {
   font-size: 20px;
   font-weight: bolder;
-  animation: change 2s ease-out both infinite;
+  color: #47D16E;
 }
 .expcontent {
   font-size: 15px;
   margin-top: 20px;
-}
-@keyframes change {
-  0% {
-    color: white;
-  }
-  25% {
-    color: #daa520;
-  }
-  50% {
-    color: white;
-  }
-  75% {
-    color: #daa520;
-  }
 }
 
 @media screen and (min-width: 900px) {

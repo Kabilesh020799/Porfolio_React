@@ -92,29 +92,15 @@ function Contact({ checkedB }) {
               <li className={classes.list}>
                 <i
                   class="fa fa-map-marker fa-2x"
-                  style={{ color: "#327D7A" }}
+                  style={{ color: "#47D16E" }}
                   className={classes.icon}
                 ></i>
-                <span className={classes.tag}>Chennai | TamilNadu | INDIA</span>
-              </li>
-              <li className={classes.list}>
-                <i
-                  class="fa fa-phone fa-2x"
-                  style={{ color: "#327D7A" }}
-                  className={classes.icon}
-                ></i>
-                <a
-                  href="tel:8056609157"
-                  className={classes.tag}
-                  title="Give me a call"
-                >
-                  <span className={classes.tag}>8056609157</span>
-                </a>
+                <span className={classes.tag}>HALIFAX | NOVA SCOTIA | CANADA</span>
               </li>
               <li className={classes.list}>
                 <i
                   class="fa fa-envelope fa-2x"
-                  style={{ color: "#327D7A" }}
+                  style={{ color: "#47D16E" }}
                   className={classes.icon}
                 ></i>
                 <a

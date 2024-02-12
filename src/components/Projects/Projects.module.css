@@ -12,8 +12,8 @@
   margin: 30px;
   width: 300px;
   height: 300px;
-  border: 2px solid #06101e;
-  background-color: #172a45;
+  border: 1px solid var(--Bordes, #3D3D3D);
+  background: var(--Rellenos, #1F1F21);
   border-radius: 5px;
   transition: transform 338ms ease-in;
 }
@@ -51,19 +51,18 @@
 }
 
 .bodyhead {
-  color: #a5b1d0;
   text-align: center;
-  text-decoration: underline;
+  color: #47D16E;
 }
 .bodycon {
-  color: #97a2c0;
+  color: #fff;
   margin-top: 20px;
   width: 95%;
   font-size: 13px;
   margin-left: 10px;
 }
 .tile {
-  color: #576581;
+  color: #fff;
   margin-top: 15px;
   text-align: left;
   margin-left: 20px;
