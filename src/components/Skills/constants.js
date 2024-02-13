@@ -1,44 +1,55 @@
 const skillsData = [
   {
-    name: 'React JS',
-    description: '',
-    icon: 'fa-brands fa-react'
+    name: 'Node JS',
+  },
+  {
+    name: 'HTML',
+  },
+  {
+    name: 'CSS',
+  },
+  {
+    name: 'JavaScript',
+  },
+  {
+    name: 'Java'
+  },
+  {
+    name: 'Dart',
+  },
+  {
+    name: 'Python',
   },
   {
     name: 'React JS',
-    description: '',
-    icon: 'fa-brands fa-react'
   },
   {
-    name: 'React JS',
-    description: '',
-    icon: 'fa-brands fa-react'
+    name: 'Vue JS',
   },
   {
-    name: 'React JS',
-    description: '',
-    icon: 'fa-brands fa-react'
+    name: 'Node JS',
   },
   {
-    name: 'React JS',
-    description: '',
-    icon: 'fa-brands fa-react'
+    name: 'Spring',
   },
   {
-    name: 'React JS',
-    description: '',
-    icon: 'fa-brands fa-react'
+    name: 'Flutter',
   },
   {
-    name: 'React JS',
-    description: '',
-    icon: 'fa-brands fa-react'
+    name: 'React Native',
   },
   {
-    name: 'React JS',
-    description: '',
-    icon: 'fa-brands fa-react'
-  }
+    name: 'Machine Learning',
+  },
+  {
+    name: 'Git',
+  },
+  {
+    name: 'GitHub',
+  },
+  {
+    name: 'Docker',
+  },
 ];
 
 export {

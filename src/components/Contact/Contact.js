@@ -92,7 +92,7 @@ function Contact({ checkedB }) {
               <li className={classes.list}>
                 <i
                   class="fa fa-map-marker fa-2x"
-                  style={{ color: "#47D16E" }}
+                  style={{ color: "#71C5A5" }}
                   className={classes.icon}
                 ></i>
                 <span className={classes.tag}>HALIFAX | NOVA SCOTIA | CANADA</span>
@@ -100,7 +100,7 @@ function Contact({ checkedB }) {
               <li className={classes.list}>
                 <i
                   class="fa fa-envelope fa-2x"
-                  style={{ color: "#47D16E" }}
+                  style={{ color: "#71C5A5" }}
                   className={classes.icon}
                 ></i>
                 <a

@@ -2,28 +2,30 @@ import React from "react";
 import classes from "./About.module.css";
 import Fade from "react-reveal/Fade";
 import img from "./../../assets/Dp.JPG";
+import Skills from "../Skills/Skills";
 function About() {
   return (
     <Fade bottom>
       <div className={classes.About} id="about">
         <div className={classes.container}>
-          <img src={img} className={classes.img} />
-          <h3 className={classes.heading2}>Hi There!Let me intoduce myself.</h3>
-          <p className={classes.para}>
-            I am a <b className={classes.green}>Web Developer</b> and a <b className={classes.green}>Data Analyst</b> from <b className={classes.green}>Halifax, Nova Scotia, Canada</b>. I love to build creative and productive websites.
-            From the time I started my Bachelor's degree I have come across many
-            domains but Web Development and Machine Learning makes me super
-            interested while working on them. The World is moving towards
-            Automation and it has been my main motivation for working on these
-            domains.
-            <br />
-            <br />I love to play <u>Cricket</u> as I am passionate in playing
-            it. I have been playing cricket since my school times and have
-            represented my school team. <br />
-            <br />I am looking forward to work on projects that creates a social
-            impact on the society and will be interested in working on{" "}
-            <u>Freelance</u> projects
-          </p>
+          {/* <img src={img} className={classes.img} /> */}
+          <div className={classes.wrapper}>
+            <h3 className={classes.heading2}>Who am I?</h3>
+            <p className={classes.para}>
+              I discovered my love for technology during my undergraduate years in 2020 when I started my first software project. Since then, I've been on a journey fueled by curiosity and a thirst for knowledge. I've explored various frameworks and languages, each new one expanding my skills and giving me deeper insights into building efficient solutions.
+              <br /><br />
+              With every line of code I write, I gain a greater appreciation for the creativity and precision of software development. Now, as I pursue my graduate studies in computer science in <b className={classes.green}>Halifax, NS, Canada </b>, I'm excited to keep growing and innovating in this ever-changing field.
+              <br /><br />
+              I'm eager to contribute my skills and ideas to the world of technology, and I can't wait to see where this journey takes me next. 
+              <br /><br />I am looking forward to work on projects that creates a social
+              impact on the society and will be interested in working on{" "}
+              <b className={classes.green}>Freelance</b> projects
+            </p>
+          </div>
+          <div className={classes.wrapper}>
+            <h3 className={classes.heading2}>My Skills</h3>
+            <Skills />
+          </div>
         </div>
       </div>
     </Fade>

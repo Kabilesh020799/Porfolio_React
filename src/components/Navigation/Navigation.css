@@ -8,11 +8,11 @@
 /* HEADINGS */
 
 .heading {
-  color: #47D16E;
+  color: #71C5A5;
   font-family: "B612", sans-serif;
 }
 .head_gold {
-  color: #47D16E;
+  color: #71C5A5;
 }
 h1,
 p {
@@ -36,6 +36,8 @@ h2 {
   display: flex;
   justify-content: space-between;
   width: 70%;
+  align-items: center;
+  padding: 30px 0px 20px 0px;
 }
 
 .nav-wrapper {
@@ -67,6 +69,7 @@ h2 {
 
 .nav_back {
   background-color: black;
+  padding: 20px;
 }
 
 .navbar ul {
@@ -308,4 +311,18 @@ h2 {
   .search-input {
     display: none;
   }
+}
+
+.btn-resume {
+  color: #71C5A5;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  background: transparent;
+  border: 1px solid #71C5A5;
+  cursor: pointer;
 }

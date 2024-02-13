@@ -26,8 +26,6 @@ function Body() {
               1000,
               "App Developer 📱",
               1000,
-              "Cricketer 🏏",
-              1000,
             ]}
           ></TypeAnimation>
         </h3>
@@ -37,7 +35,7 @@ function Body() {
               <a
                 href="https://www.facebook.com/ravichandran.kabilesh/"
                 class="social-icon"
-                style={{color: '#47D16E'}}
+                style={{color: '#71C5A5'}}
               >
                 {" "}
                 <i class="fa fa-facebook ls"></i>
@@ -47,7 +45,7 @@ function Body() {
               <a
                 href="https://www.instagram.com/kabilesh_ravichandran/"
                 class="social-icon"
-                style={{color: '#47D16E'}}
+                style={{color: '#71C5A5'}}
               >
                 {" "}
                 <i class="fa fa-instagram ls"></i>
@@ -57,7 +55,7 @@ function Body() {
               <a
                 href="https://www.linkedin.com/in/kabileshravi27/"
                 class="social-icon"
-                style={{color: '#47D16E'}}
+                style={{color: '#71C5A5'}}
               >
                 {" "}
                 <i class="fa fa-linkedin ls"></i>
@@ -67,7 +65,7 @@ function Body() {
               <a 
                 href="https://github.com/Kabilesh020799"
                 class="social-icon"
-                style={{color: '#47D16E'}}  
+                style={{color: '#71C5A5'}}  
               >
                 {" "}
                 <i class="fa fa-github ls"></i>
@@ -77,7 +75,7 @@ function Body() {
               <a
                 href="https://www.hackerrank.com/itsmekabilesh"
                 class="social-icon"
-                style={{color: '#47D16E'}}
+                style={{color: '#71C5A5'}}
               >
                 {" "}
                 <i class="fab fa-hackerrank ls"></i>
