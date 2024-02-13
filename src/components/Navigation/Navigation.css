@@ -44,6 +44,7 @@ h2 {
   width: 100%;
   position: -webkit-sticky; /* Safari */
   position: sticky;
+  padding: 20px;
   top: 0;
   z-index: 1;
   transition-timing-function: ease-in;
@@ -69,7 +70,6 @@ h2 {
 
 .nav_back {
   background-color: black;
-  padding: 20px;
 }
 
 .navbar ul {
@@ -85,6 +85,28 @@ h2 {
   font-weight: 400;
   text-decoration: none;
   transition: color 0.3s ease-out;
+}
+
+.resume {
+  font-family: 'Roboto' !important;
+}
+.btn-resume {
+  color: #71C5A5;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  background: transparent;
+  border: 1px solid #71C5A5;
+  cursor: pointer;
+  transition: background-color 1s ease;
+}
+
+.btn-resume:hover {
+  background: #bce2d4;
 }
 
 .nav-item a:hover {
@@ -311,18 +333,4 @@ h2 {
   .search-input {
     display: none;
   }
-}
-
-.btn-resume {
-  color: #71C5A5;
-  padding: 10px 20px;
-  outline: none;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  font-weight: 600;
-  font-family: "Roboto", sans-serif;
-  background: transparent;
-  border: 1px solid #71C5A5;
-  cursor: pointer;
 }

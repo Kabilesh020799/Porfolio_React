@@ -84,7 +84,7 @@ function Body() {
           </ul>
         </div>
         <a class="container-arrow scroll-to">
-          <Link to="about" spy={true} smooth={true} duration={500} offset={-50}>
+          <Link to="about" spy={true} smooth={true} duration={500} offset={-150}>
             <span>
               <i class="fa fa-angle-down" aria-hidden="true"></i>{" "}
             </span>
