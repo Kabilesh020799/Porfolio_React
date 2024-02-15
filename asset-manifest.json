@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.ef0e821b.chunk.css",
-    "main.js": "/static/js/main.65603fe9.chunk.js",
-    "main.js.map": "/static/js/main.65603fe9.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
-    "runtime-main.js.map": "/static/js/runtime-main.19ccc7f6.js.map",
-    "static/js/2.254920a3.chunk.js": "/static/js/2.254920a3.chunk.js",
-    "static/js/2.254920a3.chunk.js.map": "/static/js/2.254920a3.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.9223acb63c403d4d7dd3abe6b70d9570.js": "/precache-manifest.9223acb63c403d4d7dd3abe6b70d9570.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.ef0e821b.chunk.css.map": "/static/css/main.ef0e821b.chunk.css.map",
-    "static/js/2.254920a3.chunk.js.LICENSE.txt": "/static/js/2.254920a3.chunk.js.LICENSE.txt",
-    "static/media/Dp.JPG": "/static/media/Dp.cbd8551e.JPG",
-    "static/media/KabileshResumee.pdf": "/static/media/KabileshResumee.609fff06.pdf"
+    "main.css": "/Porfolio_React/static/css/main.ef0e821b.chunk.css",
+    "main.js": "/Porfolio_React/static/js/main.65603fe9.chunk.js",
+    "main.js.map": "/Porfolio_React/static/js/main.65603fe9.chunk.js.map",
+    "runtime-main.js": "/Porfolio_React/static/js/runtime-main.46c4c622.js",
+    "runtime-main.js.map": "/Porfolio_React/static/js/runtime-main.46c4c622.js.map",
+    "static/js/2.254920a3.chunk.js": "/Porfolio_React/static/js/2.254920a3.chunk.js",
+    "static/js/2.254920a3.chunk.js.map": "/Porfolio_React/static/js/2.254920a3.chunk.js.map",
+    "index.html": "/Porfolio_React/index.html",
+    "precache-manifest.37760a113857a3e4fd9b3bbaec7a36ac.js": "/Porfolio_React/precache-manifest.37760a113857a3e4fd9b3bbaec7a36ac.js",
+    "service-worker.js": "/Porfolio_React/service-worker.js",
+    "static/css/main.ef0e821b.chunk.css.map": "/Porfolio_React/static/css/main.ef0e821b.chunk.css.map",
+    "static/js/2.254920a3.chunk.js.LICENSE.txt": "/Porfolio_React/static/js/2.254920a3.chunk.js.LICENSE.txt",
+    "static/media/Dp.JPG": "/Porfolio_React/static/media/Dp.cbd8551e.JPG",
+    "static/media/KabileshResumee.pdf": "/Porfolio_React/static/media/KabileshResumee.609fff06.pdf"
   },
   "entrypoints": [
-    "static/js/runtime-main.19ccc7f6.js",
+    "static/js/runtime-main.46c4c622.js",
     "static/js/2.254920a3.chunk.js",
     "static/css/main.ef0e821b.chunk.css",
     "static/js/main.65603fe9.chunk.js"
