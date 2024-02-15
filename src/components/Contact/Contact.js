@@ -95,7 +95,7 @@ function Contact({ checkedB }) {
                   style={{ color: "#71C5A5" }}
                   className={classes.icon}
                 ></i>
-                <span className={classes.tag}>HALIFAX | NOVA SCOTIA | CANADA</span>
+                <span className={classes.tag}>Halifax | NovaScotia | Canada</span>
               </li>
               <li className={classes.list}>
                 <i
