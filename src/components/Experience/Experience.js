@@ -5,7 +5,7 @@ import Fade from "react-reveal/Fade";
 function Experience() {
   return (
     <Fade bottom>
-      <div className={classes.Experience} id="experience">
+      {/* <div className={classes.Experience} id="experience">
         <h1 className={classes.heading}>Experience</h1>
         <div className={classes.expbody}>
           <div className={classes.exphead}>
@@ -48,6 +48,10 @@ function Experience() {
             Engineers Club Of SVCE.
           </div>
         </div>
+      </div> */}
+      <div id="experience" className={classes.Experience}>
+        <i className={`fa-solid fa-hammer ${classes.faIcon}`}></i>
+        Page under construction ...
       </div>
     </Fade>
   );

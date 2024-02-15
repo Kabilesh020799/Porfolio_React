@@ -1,0 +1,15 @@
+.skill-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: #71C5A5;
+  border: 1px solid #71C5A5;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.skill-box:hover {
+  transform: scale(1.1);
+}

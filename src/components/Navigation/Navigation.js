@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./Navigation.css";
 import { Link, animateScroll as scroll } from "react-scroll";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Switch from "@material-ui/core/Switch";
 import { withStyles } from "@material-ui/core/styles";
+import navigations from "./constant";
+
+import ResumePdf from '../../assets/KabileshResumee.pdf';
 
 function Navigation({ checkedB, setCheckedB }) {
   const [click, setClick] = useState(false);
@@ -22,59 +24,6 @@ function Navigation({ checkedB, setCheckedB }) {
       window.addEventListener("scroll");
     };
   }, []);
-
-  const IOSSwitch = withStyles((theme) => ({
-    root: {
-      width: 42,
-      height: 26,
-      padding: 0,
-      margin: theme.spacing(1),
-    },
-    switchBase: {
-      padding: 1,
-      "&$checked": {
-        transform: "translateX(16px)",
-        color: "white",
-        "& + $track": {
-          backgroundColor: "tomato",
-          opacity: 1,
-          border: "none",
-        },
-      },
-      "&$focusVisible $thumb": {
-        color: "#52d869",
-        border: "6px solid #fff",
-      },
-    },
-    thumb: {
-      width: 24,
-      height: 24,
-    },
-    track: {
-      borderRadius: 26 / 2,
-      border: `1px solid ${theme.palette.grey[400]}`,
-      backgroundColor: "#0a192f",
-      opacity: 1,
-      transition: theme.transitions.create(["background-color", "border"]),
-    },
-    checked: {},
-    focusVisible: {},
-  }))(({ classes, ...props }) => {
-    return (
-      <Switch
-        focusVisibleClassName={classes.focusVisible}
-        disableRipple
-        classes={{
-          root: classes.root,
-          switchBase: classes.switchBase,
-          thumb: classes.thumb,
-          track: classes.track,
-          checked: classes.checked,
-        }}
-        {...props}
-      />
-    );
-  });
 
   const handleChange = (event) => {
     setCheckedB(event.target.checked);
@@ -113,88 +62,33 @@ function Navigation({ checkedB, setCheckedB }) {
             !checkedB ? "ul_tomato" : "ul_normal"
           }`}
         >
-          <li class="nav-item">
-            <Link
-              to="home"
-              spy={true}
-              smooth={true}
-              duration={500}
-              offset={-50}
-              onClick={clicked}
-            >
-              Home
-            </Link>
-          </li>
-          <li class="nav-item">
-            <Link
-              to="about"
-              spy={true}
-              smooth={true}
-              duration={500}
-              offset={-50}
-              onClick={clicked}
-            >
-              About
-            </Link>
-          </li>
-          <li class="nav-item">
-            <Link
-              to="skills"
-              spy={true}
-              smooth={true}
-              duration={500}
-              offset={-110}
-              onClick={clicked}
-            >
-              Skills
-            </Link>
-          </li>
-          <li class="nav-item">
-            <Link
-              to="experience"
-              spy={true}
-              smooth={true}
-              offset={-50}
-              duration={500}
-              onClick={clicked}
-            >
-              Experience
-            </Link>
-          </li>
-          <li class="nav-item">
-            <Link
-              to="projects"
-              spy={true}
-              smooth={true}
-              offset={-110}
-              duration={500}
-              onClick={clicked}
-            >
-              Projects
-            </Link>
-          </li>
+          {
+            navigations?.map((navigation) => (
+              <li class="nav-item">
+                <Link
+                  to={navigation.path}
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  offset={-150}
+                  onClick={clicked}
+                >
+                  {navigation?.name}
+                </Link>
+              </li>
+            ))
+          }
           <li className="nav-item">
-            <Link
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={-50}
-              duration={500}
-              onClick={clicked}
+            <a
+              href={ResumePdf}
+              download="Kabilesh_Resume"
+              target="_blank"
+              className="resume"
             >
-              Contact
-            </Link>
-          </li>
-          <li className="nav-item">
-            <FormControlLabel
-              control={
-                <IOSSwitch
-                  checked={checkedB}
-                  onChange={handleChange}
-                  name="checkedB"
-                />
-              }
-            />
+              <button className="btn-resume">
+                Resume
+              </button>
+            </a>
           </li>
         </ul>
       </nav>

@@ -1,4 +1,5 @@
 {
+  "homepage": "http://Kabilesh020799.github.io/",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
@@ -9,19 +10,26 @@
     "@testing-library/user-event": "^7.1.2",
     "animate.css": "^4.1.0",
     "emailjs-com": "^2.6.3",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "localforage": "^1.10.0",
+    "match-sorter": "^6.3.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-particles-js": "^3.3.0",
     "react-reveal": "^1.2.2",
-    "react-router-dom": "^5.2.0",
+    "react-router": "^6.22.0",
+    "react-router-dom": "^6.22.0",
     "react-scripts": "3.4.3",
     "react-scroll": "^1.8.1",
     "react-spinners": "^0.9.0",
     "react-toggle-switch": "^3.0.4",
-    "react-typical": "^0.1.3"
+    "react-type-animation": "^3.2.0",
+    "react-typical": "^0.1.3",
+    "sort-by": "^1.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deply": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -40,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
