@@ -1,0 +1,60 @@
+.card {
+  color: #5E6E85;
+  width: 700px;
+  text-align: left;
+  display: flex;
+  cursor: pointer;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.card:hover {
+  background: #162446;
+  transform: scale(1.01);
+}
+
+.card-date {
+  width: 35%;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+}
+
+.card-position {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.color-green {
+  color: #71C5A5;
+}
+
+.card-company {
+  font-size: 18px;
+}
+
+.card-description {
+  margin-top: 2rem;
+}
+
+.card-labels {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card-label {
+  color: #71C5A5;
+  background: #152B3A;
+  padding: 5px 10px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
