@@ -9,7 +9,7 @@ const Labels = (props) => {
 
   return(
     <div className={`labels ${type === 'done' ? 'done': ''}${className ? ` ${className}` : ''}`}>
-      { type === 'done' ? 'completed' : 'on-going' }
+      { type === 'done' ? '' : 'on-going' }
     </div>
   )
 };

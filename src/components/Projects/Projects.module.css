@@ -11,7 +11,8 @@
 .card {
   margin: 30px;
   width: 300px;
-  height: 300px;
+  min-height: 300px;
+  padding-bottom: 20px;
   border: 1px solid var(--Bordes, #3D3D3D);
   background: var(--Rellenos, #21253e);
   border-radius: 5px;
@@ -65,13 +66,30 @@
   color: #fff;
   text-align: left;
   font-family: "Inconsolata", monospace;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: start;
+  width: 100%;
+}
+
+.tileItem {
+  color: #71C5A5;
+  background: #152B3A;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer {
   display: flex;
-  justify-content: space-between;
   margin: 15px 10px 0px 20px;
   color: #fff;
   font-family: "Inconsolata", monospace;
-  align-items: center;
+  align-items: end;
+  flex-direction: column;
+  gap: 10px;
 }
