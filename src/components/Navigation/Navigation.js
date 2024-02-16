@@ -64,7 +64,7 @@ function Navigation({ checkedB }) {
                   spy={true}
                   smooth={true}
                   duration={500}
-                  offset={navigation?.path === 'projects' ? -180 : -150}
+                  offset={navigation?.path === 'projects' ? -180 : -110}
                   onClick={clicked}
                 >
                   {navigation?.name}
