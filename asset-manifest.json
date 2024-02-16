@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Porfolio_React/static/css/main.45e49e8d.css",
+    "main.css": "/Porfolio_React/static/css/main.d03c3f51.css",
     "main.js": "/Porfolio_React/static/js/main.b507e63f.js",
     "static/media/Dp.JPG": "/Porfolio_React/static/media/Dp.cc169af06a7abfa779a3.JPG",
     "static/media/KabileshResumee.pdf": "/Porfolio_React/static/media/KabileshResumee.bbbc606228e68aa7d225.pdf",
     "index.html": "/Porfolio_React/index.html",
-    "main.45e49e8d.css.map": "/Porfolio_React/static/css/main.45e49e8d.css.map",
+    "main.d03c3f51.css.map": "/Porfolio_React/static/css/main.d03c3f51.css.map",
     "main.b507e63f.js.map": "/Porfolio_React/static/js/main.b507e63f.js.map"
   },
   "entrypoints": [
-    "static/css/main.45e49e8d.css",
+    "static/css/main.d03c3f51.css",
     "static/js/main.b507e63f.js"
   ]
 }
