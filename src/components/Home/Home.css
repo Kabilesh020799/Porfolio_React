@@ -70,7 +70,7 @@ ul.social-icons {
 .fa-instagram:hover {
   background-color: #c62d91;
 }
-.fa-hackerrank {
+.fa-laptop-code {
   padding: 10px 14px;
   -o-transition: 0.5s;
   -ms-transition: 0.5s;
@@ -79,8 +79,8 @@ ul.social-icons {
   transition: 0.5s;
   background-color: transparent;
 }
-.fa-hackerrank:hover {
-  background-color: #1ba94c;
+.fa-laptop-code:hover {
+  background-color: #FFA015;
 }
 .fa-twitter {
   padding: 10px 12px;

@@ -79,12 +79,12 @@ function Body() {
             </li>
             <li>
               <a
-                href="https://www.hackerrank.com/itsmekabilesh"
+                href="https://leetcode.com/kabilesh020799/"
                 class="social-icon"
                 style={{color: '#71C5A5'}}
               >
                 {" "}
-                <i class="fab fa-hackerrank ls"></i>
+                <i class="fa fa-laptop-code ls"></i>
               </a>
             </li>
           </ul>

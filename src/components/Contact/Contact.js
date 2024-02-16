@@ -157,11 +157,11 @@ function Contact({ checkedB }) {
                 </li>
                 <li>
                   <a
-                    href="https://www.hackerrank.com/itsmekabilesh"
+                    href="https://leetcode.com/kabilesh020799/"
                     class="social-icon"
                   >
                     {" "}
-                    <i class="fab fa-hackerrank ls"></i>
+                    <i class="fa fa-laptop-code ls"></i>
                   </a>
                 </li>
               </ul>
