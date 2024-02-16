@@ -37,11 +37,12 @@ function Contact({ checkedB }) {
     setMsg("");
     setName("");
   };
+
   return (
     <Fade bottom>
       <div className={classes.Contact} id="contact">
         <div className={classes.cont}>
-          <h1 className={classes.header1}>Have something to say?</h1>
+          <h1 className={classes.header1}>Let's Build Something Amazing</h1>
           <div className={classes.down}>
             <form className={classes.Form}>
               <input

@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./Navigation.css";
-import { Link, animateScroll as scroll } from "react-scroll";
-import Switch from "@material-ui/core/Switch";
-import { withStyles } from "@material-ui/core/styles";
+import { Link }from "react-scroll";
 import navigations from "./constant";
 
 import ResumePdf from '../../assets/KabileshResumee.pdf';
 
-function Navigation({ checkedB, setCheckedB }) {
+function Navigation({ checkedB }) {
   const [click, setClick] = useState(false);
   const [show, handleShow] = useState(false);
 
@@ -25,10 +23,6 @@ function Navigation({ checkedB, setCheckedB }) {
     };
   }, []);
 
-  const handleChange = (event) => {
-    setCheckedB(event.target.checked);
-  };
-
   return (
     <div class={`nav-wrapper ${show && "nav_back"}`}>
       <div class="grad-bar"></div>
@@ -38,7 +32,7 @@ function Navigation({ checkedB, setCheckedB }) {
           spy={true}
           smooth={true}
           duration={500}
-          offset={-50}
+          offset={-150}
           onClick={clicked}
         >
           <h1
@@ -70,7 +64,7 @@ function Navigation({ checkedB, setCheckedB }) {
                   spy={true}
                   smooth={true}
                   duration={500}
-                  offset={-150}
+                  offset={navigation?.path === 'projects' ? -180 : -150}
                   onClick={clicked}
                 >
                   {navigation?.name}
@@ -83,6 +77,7 @@ function Navigation({ checkedB, setCheckedB }) {
               href={ResumePdf}
               download="Kabilesh_Resume"
               target="_blank"
+              rel="noreferrer"
               className="resume"
             >
               <button className="btn-resume">

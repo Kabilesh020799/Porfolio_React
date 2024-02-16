@@ -4,11 +4,17 @@ import Fade from "react-reveal/Fade";
 import "./Home.css";
 import { Link } from "react-scroll";
 import { TypeAnimation } from "react-type-animation";
+import profile from '../../assets/Dp.JPG';
 
 function Body() {
   return (
     <Fade bottom>
       <div className={classes.body} id="home">
+        <img
+          src={profile}
+          className={classes.profile}
+          alt="profile"
+        />
         <h1 className={classes.heading}>KABILESH</h1>
         <h3 className={classes.heading1}>
           I am{" "}
