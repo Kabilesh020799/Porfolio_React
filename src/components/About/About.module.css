@@ -62,4 +62,10 @@
   .container {
     flex-direction: column;
   }
+  .para {
+    width: 100%;
+  }
+  .container {
+    padding: 0 2rem;
+  }
 }
