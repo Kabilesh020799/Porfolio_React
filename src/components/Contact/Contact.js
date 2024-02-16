@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Fade from "react-reveal/Fade";
 import classes from "./Contact.module.css";
-import emailjs from "emailjs-com";
+import emailjs from '@emailjs/browser';
 
 function Contact({ checkedB }) {
   const [name, setName] = useState("");
@@ -25,9 +25,11 @@ function Contact({ checkedB }) {
     emailjs
       .send(
         "default_service",
-        "template_a8oyhen",
+        "template_yq66kwi",
         templateParams,
-        "user_mwBwu7UjglI9ydLfin6Wf"
+        {
+          publicKey: 'asWnA6RSUG2wRoq6n',
+        }
       )
       .then((res) => prompt("Thanks for the submission"))
       .catch((err) => console.log(err));
