@@ -63,6 +63,14 @@
   .card {
     font-size: 12px;
     padding: 20px;
-     width: 85%;
+    width: 85%;
+    flex-direction: column;
+  }
+  .card-date {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .card-details {
+    width: 100%;
   }
 }

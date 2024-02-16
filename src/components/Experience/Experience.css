@@ -42,4 +42,7 @@
     justify-content: center;
     align-items: center;
   }
+  .experience-wrapper > h1 {
+    font-size: 24px;
+  }
 }
