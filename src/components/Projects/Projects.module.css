@@ -7,16 +7,21 @@
   justify-content: center;
   overflow: hidden;
   flex-direction: row;
+  margin-top: 2rem;
+  margin-bottom: 10rem;
 }
 .card {
   margin: 30px;
   width: 300px;
-  min-height: 300px;
+  min-height: 350px;
   padding-bottom: 20px;
   border: 1px solid var(--Bordes, #3D3D3D);
   background: var(--Rellenos, #21253e);
   border-radius: 5px;
   transition: transform 338ms ease-in;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .body {
   margin-top: 20px;
