@@ -8,7 +8,7 @@ function Experience() {
   return (
     <Fade bottom>
       <div className="experience-wrapper">
-        <h1>Have a look at my experiences!!</h1>
+        <h1>Journey through my work experiences</h1>
         <div className="experience">
           {
             experience?.map((experienceItem) => (

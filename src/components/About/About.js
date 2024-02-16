@@ -23,7 +23,7 @@ function About() {
             </p>
           </div>
           <div className={classes.wrapper}>
-            <h3 className={classes.heading2}>My Skills</h3>
+            <h3 className={classes.heading2}>My skills</h3>
             <Skills />
           </div>
         </div>
