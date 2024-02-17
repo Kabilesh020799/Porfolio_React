@@ -11,7 +11,7 @@ const experience = [
   {
     position: 'Frontend Engineer',
     company: 'Mad Street Den',
-    description: 'Developed and maintained a demo website, significantly boosting customer engagement and driving a 50% increase in revenue. Oversaw backend API integration and frontend development, delivering seamless user experiences. Implemented Agile methodologies and utilized Jira for efficient project management, ensuring timely delivery. Led cross-functional collaboration, refining time management and organizational skills. Mentored new team members, enhancing coding practices and development efficiency. Conducted thorough code reviews to uphold high standards and best practices, while documenting components with Storybook for improved collaboration and understanding.',
+    description: 'Developed and maintained a demo website, significantly boosting customer engagement. Oversaw backend API integration and frontend development, delivering seamless user experiences. Implemented Agile methodologies and utilized Jira for efficient project management, ensuring timely delivery. Led cross-functional collaboration, refining time management and organizational skills. Mentored new team members, enhancing coding practices and development efficiency. Conducted thorough code reviews to uphold high standards and best practices, while documenting components with Storybook for improved collaboration and understanding.',
     techStack: ['React JS', 'Django', 'Javascript', 'HTML & SCSS', 'Python', 'Jest', 'AWS', 'Git', 'Storybook', 'Wordpress',],
     startDate: 'Oct 2021',
     endDate: 'Aug 2023',
