@@ -27,7 +27,7 @@ const experience = [
     link: 'https://vue.ai/',
   },
   {
-    position: 'Fullstack Engineer',
+    position: 'Fullstack Engineer Intern',
     company: 'Vigyor Media Technologies',
     description: 'Engineered a full-stack application that significantly reduced manual advertisement monitoring efforts. Led the user interface development, backend server implementation, and data management, resulting in a 50% increase in efficiency. Developed expertise in agile development processes and effective task management while working collaboratively within a team.',
     techStack: ['React JS', 'Node JS', 'Javascript', 'HTML & CSS', 'Python', 'AWS', 'Git', 'Ubuntu', ],
