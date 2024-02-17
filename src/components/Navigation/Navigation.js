@@ -3,7 +3,7 @@ import "./Navigation.css";
 import { Link }from "react-scroll";
 import navigations from "./constant";
 
-import ResumePdf from '../../assets/KabileshResume.pdf';
+import ResumePdf from '../../assets/Kabilesh27Resume.pdf';
 
 function Navigation({ checkedB }) {
   const [click, setClick] = useState(false);
