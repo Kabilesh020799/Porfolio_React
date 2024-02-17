@@ -22,15 +22,15 @@ function Body() {
             repeat={Infinity}
             wrapper="b"
             sequence={[
-              "Grad Student 👨‍🎓",
-              1000,
               "Software Engineer 👨‍💻⚛️",
+              1000,
+              "Fullstack Developer 🤖",
+              1000,
+              "App Developer 📱",
               1000,
               "ML Aspirant 💻",
               1000,
-              "Web Developer 🤖",
-              1000,
-              "App Developer 📱",
+              "Graduate Student 👨‍🎓",
               1000,
             ]}
           ></TypeAnimation>
