@@ -155,7 +155,7 @@ function Contact({ checkedB }) {
                     <i class="fa fa-github ls"></i>
                   </a>
                 </li>
-                <li>
+                <li style={{display: 'none'}}>
                   <a
                     href="https://leetcode.com/kabilesh020799/"
                     class="social-icon"
