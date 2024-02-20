@@ -50,6 +50,9 @@ const skillsData = [
   {
     name: 'Docker',
   },
+  {
+    name: 'AWS',
+  },
 ];
 
 export {
