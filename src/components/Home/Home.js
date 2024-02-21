@@ -17,7 +17,7 @@ function Body() {
         />
         <h1 className={classes.heading}>KABILESH</h1>
         <h3 className={classes.heading1}>
-          I am{" "}
+          I am a{" "}
           <TypeAnimation
             repeat={Infinity}
             wrapper="b"
