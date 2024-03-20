@@ -15,6 +15,7 @@ function Body() {
           className={classes.profile}
           alt="profile"
         />
+        
         <h1 className={classes.heading}>KABILESH</h1>
         <h3 className={classes.heading1}>
           I am a{" "}
