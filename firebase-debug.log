@@ -1,0 +1,26 @@
+[debug] [2024-04-30T13:45:23.066Z] ----------------------------------------------------------------------
+[debug] [2024-04-30T13:45:23.069Z] Command:       /usr/local/bin/firebase /Users/kabileshravichandran/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2024-04-30T13:45:23.070Z] CLI Version:   13.0.2
+[debug] [2024-04-30T13:45:23.070Z] Platform:      darwin
+[debug] [2024-04-30T13:45:23.071Z] Node Version:  v18.5.0
+[debug] [2024-04-30T13:45:23.080Z] Time:          Tue Apr 30 2024 10:45:23 GMT-0300 (Atlantic Daylight Time)
+[debug] [2024-04-30T13:45:23.080Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-30T13:45:23.283Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-30T13:45:23.284Z] > authorizing via signed-in user (itsmekabilesh@gmail.com)
+[debug] [2024-04-30T13:45:23.286Z] [iam] checking project portfolio-d8120 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-04-30T13:45:23.288Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-d8120:testIamPermissions [none]
+[debug] [2024-04-30T13:45:23.293Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-d8120:testIamPermissions x-goog-quota-user=projects/portfolio-d8120
+[debug] [2024-04-30T13:45:23.294Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-d8120:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-04-30T13:45:24.149Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-d8120:testIamPermissions 200
+[debug] [2024-04-30T13:45:24.151Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-d8120:testIamPermissions {}
+[debug] [2024-04-30T13:45:24.154Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project portfolio-d8120:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2024-04-30T13:45:24.156Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-d8120 [none]
+[debug] [2024-04-30T13:45:24.636Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-d8120 403
+[debug] [2024-04-30T13:45:24.639Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-d8120 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-04-30T13:45:24.641Z] HTTP Error: 403, The caller does not have permission
+[error] 
+[error] Error: Assertion failed: resolving hosting target of a site with no site name or target name. This should have caused an error earlier
