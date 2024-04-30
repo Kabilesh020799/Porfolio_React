@@ -16,6 +16,7 @@ function App() {
         checkedB={checkedB}
         setCheckedB={setCheckedB}
       />
+      
       <Home className="cls" />
       <About className="cls" />
       <Experience className="cls" />
