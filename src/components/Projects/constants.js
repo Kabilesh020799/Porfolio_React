@@ -48,14 +48,18 @@ const projects = [
   {
     title: 'NutriNova',
     content: 'NutriNova is a comprehensive application designed to help users lead healthier lifestyles. With features such as personalized health dashboards, activity tracking, and nutrition planning, users can easily monitor and improve their overall well-being.',
-    type: 'on-going',
+    type: 'done',
     tile: ['Vue JS', 'Spring', 'JAVA', 'Mongo DB'],
+    giturl: 'https://github.com/Kabilesh020799/NutriNova',
+    url: 'https://github.com/Kabilesh020799/NutriNova',
   },
   {
     title: 'GitScope',
     content: 'A tool for analyzing GitHub repositories, offering interactive visualizations to understand project development trends. By integrating the GitHub API, the tool provides real-time data for informed decision-making in software development projects.',
-    type: 'on-going',
-    tile: ['React JS', 'D3.js', 'HTML/CSS', 'Redux', 'Git', 'GitHub API']
+    type: 'done',
+    tile: ['React JS', 'D3.js', 'HTML/CSS', 'Redux', 'Git', 'GitHub API'],
+    giturl: 'https://github.com/Kabilesh020799/GitScope',
+    url: 'https://github.com/Kabilesh020799/GitScope',
   }
 ];
 

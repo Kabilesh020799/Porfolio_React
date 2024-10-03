@@ -1,5 +1,14 @@
 const experience = [
   {
+    position: 'Fullstack Developer Co-op',
+    company: "Duplex | RedBrick",
+    description: "Contributed to the development of key features for the flagship product, delivering high-quality code on time for deployment. Improved product reliability by writing detailed unit test cases and end-to-end (E2E) test cases for major components of the codebase. These efforts enhanced the overall stability, reduced bugs in production, and supported a smoother user experience",
+    techStack: ['VueJs', 'NuxtJs', 'Vitest', 'Playwright', 'AWS'],
+    startDate: 'Sept 2024',
+    endDate: 'Present',
+    link: 'https://www.duplex.com/',
+  },
+  {
     position: 'Fullstack Engineer',
     company: 'Otis AI',
     description: 'Developed and maintained a customer success story showcase page, enhancing customer engagement and the company\'s public image. Played a key role in developing revenue-related admin panel features, contributing to the company\'s financial success. Additionally, redeveloped the login and signup interface to improve user experience and modernize the authentication system. Collaborated effectively with an international developer team, improving communication and teamwork skills in a global environment.',
