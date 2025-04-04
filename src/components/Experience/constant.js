@@ -2,7 +2,7 @@ const experience = [
   {
     position: 'Fullstack Developer Co-op',
     company: "Duplex | RedBrick",
-    description: "Contributed to the development of key features for the flagship product, delivering high-quality code on time for deployment. Improved product reliability by writing detailed unit test cases and end-to-end (E2E) test cases for major components of the codebase. These efforts enhanced the overall stability, reduced bugs in production, and supported a smoother user experience",
+    description: "Engineered a scalable advertisement feature for Shift browser’s landing page using VueJS, TypeScript, and NuxtJS. Implemented comprehensive end-to-end and unit tests with Playwright and Vitest to ensure code quality. Enhanced system reliability through custom Datadog monitors and streamlined deployment using CI/CD pipelines built with AWS CodePipeline. Created a proof-of-concept for automated news summarization by integrating machine learning models from Hugging Face and PyTorch.",
     techStack: ['VueJs', 'NuxtJs', 'Vitest', 'Playwright', 'AWS'],
     startDate: 'Sept 2024',
     endDate: 'Present',
