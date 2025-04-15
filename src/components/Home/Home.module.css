@@ -12,7 +12,7 @@
   font-family: "Vollkorn", serif;
   letter-spacing: 5px;
   animation: shine ease 0.5s both infinite;
-  color: #71C5A5;
+  color: #71c5a5;
   margin-top: 2rem;
   line-height: 60px;
 }
@@ -24,10 +24,10 @@
 
 .profile {
   height: 300px;
-  width: 500px;
+  width: 300px;
   margin-top: 2rem;
   border-radius: 8px;
-  box-shadow: 1px 1px 4px 4px #71C5A5;
+  background-color: #71c5a5;
 }
 @media screen and (max-width: 900px) {
   .heading1 {
