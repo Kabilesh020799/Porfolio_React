@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Fade from "react-reveal/Fade";
 import classes from "./Contact.module.css";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 function Contact({ checkedB }) {
   const [name, setName] = useState("");
@@ -23,14 +23,9 @@ function Contact({ checkedB }) {
       message: msg,
     };
     emailjs
-      .send(
-        "default_service",
-        "template_yq66kwi",
-        templateParams,
-        {
-          publicKey: 'asWnA6RSUG2wRoq6n',
-        }
-      )
+      .send("default_service", "template_yq66kwi", templateParams, {
+        publicKey: "asWnA6RSUG2wRoq6n",
+      })
       .then((res) => prompt("Thanks for the submission"))
       .catch((err) => console.log(err));
     setEmail("");
@@ -98,7 +93,7 @@ function Contact({ checkedB }) {
                   style={{ color: "#71C5A5" }}
                   className={classes.icon}
                 ></i>
-                <span className={classes.tag}>Halifax | NovaScotia | Canada</span>
+                <span className={classes.tag}>Canada</span>
               </li>
               <li className={classes.list}>
                 <i
@@ -155,7 +150,7 @@ function Contact({ checkedB }) {
                     <i class="fa fa-github ls"></i>
                   </a>
                 </li>
-                <li style={{display: 'none'}}>
+                <li style={{ display: "none" }}>
                   <a
                     href="https://leetcode.com/kabilesh020799/"
                     class="social-icon"
