@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Fade from "react-reveal/Fade";
 import classes from "./Contact.module.css";
 import emailjs from "@emailjs/browser";
@@ -7,30 +7,36 @@ function Contact({ checkedB }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [msg, setMsg] = useState("");
-  const [empty, setEmpty] = useState(true);
-
-  useEffect(() => {
-    if (name && email && msg) {
-      setEmpty(false);
-    }
-  }, [name, email, msg]);
+  const [loading, setLoading] = useState(false); // Spinner control
 
   const submit = (e) => {
     e.preventDefault();
+
     const templateParams = {
       from_name: email,
       to_name: name,
       message: msg,
     };
+
+    setLoading(true);
+
     emailjs
       .send("default_service", "template_yq66kwi", templateParams, {
         publicKey: "asWnA6RSUG2wRoq6n",
       })
-      .then((res) => prompt("Thanks for the submission"))
-      .catch((err) => console.log(err));
-    setEmail("");
-    setMsg("");
-    setName("");
+      .then(() => {
+        alert("Thanks for the submission!");
+        setName("");
+        setEmail("");
+        setMsg("");
+      })
+      .catch((err) => {
+        console.error(err);
+        alert("Oops! Something went wrong. Please try again later.");
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   return (
@@ -38,132 +44,113 @@ function Contact({ checkedB }) {
       <div className={classes.Contact} id="contact">
         <div className={classes.cont}>
           <h1 className={classes.header1}>Let's build something amazing</h1>
+
           <div className={classes.down}>
-            <form className={classes.Form}>
+            <form className={classes.Form} onSubmit={submit}>
               <input
                 type="text"
-                placeholder="NAME"
+                placeholder="Your Name"
                 className={`${classes.input} ${
-                  !checkedB ? classes.input_tomato : null
+                  !checkedB ? classes.input_tomato : ""
                 }`}
                 value={name}
-                onChange={(e) => {
-                  setName(e.target.value);
-                }}
+                onChange={(e) => setName(e.target.value)}
               />
               <input
                 type="email"
-                placeholder="E-MAIL"
+                placeholder="Your Email"
                 className={`${classes.input} ${
-                  !checkedB ? classes.input_tomato : null
+                  !checkedB ? classes.input_tomato : ""
                 }`}
                 value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                }}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <textarea
-                rows="10"
-                placeholder="MESSAGE"
-                style={
-                  checkedB
-                    ? { backgroundColor: "#0a192f" }
-                    : { backgroundColor: "tomato" }
-                }
+                rows="8"
+                placeholder="Your Message"
+                style={{
+                  backgroundColor: checkedB ? "#0a192f" : "tomato",
+                }}
                 className={`${classes.textarea} ${
-                  !checkedB ? classes.input_tomato : null
+                  !checkedB ? classes.input_tomato : ""
                 }`}
                 value={msg}
-                onChange={(e) => {
-                  setMsg(e.target.value);
-                }}
+                onChange={(e) => setMsg(e.target.value)}
               />
+
               <button
+                type="submit"
                 className={classes.send}
-                onClick={submit}
-                disabled={empty}
+                disabled={!name || !email || !msg || loading}
               >
-                SEND
+                {loading ? "Sending..." : "SEND"}
               </button>
             </form>
+
             <ul className={classes.contactlist}>
               <li className={classes.list}>
                 <i
-                  class="fa fa-map-marker fa-2x"
+                  className="fa fa-map-marker fa-2x"
                   style={{ color: "#71C5A5" }}
-                  className={classes.icon}
                 ></i>
                 <span className={classes.tag}>Canada</span>
               </li>
               <li className={classes.list}>
                 <i
-                  class="fa fa-envelope fa-2x"
+                  className="fa fa-envelope fa-2x"
                   style={{ color: "#71C5A5" }}
-                  className={classes.icon}
                 ></i>
                 <a
                   href="mailto:kabilesh020799@gmail.com"
-                  title="Send me an email"
                   className={classes.tag}
                 >
-                  <span className={classes.tag}> kabilesh020799@gmail.com</span>
+                  kabilesh020799@gmail.com
                 </a>
               </li>
             </ul>
           </div>
+
           <div className={classes.tiles}>
-            <div class="footer-social-icons">
-              <ul class="social-icons">
+            <div className="footer-social-icons">
+              <ul className="social-icons">
                 <li>
                   <a
-                    href="https://www.facebook.com/ravichandran.kabilesh/"
-                    class="social-icon"
+                    href="https://facebook.com/ravichandran.kabilesh/"
+                    className="social-icon"
                   >
-                    {" "}
-                    <i class="fa fa-facebook ls"></i>
+                    <i className="fa fa-facebook"></i>
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://www.instagram.com/kabilesh_ravichandran/"
-                    class="social-icon"
+                    href="https://instagram.com/kabilesh_ravichandran/"
+                    className="social-icon"
                   >
-                    {" "}
-                    <i class="fab fa-instagram ls"></i>
+                    <i className="fab fa-instagram"></i>
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://www.linkedin.com/in/kabileshravi27/"
-                    class="social-icon"
+                    href="https://linkedin.com/in/kabileshravi27/"
+                    className="social-icon"
                   >
-                    {" "}
-                    <i class="fa fa-linkedin ls"></i>
+                    <i className="fa fa-linkedin"></i>
                   </a>
                 </li>
                 <li>
                   <a
                     href="https://github.com/Kabilesh020799"
-                    class="social-icon"
+                    className="social-icon"
                   >
-                    {" "}
-                    <i class="fa fa-github ls"></i>
-                  </a>
-                </li>
-                <li style={{ display: "none" }}>
-                  <a
-                    href="https://leetcode.com/kabilesh020799/"
-                    class="social-icon"
-                  >
-                    {" "}
-                    <i class="fa fa-laptop-code ls"></i>
+                    <i className="fa fa-github"></i>
                   </a>
                 </li>
               </ul>
             </div>
           </div>
+
           <div className={classes.copyright}>
-            &copy; ALL OF THE RIGHTS RESERVED
+            &copy; {new Date().getFullYear()} All rights reserved
           </div>
         </div>
       </div>
