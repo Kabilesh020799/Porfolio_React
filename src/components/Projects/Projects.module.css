@@ -15,7 +15,7 @@
   width: 300px;
   min-height: 350px;
   padding-bottom: 20px;
-  border: 1px solid var(--Bordes, #3D3D3D);
+  border: 1px solid var(--Bordes, #3d3d3d);
   background: var(--Rellenos, #21253e);
   border-radius: 5px;
   transition: transform 338ms ease-in;
@@ -58,7 +58,7 @@
 
 .bodyhead {
   text-align: center;
-  color: #71C5A5;
+  color: #5c6bc0;
 }
 .bodycon {
   color: #fff;
@@ -79,8 +79,8 @@
 }
 
 .tileItem {
-  color: #71C5A5;
-  background: #152B3A;
+  color: #5c6bc0;
+  background: #152b3a;
   font-size: 12px;
   padding: 5px 10px;
   border-radius: 16px;

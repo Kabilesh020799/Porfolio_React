@@ -7,8 +7,7 @@ function Contact({ checkedB }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [msg, setMsg] = useState("");
-  const [loading, setLoading] = useState(false); // Spinner control
-
+  const [loading, setLoading] = useState(false);
   const submit = (e) => {
     e.preventDefault();
 
@@ -91,14 +90,14 @@ function Contact({ checkedB }) {
               <li className={classes.list}>
                 <i
                   className="fa fa-map-marker fa-2x"
-                  style={{ color: "#71C5A5" }}
+                  style={{ color: "#5C6BC0" }}
                 ></i>
                 <span className={classes.tag}>Canada</span>
               </li>
               <li className={classes.list}>
                 <i
                   className="fa fa-envelope fa-2x"
-                  style={{ color: "#71C5A5" }}
+                  style={{ color: "#5C6BC0" }}
                 ></i>
                 <a
                   href="mailto:kabilesh020799@gmail.com"

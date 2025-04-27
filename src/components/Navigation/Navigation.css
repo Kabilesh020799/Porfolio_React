@@ -8,11 +8,11 @@
 /* HEADINGS */
 
 .heading {
-  color: #71C5A5;
+  color: #5c6bc0;
   font-family: "B612", sans-serif;
 }
 .head_gold {
-  color: #71C5A5;
+  color: #5c6bc0;
 }
 h1,
 p {
@@ -88,10 +88,10 @@ h2 {
 }
 
 .resume {
-  font-family: 'Roboto' !important;
+  font-family: "Roboto" !important;
 }
 .btn-resume {
-  color: #71C5A5;
+  color: #5c6bc0;
   padding: 10px 20px;
   outline: none;
   border: none;
@@ -100,7 +100,7 @@ h2 {
   font-weight: 600;
   font-family: "Roboto", sans-serif;
   background: transparent;
-  border: 1px solid #71C5A5;
+  border: 1px solid #5c6bc0;
   cursor: pointer;
   transition: background-color 1s ease;
 }
@@ -110,7 +110,7 @@ h2 {
 }
 
 .nav-item a:hover {
-  color: #71C5A5;
+  color: #5c6bc0;
   cursor: pointer;
 }
 

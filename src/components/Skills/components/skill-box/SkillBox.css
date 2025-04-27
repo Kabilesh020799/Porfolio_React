@@ -4,8 +4,8 @@
   align-items: center;
   padding: 10px 20px;
   font-size: 20px;
-  color: #71C5A5;
-  border: 1px solid #71C5A5;
+  color: #5c6bc0;
+  border: 1px solid #5c6bc0;
   cursor: pointer;
   border-radius: 4px;
 }
@@ -20,4 +20,3 @@
     padding: 5px 10px;
   }
 }
-

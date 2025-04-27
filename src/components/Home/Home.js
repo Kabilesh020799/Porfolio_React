@@ -4,18 +4,14 @@ import Fade from "react-reveal/Fade";
 import "./Home.css";
 import { Link } from "react-scroll";
 import { TypeAnimation } from "react-type-animation";
-import profile from '../../assets/Dp.JPG';
+import profile from "../../assets/Dp.JPG";
 
 function Body() {
   return (
     <Fade bottom>
       <div className={classes.body} id="home">
-        <img
-          src={profile}
-          className={classes.profile}
-          alt="profile"
-        />
-        
+        <img src={profile} className={classes.profile} alt="profile" />
+
         <h1 className={classes.heading}>KABILESH</h1>
         <h3 className={classes.heading1}>
           I am a{" "}
@@ -42,7 +38,7 @@ function Body() {
               <a
                 href="https://www.facebook.com/ravichandran.kabilesh/"
                 class="social-icon"
-                style={{color: '#71C5A5'}}
+                style={{ color: "#5C6BC0" }}
               >
                 {" "}
                 <i class="fa fa-facebook ls"></i>
@@ -52,7 +48,7 @@ function Body() {
               <a
                 href="https://www.instagram.com/kabilesh_ravichandran/"
                 class="social-icon"
-                style={{color: '#71C5A5'}}
+                style={{ color: "#5C6BC0" }}
               >
                 {" "}
                 <i class="fa fa-instagram ls"></i>
@@ -62,27 +58,27 @@ function Body() {
               <a
                 href="https://www.linkedin.com/in/kabileshravi27/"
                 class="social-icon"
-                style={{color: '#71C5A5'}}
+                style={{ color: "#5C6BC0" }}
               >
                 {" "}
                 <i class="fa fa-linkedin ls"></i>
               </a>
             </li>
             <li>
-              <a 
+              <a
                 href="https://github.com/Kabilesh020799"
                 class="social-icon"
-                style={{color: '#71C5A5'}}  
+                style={{ color: "#5C6BC0" }}
               >
                 {" "}
                 <i class="fa fa-github ls"></i>
               </a>
             </li>
-            <li style={{display: 'none'}}>
+            <li style={{ display: "none" }}>
               <a
                 href="https://leetcode.com/kabilesh020799/"
                 class="social-icon"
-                style={{color: '#71C5A5'}}
+                style={{ color: "#5C6BC0" }}
               >
                 {" "}
                 <i class="fa fa-laptop-code ls"></i>
@@ -91,7 +87,13 @@ function Body() {
           </ul>
         </div>
         <a class="container-arrow scroll-to">
-          <Link to="about" spy={true} smooth={true} duration={500} offset={-150}>
+          <Link
+            to="about"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-150}
+          >
             <span>
               <i class="fa fa-angle-down" aria-hidden="true"></i>{" "}
             </span>

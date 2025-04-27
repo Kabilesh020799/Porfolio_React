@@ -1,5 +1,5 @@
 .card {
-  color: #5E6E85;
+  color: #5e6e85;
   width: 700px;
   text-align: left;
   display: flex;
@@ -30,7 +30,7 @@
 }
 
 .color-green {
-  color: #71C5A5;
+  color: #5c6bc0;
 }
 
 .card-company {
@@ -50,8 +50,8 @@
 }
 
 .card-label {
-  color: #71C5A5;
-  background: #152B3A;
+  color: #5c6bc0;
+  background: #152b3a;
   padding: 5px 10px;
   border-radius: 16px;
   display: flex;

@@ -1,71 +1,90 @@
 .About {
   min-height: 100vh;
-  height: fit-content;
+  padding: 5rem 2rem;
   font-family: "Roboto", sans-serif;
-}
-.heading {
-  margin-top: 13%;
-}
-.heading2 {
-  font-size: 25px;
-  margin-top: 20px;
-  color: white;
-  font-weight: bolder;
-}
-.green {
-  color: #71C5A5;
-}
-.img {
-  width: 300px;
-  height: 200px;
-  margin-top: 20px;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px 5px #0a192f;
-}
-.container {
+  background-color: #0a192f;
   display: flex;
-  align-items: stretch;
-  padding: 0 4rem;
-  gap: 20px;
-  margin-top: 8rem;
+  align-items: center;
+  justify-content: center;
 }
 
-.para {
-  font-size: 14px;
-  width: 95%;
-  letter-spacing: 2px;
-  color: #FAF9F6;
-  text-align: left;
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .wrapper {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: start;
-  gap: 20px;
+  justify-content: flex-start;
+  gap: 1.5rem;
 }
+
 .wrapper:nth-child(2) {
-  gap: 40px;
+  gap: 2rem;
 }
-@media screen and (min-width: 768px) {
-  .para {
-    font-size: 18px;
+
+.heading2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #5c6bc0;
+}
+
+.green {
+  color: #5c6bc0;
+}
+
+.para {
+  font-size: 1rem;
+  letter-spacing: 0.8px;
+  line-height: 1.8;
+  color: #faf9f6;
+  text-align: left;
+}
+
+.img {
+  width: 300px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 904px) {
+  .container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1.5rem;
+    align-items: center;
   }
+
+  .para {
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+  }
+
   .heading2 {
-    font-size: 35px;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .wrapper {
+    align-items: center;
   }
 }
 
-@media screen and (max-width: 904px) {
-  .container {
-    flex-direction: column;
+@media (min-width: 768px) {
+  .heading2 {
+    font-size: 2.5rem;
   }
+
   .para {
-    width: 100%;
-  }
-  .container {
-    padding: 0 2rem;
+    font-size: 1.1rem;
   }
 }

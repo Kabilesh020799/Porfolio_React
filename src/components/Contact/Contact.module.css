@@ -18,7 +18,7 @@
 
 .header1 {
   font-size: 2.5rem;
-  color: #71c5a5;
+  color: #5c6bc0;
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -52,8 +52,8 @@
 
 .input:focus,
 .textarea:focus {
-  border-color: #71c5a5;
-  box-shadow: 0 0 8px #71c5a5;
+  border-color: #5c6bc0;
+  box-shadow: 0 0 8px #5c6bc0;
   outline: none;
 }
 
@@ -69,7 +69,7 @@
 .send {
   width: 180px;
   padding: 0.8rem;
-  background: linear-gradient(135deg, #71c5a5, #4bb0a1);
+  background: linear-gradient(135deg, #5c6bc0, #4bb0a1);
   border: none;
   border-radius: 8px;
   color: white;
@@ -82,7 +82,7 @@
 
 .send:hover {
   transform: scale(1.05);
-  background: linear-gradient(135deg, #4bb0a1, #71c5a5);
+  background: linear-gradient(135deg, #4bb0a1, #5c6bc0);
 }
 
 .send:disabled {
@@ -123,7 +123,7 @@
 }
 
 .social-icon {
-  color: #71c5a5;
+  color: #5c6bc0;
   font-size: 2rem;
   transition: transform 0.3s, color 0.3s;
 }
