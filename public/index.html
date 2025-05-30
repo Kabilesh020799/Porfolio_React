@@ -7,7 +7,12 @@
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-86PF1QSL31"
     ></script>
-    <meta http-equiv="refresh" content="0; url=https://www.kabiles.me" />
+    <script>
+      if (location.hostname.includes("github.io")) {
+        location.replace("https://www.kabiles.me");
+      }
+    </script>
+
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
