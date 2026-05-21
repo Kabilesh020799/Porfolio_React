@@ -19,24 +19,19 @@
 }
 
 .projects__subtitle {
-  @include muted-copy($container-copy);
   margin: $subtitle-margin-top auto $space-none;
-  text-align: center;
 }
 
 .projects__grid {
   min-height: auto;
   height: fit-content;
-  display: grid;
   grid-template-columns: repeat($auto-fit, minmax($project-card-min, $fr-unit));
   align-items: stretch;
-  justify-content: center;
   gap: $space-wide;
   width: min($container-page, calc($size-full - $space-section));
   margin: $space-none auto $project-footer-bottom;
 }
 .projects__card {
-  width: $size-full;
   min-height: $project-card-min-height;
   padding: $project-card-padding;
   @include card-surface($project-card-surface-alpha);
@@ -44,14 +39,9 @@
   transition: transform $project-card-transition $ease-standard,
     border-color $project-card-transition $ease-standard,
     box-shadow $project-card-transition $ease-standard;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 .projects__card-body {
   margin-top: $project-card-padding;
-  display: flex;
-  flex-direction: column;
 }
 .projects__card:hover,
 .projects__card:focus-within {
@@ -60,16 +50,10 @@
   box-shadow: token(shadow);
 }
 .projects__card-head {
-  display: flex;
   padding: $space-none;
-  width: $size-full;
-  text-align: center;
-  align-items: center;
-  justify-content: space-between;
   color: var(--accent-strong);
 }
 .projects__card-title {
-  text-align: left;
   color: var(--text);
   font-size: $font-card-title;
   line-height: $line-heading;
@@ -77,27 +61,19 @@
 .projects__card-copy {
   color: var(--text-muted);
   margin-top: $card-padding-tablet;
-  width: $size-full;
   font-size: $font-copy-sm;
   padding: $space-none;
   line-height: $line-copy;
-  text-align: left;
 }
 .projects__card-footer {
-  display: flex;
   margin: $project-card-padding $space-none $space-none;
   color: var(--text);
   font-family: var(--font-body);
-  align-items: stretch;
-  flex-direction: column;
   gap: $radius-lg;
 }
 
 .projects__actions {
-  display: flex;
   gap: $space-small;
-  justify-content: flex-start;
-  flex-wrap: wrap;
 }
 
 .projects__actions a {

@@ -44,18 +44,18 @@ function Contact() {
 
   return (
     <section className="contact" id="contact" aria-labelledby="contact-title">
-        <div className="contact__container">
-          <h2 className="contact__heading" id="contact-title">Let's build something useful</h2>
-          <p className="contact__subcopy">
+        <div className="contact__container u-full-width">
+          <h2 className="contact__heading u-text-center" id="contact-title">Let's build something useful</h2>
+          <p className="contact__subcopy u-muted-copy">
             Have an opportunity, product idea, or collaboration in mind? Send a
             note and I will reply as soon as I can.
           </p>
 
-          <div className="contact__content">
-            <form className="contact__form" onSubmit={onSubmit}>
+          <div className="contact__content u-grid u-full-width">
+            <form className="contact__form u-flex u-flex-column u-full-width" onSubmit={onSubmit}>
               {contactFields.map((field) => (
                 <React.Fragment key={field.id}>
-                  <label className="contact__label" htmlFor={field.id}>
+                  <label className="contact__label u-text-left" htmlFor={field.id}>
                     {field.label}
                   </label>
                   <input
@@ -72,7 +72,7 @@ function Contact() {
                   />
                 </React.Fragment>
               ))}
-              <label className="contact__label" htmlFor="contact-message">
+              <label className="contact__label u-text-left" htmlFor="contact-message">
                 Message
               </label>
               <textarea
@@ -86,7 +86,7 @@ function Contact() {
               />
               {status && (
                 <p
-                  className={`contact__status ${
+                  className={`contact__status u-full-width u-text-left ${
                     status.type === "success"
                       ? "contact__status--success"
                       : "contact__status--error"
@@ -105,15 +105,15 @@ function Contact() {
               </button>
             </form>
 
-            <ul className="contact__list">
-              <li className="contact__list-item">
+            <ul className="contact__list u-grid u-full-width">
+              <li className="contact__list-item u-flex u-align-center">
                 <i
                   className="fa fa-map-marker fa-2x"
                   aria-hidden="true"
                 ></i>
                 <span className="contact__tag">Canada</span>
               </li>
-              <li className="contact__list-item">
+              <li className="contact__list-item u-flex u-align-center">
                 <i
                   className="fa fa-envelope fa-2x"
                   aria-hidden="true"
@@ -135,7 +135,7 @@ function Contact() {
             />
           </div>
 
-          <div className="contact__copyright">
+          <div className="contact__copyright u-text-center">
             &copy; {new Date().getFullYear()} All rights reserved
           </div>
         </div>

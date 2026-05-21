@@ -2,18 +2,7 @@
 @use "../../../styles/tokens" as *;
 
 .social-links {
-  margin: $space-none;
-  padding: $space-none;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   gap: $space-small;
-  flex-wrap: wrap;
-}
-
-.social-links__item {
-  display: flex;
 }
 
 .social-links__link {
@@ -29,6 +18,8 @@
   transform: translateY($button-hover-lift);
 }
 
-.social-links__link i {
-  font-size: $font-lg;
+.social-links__icon {
+  width: $font-lg;
+  height: $font-lg;
+  fill: currentColor;
 }

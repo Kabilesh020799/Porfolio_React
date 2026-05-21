@@ -10,7 +10,7 @@ import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
-    <div className="App_black">
+    <div className="App_black u-text-center">
       <a className="skip-link" href="#home">
         Skip to main content
       </a>

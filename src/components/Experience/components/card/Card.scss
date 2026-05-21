@@ -3,9 +3,6 @@
 
 .card {
   color: var(--text-soft);
-  width: $size-full;
-  text-align: left;
-  display: flex;
   cursor: default;
   padding: $card-padding;
   @include card-surface($experience-card-surface-alpha);
@@ -53,16 +50,11 @@
 }
 
 .card-details {
-  display: flex;
-  flex-direction: column;
   flex: $grid-single $grid-single auto;
   min-width: $size-none;
 }
 
 .card-company-row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
   gap: $space-base;
 }
 
@@ -74,8 +66,6 @@
 }
 
 .milestone-meta {
-  display: flex;
-  flex-wrap: wrap;
   gap: $space-tiny;
   margin-top: $meta-offset;
 }
@@ -87,10 +77,7 @@
 }
 
 .card-actions {
-  display: flex;
   gap: $meta-offset;
-  flex-wrap: wrap;
-  justify-content: flex-end;
 }
 
 .expand-button,
@@ -110,8 +97,6 @@
 }
 
 .role-list {
-  display: flex;
-  flex-direction: column;
   gap: $role-summary-offset;
   margin-top: $space-wide;
 }
@@ -156,7 +141,6 @@
 .card-description {
   margin-top: $subtitle-margin-top;
   line-height: $line-card-description;
-  text-align: left;
 }
 
 .card-labels {
@@ -169,7 +153,6 @@
     font-size: $font-meta;
     padding: $card-padding-tablet;
     width: min($container-timeline-card, $size-full);
-    flex-direction: column;
   }
 
   .timeline-marker {
@@ -192,14 +175,6 @@
 
   .card-position {
     font-size: $font-md;
-  }
-
-  .card-company-row {
-    flex-direction: column;
-  }
-
-  .card-actions {
-    justify-content: flex-start;
   }
 
   .card-company {

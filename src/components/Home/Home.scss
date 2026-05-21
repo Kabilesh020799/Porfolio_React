@@ -2,11 +2,10 @@
 @use "../../styles/tokens" as *;
 
 .home {
-  min-height: $viewport-height;
+  min-height: $home-first-view-height;
   height: fit-content;
-  text-align: center;
   @include flex-center(column);
-  padding: $home-padding-top $space-wide $space-section;
+  padding: $home-padding-top $space-wide $home-padding-bottom;
   position: relative;
   overflow: hidden;
   background:
@@ -15,8 +14,8 @@
 }
 
 .home__profile {
-  width: min($profile-size, $profile-mobile-size);
-  height: min($profile-size, $profile-mobile-size);
+  width: min($profile-first-view-size, $profile-mobile-size);
+  height: min($profile-first-view-size, $profile-mobile-size);
   object-fit: cover;
   object-position: center top;
   border-radius: token(radius-circle);
@@ -33,7 +32,6 @@
 
 .home__heading {
   @include display-heading($heading-home);
-  text-align: center;
   letter-spacing: $size-none;
   margin-top: $space-section;
   text-shadow: token(shadow-text);
@@ -59,10 +57,7 @@
 }
 
 .home__actions {
-  display: flex;
-  justify-content: center;
   gap: $space-base;
-  flex-wrap: wrap;
   margin-top: $home-actions-offset;
 }
 
@@ -112,8 +107,6 @@
   margin-top: $scroll-cue-offset;
   color: var(--accent-strong);
   display: inline-block;
-  text-align: center;
-  width: $size-full;
   cursor: pointer;
 }
 
@@ -122,6 +115,14 @@
   font-size: $font-scroll-cue;
   opacity: $opacity-scroll-cue;
   transition: transform $duration-fast $ease-standard, opacity $duration-fast $ease-standard;
+}
+
+.home__scroll-icon {
+  width: $font-scroll-cue;
+  height: $font-scroll-cue;
+  fill: currentColor;
+  display: block;
+  margin: $space-none auto;
 }
 
 .home__scroll-cue:hover span,
@@ -133,6 +134,40 @@
 @media screen and (max-width: $breakpoint-home) {
   .home {
     padding-top: $space-panel;
+  }
+}
+
+@media screen and (max-height: $home-short-viewport) {
+  .home {
+    padding-top: $home-compact-padding-top;
+    padding-bottom: $home-compact-padding-bottom;
+  }
+
+  .home__profile {
+    width: min($home-compact-profile, $profile-mobile-size);
+    height: min($home-compact-profile, $profile-mobile-size);
+  }
+
+  .home__heading {
+    font-size: $home-compact-heading;
+    margin-top: $space-large;
+  }
+
+  .home__subheading {
+    min-height: $home-compact-subtitle-height;
+    margin-top: $space-small;
+  }
+
+  .home__intro {
+    margin-top: $space-small;
+  }
+
+  .home__actions {
+    margin-top: $home-compact-actions-offset;
+  }
+
+  .home__social-wrap {
+    margin-top: $home-compact-social-top;
   }
 }
 
@@ -152,12 +187,17 @@
   .home__scroll-cue span {
     font-size: $font-scroll-cue-mobile;
   }
+
+  .home__scroll-icon {
+    width: $font-scroll-cue-mobile;
+    height: $font-scroll-cue-mobile;
+  }
 }
 
 @media screen and (max-width: $breakpoint-sm) {
   .home {
-    min-height: auto;
-    padding: $home-mobile-padding-top $space-base $space-roomy;
+    min-height: $home-first-view-height;
+    padding: $home-compact-padding-top $space-base $home-compact-padding-bottom;
   }
 
   .home__heading {

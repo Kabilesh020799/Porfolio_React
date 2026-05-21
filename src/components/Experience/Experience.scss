@@ -2,10 +2,8 @@
 @use "../../styles/tokens" as *;
 
 .experience-wrapper {
-  display: grid;
   grid-template-columns: minmax($experience-sidebar-min, $experience-sidebar-fr)
     minmax($size-none, $experience-content-fr);
-  width: $size-full;
   min-height: auto;
   margin-bottom: $space-stage;
   padding: $space-stage $space-section $space-section;
@@ -14,10 +12,6 @@
 }
 
 .experience-title {
-  text-align: left;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
   padding-top: $experience-title-offset;
   @include display-heading;
   position: sticky;
@@ -26,11 +20,8 @@
 }
 
 .experience {
-  display: flex;
   gap: $space-large;
-  flex-direction: column;
   justify-content: start;
-  width: $size-full;
   min-width: $size-none;
   position: relative;
   padding-left: $space-section;
@@ -53,27 +44,21 @@
 
 @media screen and (max-width: $breakpoint-experience) {
   .experience-wrapper {
-    flex-direction: column;
     height: fit-content;
-    @include flex-center(column);
     gap: $space-section;
     margin-bottom: $space-stage;
     padding: $space-page $space-base $space-none;
   }
   .experience {
     height: fit-content;
-    justify-content: center;
-    align-items: center;
     width: $size-full;
     gap: $space-wide;
     padding-left: $space-wide;
-    align-items: stretch;
   }
   .experience-title {
     font-size: $font-experience-mobile-heading;
     padding-top: $space-none;
     position: static;
-    text-align: center;
   }
 }
 

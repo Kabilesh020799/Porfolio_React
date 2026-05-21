@@ -9,14 +9,14 @@ import { socialLinks } from "../../data";
 
 function Body() {
   return (
-    <section className="home" id="home" aria-labelledby="home-title">
+    <section className="home u-text-center" id="home" aria-labelledby="home-title">
         <img
           src={profile}
           className="home__profile"
           alt="Kabilesh Ravichandran"
         />
 
-        <h1 className="home__heading" id="home-title">KABILESH</h1>
+        <h1 className="home__heading u-text-center" id="home-title">KABILESH</h1>
         <h3 className="home__subheading">
           Software engineer focused on{" "}
           <TypeAnimation
@@ -38,7 +38,7 @@ function Body() {
           I build thoughtful, production-ready experiences with React, Vue,
           Node.js, cloud tooling, and a strong eye for usability.
         </p>
-        <div className="home__actions">
+        <div className="home__actions u-flex u-justify-center u-flex-wrap">
           <Link
             to="projects"
             spy={true}
@@ -62,16 +62,18 @@ function Body() {
         <div className="home__social-wrap">
           <SocialLinks links={socialLinks} className="home__social-list" />
         </div>
-        <div className="home__scroll-cue">
+        <div className="home__scroll-cue u-text-center u-full-width">
           <Link
             to="about"
             spy={true}
             smooth={true}
             duration={500}
             offset={-150}
-          >
+        >
             <span>
-              <i className="fa fa-angle-down" aria-hidden="true"></i>{" "}
+              <svg className="home__scroll-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 16.8 4.6 9.4l1.8-1.8 5.6 5.6 5.6-5.6 1.8 1.8L12 16.8Z" />
+              </svg>
             </span>
           </Link>
         </div>

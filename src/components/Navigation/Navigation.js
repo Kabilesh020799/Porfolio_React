@@ -30,7 +30,7 @@ function Navigation() {
 
   return (
     <div className={`nav-wrapper ${show ? "nav_back" : ""}`}>
-      <nav className="navbar">
+      <nav className="navbar u-flex u-align-center u-justify-between">
         <Link
           to="home"
           spy={true}
@@ -40,7 +40,6 @@ function Navigation() {
           onClick={closeMenu}
         >
           <span
-            style={{ cursor: "pointer" }}
             className={`heading ${show && "head_gold"}`}
           >
             KABILESH
@@ -58,7 +57,7 @@ function Navigation() {
           <span className="bar"></span>
           <span className="bar"></span>
         </button>
-        <ul className={`nav no-search ${click ? "mobile-nav" : ""}`}>
+        <ul className={`nav no-search u-list-reset u-flex u-align-center u-justify-between u-stack-on-nav u-justify-start-on-nav u-text-center-on-nav ${click ? "mobile-nav" : ""}`}>
           {navigations?.map((navigation) => (
             <li className="nav-item" key={navigation.path}>
               <Link

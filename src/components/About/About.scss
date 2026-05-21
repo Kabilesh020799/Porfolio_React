@@ -12,19 +12,13 @@
 }
 
 .about__container {
-  display: flex;
-  align-items: flex-start;
   gap: clamp($space-section, $fluid-section-title, $space-page);
   max-width: $container-content;
-  width: $size-full;
-  flex-wrap: wrap;
 }
 
 .about__wrapper {
   flex: $about-wrapper-flex;
   min-width: $size-none;
-  display: flex;
-  flex-direction: column;
   justify-content: flex-start;
   gap: $space-wide;
 }
@@ -36,7 +30,6 @@
 .about__heading {
   @include display-heading($space-section);
   font-weight: $font-weight-bold;
-  text-align: left;
 }
 
 .about__highlight {
@@ -48,7 +41,6 @@
   font-size: $font-md;
   letter-spacing: $tracking-copy;
   line-height: $line-relaxed;
-  text-align: left;
 }
 
 @media (max-width: $breakpoint-about) {
@@ -57,25 +49,20 @@
   }
 
   .about__container {
-    flex-direction: column;
     gap: $space-section;
     padding: $space-none;
-    align-items: center;
   }
 
   .about__copy {
     width: $size-full;
     font-size: $font-md;
-    text-align: center;
   }
 
   .about__heading {
     font-size: $font-about-tablet-heading;
-    text-align: center;
   }
 
   .about__wrapper {
-    align-items: center;
     width: $size-full;
   }
 }

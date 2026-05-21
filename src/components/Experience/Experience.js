@@ -32,9 +32,9 @@ function Experience() {
   }));
 
   return (
-    <div className="experience-wrapper" id="experience">
-        <h2 className="experience-title">Professional experience</h2>
-        <div className="experience">
+    <div className="experience-wrapper u-grid u-stack-on-tablet u-center-on-tablet u-full-width" id="experience">
+        <h2 className="experience-title u-flex u-align-start u-justify-start u-text-left u-text-center-on-tablet">Professional experience</h2>
+        <div className="experience u-flex u-flex-column u-align-stretch u-center-on-tablet u-full-width">
           {groupedExperience?.map((experienceItem) => (
             <Card
               key={experienceItem?.company}

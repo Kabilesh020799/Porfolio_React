@@ -7,7 +7,7 @@ const SkillBox = (props) => {
   } = props;
 
   return (
-    <div className="skill-box">
+    <div className="skill-box u-text-center">
       {name}
     </div>
   );

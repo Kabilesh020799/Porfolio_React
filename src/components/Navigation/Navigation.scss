@@ -6,15 +6,13 @@
   letter-spacing: $size-none;
   display: inline-block;
   font-weight: $font-weight-heavy;
+  cursor: pointer;
 }
 .head_gold {
   color: var(--gold);
 }
 .nav {
-  display: flex;
-  justify-content: space-between;
   width: min($nav-link-width, $nav-link-max-width);
-  align-items: center;
   padding: $space-wide $space-none $nav-padding-bottom $space-none;
   gap: $space-base;
 }
@@ -34,8 +32,6 @@
 /* NAVIGATION */
 
 .navbar {
-  @include flex-center;
-  justify-content: space-between;
   height: $nav-height;
   width: min($container-page, $size-full);
   margin: $space-none auto;
@@ -45,12 +41,6 @@
   background-color: token(bg-nav);
   border-bottom: $border-width-thin solid token(border);
   box-shadow: token(shadow-nav);
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
 }
 
 .nav-item a {
@@ -113,30 +103,20 @@
 }
 
 @media only screen and (max-width: $breakpoint-nav) {
-  .navbar {
-    justify-content: space-between;
-  }
-
   .heading {
     margin-left: $nav-left-space-mobile;
   }
 
   .navbar ul {
-    display: flex;
-    flex-direction: column;
     position: fixed;
-    justify-content: flex-start;
     top: $mobile-menu-offset;
     left: $space-none;
     width: $size-full;
     height: calc($viewport-height - $mobile-menu-offset);
     transform: translate($nav-mobile-menu-shift);
     transition: all $duration-slow ease-out;
-    text-align: center;
     overflow-y: auto;
     padding: $nav-mobile-menu-padding;
-  }
-  .navbar ul {
     background-color: token(bg-nav-open);
     border-top: $border-width-thin solid token(border);
   }

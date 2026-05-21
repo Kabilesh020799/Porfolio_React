@@ -7,7 +7,7 @@ function TechList({ items = [], className = "" }) {
   }
 
   return (
-    <div className={`tech-list ${className}`.trim()}>
+    <div className={`tech-list u-flex u-flex-wrap u-full-width u-text-left ${className}`.trim()}>
       {items.map((item) => (
         <span className="tech-list__item" key={item}>
           {item}

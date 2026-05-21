@@ -11,25 +11,21 @@
 }
 
 .contact__container {
-  width: $size-full;
   max-width: $container-contact;
   @include flex-center(column);
 }
 
 .contact__heading {
   @include display-heading($heading-contact);
-  text-align: center;
   margin-bottom: $space-small;
 }
 
 .contact__subcopy {
-  @include muted-copy($container-contact-copy);
+  max-width: $container-contact-copy;
   margin-bottom: $space-section;
 }
 
 .contact__content {
-  width: $size-full;
-  display: grid;
   grid-template-columns: minmax($size-none, $fr-unit);
   align-items: start;
   gap: $space-section;
@@ -37,9 +33,6 @@
 
 .contact__form {
   @include card-surface($contact-form-surface-alpha);
-  width: $size-full;
-  display: flex;
-  flex-direction: column;
   gap: $space-small;
   padding: $space-large;
   box-shadow: token(shadow);
@@ -49,7 +42,6 @@
   color: var(--text);
   font-size: $font-label;
   font-weight: $font-weight-bold;
-  text-align: left;
 }
 
 .contact__input,
@@ -63,12 +55,10 @@
 }
 
 .contact__status {
-  width: $size-full;
   border-radius: token(radius-sm);
   padding: $contact-field-padding-y $space-base;
   font-size: $font-label;
   line-height: $line-body;
-  text-align: left;
 }
 
 .contact__status--success {
@@ -106,9 +96,7 @@
 }
 
 .contact__list {
-  width: $size-full;
   margin-top: $space-none;
-  display: grid;
   grid-template-columns: repeat($contact-grid-columns, minmax($size-none, $fr-unit));
   align-items: stretch;
   gap: $space-base;
@@ -116,8 +104,6 @@
 
 .contact__list-item {
   @include card-surface($skill-card-surface-alpha);
-  display: flex;
-  align-items: center;
   gap: $space-base;
   color: var(--accent-strong);
   padding: $space-base;
@@ -142,7 +128,6 @@
   margin-top: $space-roomy;
   color: var(--text-soft);
   font-size: $font-meta;
-  text-align: center;
 }
 
 /* Mobile Responsive */

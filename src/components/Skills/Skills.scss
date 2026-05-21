@@ -23,13 +23,11 @@
 }
 
 .SkillsIntro p {
-  @include muted-copy($container-copy);
   font-size: $font-md;
   margin: $subtitle-margin-top auto $space-none;
 }
 
 .Skills {
-  display: grid;
   grid-template-columns: repeat($grid-two, minmax($size-none, $fr-unit));
   gap: $space-large;
   width: min($container-skills, $size-full);
@@ -38,8 +36,6 @@
 
 .skill-group {
   @include card-surface($skill-card-surface-alpha);
-  display: flex;
-  flex-direction: column;
   gap: $space-small;
   padding: $space-base;
 }
@@ -50,12 +46,9 @@
   font-weight: $font-weight-heavy;
   line-height: $line-skill-category;
   margin: $space-none;
-  text-align: left;
 }
 
 .skill-list {
-  display: flex;
-  flex-wrap: wrap;
   gap: $skill-list-gap;
 }
 
@@ -68,11 +61,4 @@
     grid-template-columns: $fr-unit;
   }
 
-  .skill-category {
-    text-align: center;
-  }
-
-  .skill-list {
-    justify-content: center;
-  }
 }

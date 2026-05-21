@@ -34,19 +34,19 @@ const Card = (props) => {
       : latestRole?.description;
 
   return (
-    <article className={`card ${expanded ? "card-expanded" : ""}`}>
+    <article className={`card u-flex u-stack-on-tablet u-text-left u-full-width ${expanded ? "card-expanded" : ""}`}>
       <div className="timeline-marker" aria-hidden="true"></div>
       <div className="card-date">{startDate} - {endData}</div>
-      <div className="card-details">
-        <div className="card-company-row">
+      <div className="card-details u-flex u-flex-column">
+        <div className="card-company-row u-flex u-stack-on-mobile u-align-start u-justify-between">
           <div>
             <h2 className="card-company">{company}</h2>
-            <div className="milestone-meta">
+            <div className="milestone-meta u-flex u-flex-wrap">
               <span>{roleCount} {roleCount === 1 ? "role" : "roles"}</span>
               {roleCount > 1 && <span>Career progression</span>}
             </div>
           </div>
-          <div className="card-actions">
+          <div className="card-actions u-flex u-flex-wrap u-justify-end u-justify-start-on-mobile">
             <button
               className="expand-button"
               type="button"
@@ -75,13 +75,13 @@ const Card = (props) => {
               {firstRole?.startDate} - {latestRole?.endDate}
             </div>
             <h3 className="card-position">{roleTitles}</h3>
-            <p className="card-description">{summaryDescription}</p>
+            <p className="card-description u-text-left">{summaryDescription}</p>
             <TechList items={uniqueTechStack} className="card-labels" />
           </div>
         )}
 
         <div
-          className={`role-list ${expanded ? "show-roles" : ""}`}
+          className={`role-list u-flex u-flex-column ${expanded ? "show-roles" : ""}`}
           id={roleListId}
         >
           {expanded &&
@@ -94,7 +94,7 @@ const Card = (props) => {
                   {role.startDate} - {role.endDate}
                 </div>
                 <h3 className="card-position">{role.position}</h3>
-                <p className="card-description">{role.description}</p>
+                <p className="card-description u-text-left">{role.description}</p>
                 <TechList items={role.techStack} className="card-labels" />
               </section>
             ))}
