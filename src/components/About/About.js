@@ -1,32 +1,32 @@
 import React from "react";
-import classes from "./About.module.css";
+import "./About.scss";
 import { aboutContent } from "../../data";
 
 function About() {
   return (
-    <div className={classes.About} id="about">
-        <div className={classes.container}>
-          <div className={classes.wrapper}>
-            <h3 className={classes.heading2}>Who am I?</h3>
-            <p className={classes.para}>
+    <section className="about" id="about" aria-labelledby="about-title">
+        <div className="about__container">
+          <div className="about__wrapper">
+            <h2 className="about__heading" id="about-title">Who am I?</h2>
+            <p className="about__copy">
               {aboutContent.sentence1}
               <br />
               <br />
               {aboutContent.sentence2}{" "}
-              <b className={classes.green}>Software Development</b>
-              {aboutContent.sentence3} <b className={classes.green}> Canada </b>,
+              <b className="about__highlight">Software Development</b>
+              {aboutContent.sentence3} <b className="about__highlight"> Canada </b>,
               {aboutContent.sentence4}
               <br />
               <br />
               {aboutContent.sentence5}
               <br />
               <br />
-              {aboutContent.sentence6} <b className={classes.green}>Freelance</b>{" "}
+              {aboutContent.sentence6} <b className="about__highlight">Freelance</b>{" "}
               projects
             </p>
           </div>
         </div>
-    </div>
+    </section>
   );
 }
 

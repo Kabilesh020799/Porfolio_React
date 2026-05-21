@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './FlashLight.css'; // Create this file to style the flashlight
+import "./FlashLight.scss";
 
 const Flashlight = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });

@@ -1,6 +1,13 @@
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 
+const EMAILJS_SERVICE_ID =
+  process.env.REACT_APP_EMAILJS_SERVICE_ID || "default_service";
+const EMAILJS_TEMPLATE_ID =
+  process.env.REACT_APP_EMAILJS_TEMPLATE_ID || "template_yq66kwi";
+const EMAILJS_PUBLIC_KEY =
+  process.env.REACT_APP_EMAILJS_PUBLIC_KEY || "asWnA6RSUG2wRoq6n";
+
 const useContact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -37,8 +44,8 @@ const useContact = () => {
     setLoading(true);
 
     emailjs
-      .send("default_service", "template_yq66kwi", templateParams, {
-        publicKey: "asWnA6RSUG2wRoq6n",
+      .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, {
+        publicKey: EMAILJS_PUBLIC_KEY,
       })
       .then(() => {
         setStatus({

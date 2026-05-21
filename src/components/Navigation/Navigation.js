@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Navigation.css";
+import "./Navigation.scss";
 import { Link } from "react-scroll";
 import { navigations } from "../../data";
 
@@ -30,7 +30,6 @@ function Navigation() {
 
   return (
     <div className={`nav-wrapper ${show ? "nav_back" : ""}`}>
-      <div className="grad-bar"></div>
       <nav className="navbar">
         <Link
           to="home"
@@ -40,12 +39,12 @@ function Navigation() {
           offset={-150}
           onClick={closeMenu}
         >
-          <h1
+          <span
             style={{ cursor: "pointer" }}
             className={`heading ${show && "head_gold"}`}
           >
             KABILESH
-          </h1>
+          </span>
         </Link>
         <button
           type="button"

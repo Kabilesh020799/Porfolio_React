@@ -1,5 +1,5 @@
 import React from "react";
-import './SkillBox.css';
+import "./SkillBox.scss";
 
 const SkillBox = (props) => {
   const {

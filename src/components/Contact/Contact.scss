@@ -1,0 +1,173 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/tokens" as *;
+
+.contact {
+  min-height: $viewport-height;
+  @include section-shell($space-page $space-base);
+  @include flex-center;
+  background:
+    radial-gradient(circle at $home-radial-x $contact-radial-y, token(accent-radial-soft), transparent $section-radial-size),
+    linear-gradient($gradient-angle, token(bg-section-contact), token(bg));
+}
+
+.contact__container {
+  width: $size-full;
+  max-width: $container-contact;
+  @include flex-center(column);
+}
+
+.contact__heading {
+  @include display-heading($heading-contact);
+  text-align: center;
+  margin-bottom: $space-small;
+}
+
+.contact__subcopy {
+  @include muted-copy($container-contact-copy);
+  margin-bottom: $space-section;
+}
+
+.contact__content {
+  width: $size-full;
+  display: grid;
+  grid-template-columns: minmax($size-none, $fr-unit);
+  align-items: start;
+  gap: $space-section;
+}
+
+.contact__form {
+  @include card-surface($contact-form-surface-alpha);
+  width: $size-full;
+  display: flex;
+  flex-direction: column;
+  gap: $space-small;
+  padding: $space-large;
+  box-shadow: token(shadow);
+}
+
+.contact__label {
+  color: var(--text);
+  font-size: $font-label;
+  font-weight: $font-weight-bold;
+  text-align: left;
+}
+
+.contact__input,
+.contact__textarea {
+  @include form-control;
+}
+
+.contact__textarea {
+  min-height: $contact-textarea-min;
+  resize: vertical;
+}
+
+.contact__status {
+  width: $size-full;
+  border-radius: token(radius-sm);
+  padding: $contact-field-padding-y $space-base;
+  font-size: $font-label;
+  line-height: $line-body;
+  text-align: left;
+}
+
+.contact__status--success {
+  background-color: token(success-soft);
+  border: $border-width-thin solid token(success-border);
+  color: token(success-text);
+}
+
+.contact__status--error {
+  background-color: token(error-soft);
+  border: $border-width-thin solid token(error-border);
+  color: token(error-text);
+}
+
+.contact__send {
+  @include pill-button;
+  width: $contact-button-width;
+  padding: $contact-button-padding;
+  font-size: $font-lg;
+  transition: transform $duration-base $ease-standard,
+    background $duration-base $ease-standard;
+  align-self: center;
+}
+
+.contact__send:hover {
+  transform: translateY($button-hover-lift);
+  background: linear-gradient($cta-gradient-angle, var(--gold), var(--accent-strong));
+}
+
+.contact__send:disabled {
+  background: token(disabled);
+  cursor: not-allowed;
+  transform: none;
+  opacity: $opacity-muted;
+}
+
+.contact__list {
+  width: $size-full;
+  margin-top: $space-none;
+  display: grid;
+  grid-template-columns: repeat($contact-grid-columns, minmax($size-none, $fr-unit));
+  align-items: stretch;
+  gap: $space-base;
+}
+
+.contact__list-item {
+  @include card-surface($skill-card-surface-alpha);
+  display: flex;
+  align-items: center;
+  gap: $space-base;
+  color: var(--accent-strong);
+  padding: $space-base;
+}
+
+.contact__tag {
+  font-size: $font-xl;
+  color: var(--text);
+  font-weight: $font-weight-medium;
+  overflow-wrap: anywhere;
+}
+
+.contact__socials {
+  margin-top: $space-section;
+}
+
+.contact__social-list {
+  gap: $space-wide;
+}
+
+.contact__copyright {
+  margin-top: $space-roomy;
+  color: var(--text-soft);
+  font-size: $font-meta;
+  text-align: center;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: $breakpoint-md) {
+  .contact {
+    padding: $space-roomy $space-small;
+  }
+
+  .contact__heading {
+    font-size: $font-contact-mobile-heading;
+  }
+
+  .contact__send {
+    width: $size-full;
+  }
+
+  .contact__list {
+    grid-template-columns: $fr-unit;
+  }
+
+  .contact__list-item {
+    justify-content: flex-start;
+  }
+
+  .contact__tag {
+    font-size: $font-md;
+  }
+}

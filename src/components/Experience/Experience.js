@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./components/card/Card";
 import { experience } from "../../data";
-import "./Experience.css";
+import "./Experience.scss";
 
 const groupExperienceByCompany = (items) =>
   items.reduce((groups, item) => {
@@ -33,7 +33,7 @@ function Experience() {
 
   return (
     <div className="experience-wrapper" id="experience">
-        <h1>Professional experience</h1>
+        <h2 className="experience-title">Professional experience</h2>
         <div className="experience">
           {groupedExperience?.map((experienceItem) => (
             <Card

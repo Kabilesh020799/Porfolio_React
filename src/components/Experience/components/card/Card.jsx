@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import "./Card.css";
+import React, { useId, useState } from "react";
+import "./Card.scss";
+import TechList from "../../../common/TechList/TechList";
 
 const Card = (props) => {
   const {
@@ -11,6 +12,7 @@ const Card = (props) => {
   } = props;
 
   const [expanded, setExpanded] = useState(roles?.length > 1);
+  const roleListId = useId();
   const roleCount = roles?.length || 0;
   const firstRole = roles?.[0];
   const latestRole = roles?.[roles.length - 1];
@@ -50,6 +52,8 @@ const Card = (props) => {
               type="button"
               onClick={() => setExpanded((isExpanded) => !isExpanded)}
               aria-expanded={expanded}
+              aria-controls={roleListId}
+              aria-label={`${expanded ? "Collapse" : "Show"} ${company} role details`}
             >
               {expanded ? "Collapse" : "Details"}
             </button>
@@ -72,17 +76,14 @@ const Card = (props) => {
             </div>
             <h3 className="card-position">{roleTitles}</h3>
             <p className="card-description">{summaryDescription}</p>
-            <div className="card-labels">
-              {uniqueTechStack.map((techStackItem) => (
-                <div className="card-label" key={techStackItem}>
-                  {techStackItem}
-                </div>
-              ))}
-            </div>
+            <TechList items={uniqueTechStack} className="card-labels" />
           </div>
         )}
 
-        <div className={`role-list ${expanded ? "show-roles" : ""}`}>
+        <div
+          className={`role-list ${expanded ? "show-roles" : ""}`}
+          id={roleListId}
+        >
           {expanded &&
             roles?.map((role) => (
               <section
@@ -94,13 +95,7 @@ const Card = (props) => {
                 </div>
                 <h3 className="card-position">{role.position}</h3>
                 <p className="card-description">{role.description}</p>
-                <div className="card-labels">
-                  {role.techStack?.map((techStackItem) => (
-                    <div className="card-label" key={techStackItem}>
-                      {techStackItem}
-                    </div>
-                  ))}
-                </div>
+                <TechList items={role.techStack} className="card-labels" />
               </section>
             ))}
         </div>

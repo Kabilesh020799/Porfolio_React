@@ -1,0 +1,68 @@
+@use "./styles/tokens" as *;
+
+:root {
+  @each $name, $value in $colors {
+    --#{$name}: #{$value};
+  }
+
+  --shadow: #{$shadow-elevated};
+  --shadow-soft: #{$shadow-soft};
+  --shadow-icon: #{$shadow-icon};
+  --shadow-nav: #{$shadow-nav};
+  --shadow-text: #{$shadow-text};
+  --shadow-profile: #{$shadow-profile};
+  --shadow-profile-hover: #{$shadow-profile-hover};
+  --shadow-cta: #{$shadow-cta};
+  --shadow-action-hover: #{$shadow-action-hover};
+  --font-body: #{$font-body};
+  --font-display: #{$font-display};
+  --radius-sm: #{$radius-sm};
+  --radius-md: #{$radius-md};
+  --radius-lg: #{$radius-lg};
+  --radius-circle: #{$radius-circle};
+  --radius-pill: #{$radius-pill};
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: $space-none;
+  background: var(--bg);
+  height: $size-full;
+  width: $size-full;
+  overflow-x: hidden;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+code {
+  font-family: "SFMono-Regular", source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: $focus-ring-width solid var(--gold);
+  outline-offset: $space-hairline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: $reduced-motion-duration !important;
+    animation-iteration-count: $reduced-motion-count !important;
+    scroll-behavior: auto !important;
+    transition-duration: $reduced-motion-duration !important;
+  }
+}

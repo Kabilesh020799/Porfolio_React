@@ -1,0 +1,126 @@
+@use "tokens" as *;
+
+@mixin section-shell($padding: $space-panel $space-section) {
+  width: $size-full;
+  padding: $padding;
+}
+
+@mixin flex-center($direction: row) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
+@mixin inline-flex-center {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin section-intro($max-width: $container-section-intro) {
+  width: min($max-width, calc($size-full - $space-section));
+  margin: $space-none auto $section-intro-margin-bottom;
+  text-align: center;
+}
+
+@mixin eyebrow {
+  color: token(gold);
+  font-size: $font-sm;
+  font-weight: $font-weight-heavy;
+  letter-spacing: $tracking-eyebrow;
+  text-transform: uppercase;
+}
+
+@mixin display-heading($size: $heading-section) {
+  color: token(text);
+  font-family: token(font-display);
+  font-size: $size;
+  line-height: $line-tight;
+}
+
+@mixin muted-copy($max-width: $container-copy) {
+  color: token(text-muted);
+  line-height: $line-readable;
+  max-width: $max-width;
+}
+
+@mixin card-surface($alpha: $card-surface-alpha) {
+  border: $border-width-thin solid token(border);
+  border-radius: $radius-md;
+  background: rgb(var(--surface-rgb) / $alpha);
+}
+
+@mixin pill-button($filled: true) {
+  border-radius: $radius-pill;
+  font-family: token(font-body);
+  font-weight: $font-weight-heavy;
+  text-decoration: none;
+  cursor: pointer;
+
+  @if $filled {
+    color: token(bg);
+    background: linear-gradient($cta-gradient-angle, token(accent-strong), token(gold));
+    border: $size-none;
+  } @else {
+    color: token(text);
+    background: token(bg-button-outline);
+    border: $border-width-thin solid token(accent-border);
+  }
+}
+
+@mixin icon-button($size: $icon-button-size) {
+  width: $size;
+  height: $size;
+  color: token(text);
+  text-decoration: none;
+  border: $border-width-thin solid token(border-soft);
+  border-radius: $radius-pill;
+  background: token(surface-icon);
+  box-shadow: $shadow-icon;
+  @include inline-flex-center;
+}
+
+@mixin form-control {
+  width: $size-full;
+  background-color: token(bg-glass-strong);
+  border: $border-width-thin solid token(border-medium);
+  border-radius: $radius-sm;
+  padding: $space-base;
+  color: token(text);
+  font-size: $font-md;
+  transition: border-color $duration-base $ease-standard,
+    box-shadow $duration-base $ease-standard;
+
+  &:focus {
+    border-color: token(accent-strong);
+    box-shadow: $ring-shadow-zero $scroll-cue-lift token(accent-soft);
+    outline: none;
+  }
+}
+
+@mixin hover-lift($distance: $button-hover-lift) {
+  transition: transform $duration-fast $ease-standard,
+    border-color $duration-fast $ease-standard,
+    box-shadow $duration-fast $ease-standard;
+
+  &:hover,
+  &:focus-within {
+    transform: translateY($distance);
+  }
+}
+
+@mixin chip($tone: accent) {
+  border-radius: $radius-pill;
+  font-weight: $font-weight-heavy;
+
+  @if $tone == gold {
+    color: token(gold);
+    background: token(gold-soft);
+    border: $border-width-thin solid token(gold-border);
+  } @else {
+    color: token(accent-strong);
+    background: token(accent-soft);
+    border: $border-width-thin solid token(border);
+  }
+}

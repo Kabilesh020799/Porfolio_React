@@ -1,0 +1,20 @@
+@use "../../styles/tokens" as *;
+
+.flashlight {
+  position: fixed;
+  top: $space-none;
+  left: $space-none;
+  width: $viewport-width;
+  height: $viewport-height;
+  pointer-events: none;
+}
+
+.light {
+  position: absolute;
+  width: $flashlight-size;
+  height: $flashlight-size;
+  border-radius: token(radius-circle);
+  background-color: token(light-overlay);
+  mix-blend-mode: screen; /* Blend mode to create the flashlight effect */
+  transform: translate($center-shift, $center-shift);
+}

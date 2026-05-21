@@ -1,0 +1,78 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/tokens" as *;
+
+.SkillsSection {
+  @include section-shell($space-panel $space-section $space-stage);
+  background:
+    radial-gradient(circle at $skills-radial-x $skills-radial-y, token(gold-radial), transparent $section-radial-size),
+    linear-gradient($gradient-angle, token(bg-section-strong), token(bg-section));
+}
+
+.SkillsIntro {
+  @include section-intro($container-content);
+  margin-bottom: $space-section;
+}
+
+.SkillsEyebrow {
+  @include eyebrow;
+}
+
+.SkillsTitle {
+  @include display-heading;
+  margin-top: $title-margin-top;
+}
+
+.SkillsIntro p {
+  @include muted-copy($container-copy);
+  font-size: $font-md;
+  margin: $subtitle-margin-top auto $space-none;
+}
+
+.Skills {
+  display: grid;
+  grid-template-columns: repeat($grid-two, minmax($size-none, $fr-unit));
+  gap: $space-large;
+  width: min($container-skills, $size-full);
+  margin: $space-none auto;
+}
+
+.skill-group {
+  @include card-surface($skill-card-surface-alpha);
+  display: flex;
+  flex-direction: column;
+  gap: $space-small;
+  padding: $space-base;
+}
+
+.skill-category {
+  color: var(--gold);
+  font-size: $font-meta;
+  font-weight: $font-weight-heavy;
+  line-height: $line-skill-category;
+  margin: $space-none;
+  text-align: left;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $skill-list-gap;
+}
+
+@media screen and (max-width: $breakpoint-about) {
+  .SkillsSection {
+    padding: $space-page $space-base $space-panel;
+  }
+
+  .Skills {
+    grid-template-columns: $fr-unit;
+  }
+
+  .skill-category {
+    text-align: center;
+  }
+
+  .skill-list {
+    justify-content: center;
+  }
+}

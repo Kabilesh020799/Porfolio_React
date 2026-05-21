@@ -1,0 +1,44 @@
+@use "./styles/tokens" as *;
+
+.App_black {
+  text-align: center;
+  width: $size-full;
+  background:
+    radial-gradient(circle at $app-bg-accent-x $app-bg-accent-y, token(accent-radial), transparent $app-radial-accent-size),
+    radial-gradient(circle at $app-bg-gold-x $app-bg-gold-y, token(gold-halo), transparent $app-radial-gold-size),
+    linear-gradient($gradient-angle, token(bg) $size-none, token(bg-depth) $app-bg-depth-stop, token(bg) $size-full);
+}
+
+.skip-link {
+  position: fixed;
+  top: $space-base;
+  left: $space-base;
+  z-index: $z-skip-link;
+  transform: translateY($skip-link-hidden-shift);
+  color: var(--bg);
+  background: var(--gold);
+  border-radius: token(radius-pill);
+  padding: $skip-padding-y $space-base;
+  font-weight: $font-weight-heavy;
+  text-decoration: none;
+  transition: transform $duration-fast $ease-standard;
+}
+
+.skip-link:focus {
+  transform: translateY($size-none);
+}
+
+::-webkit-scrollbar {
+  width: $scrollbar-width;
+  background-color: var(--bg);
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background-color: token(accent-scroll);
+  border-radius: token(radius-lg);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent-strong);
+}

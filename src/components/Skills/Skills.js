@@ -1,5 +1,5 @@
 import React from "react";
-import "./Skills.css";
+import "./Skills.scss";
 import { skillsData } from "../../data";
 import SkillBox from "./components/skill-box/SkillBox";
 
@@ -8,7 +8,7 @@ function Skills() {
     <section className="SkillsSection" id="skills">
       <div className="SkillsIntro">
         <span className="SkillsEyebrow">Technical toolkit</span>
-        <h2>Skills built across product, platform, and delivery</h2>
+        <h2 className="SkillsTitle">Skills built across product, platform, and delivery</h2>
         <p>
           A focused view of the languages, frameworks, data stores, and cloud
           tools I use to ship reliable software.

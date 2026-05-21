@@ -1,0 +1,135 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/tokens" as *;
+
+.projects {
+  padding: $space-panel $space-none $space-base;
+}
+
+.projects__header {
+  @include section-intro;
+}
+
+.projects__eyebrow {
+  @include eyebrow;
+}
+
+.projects__title {
+  @include display-heading;
+  margin: $title-margin-top $space-none $space-none;
+}
+
+.projects__subtitle {
+  @include muted-copy($container-copy);
+  margin: $subtitle-margin-top auto $space-none;
+  text-align: center;
+}
+
+.projects__grid {
+  min-height: auto;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat($auto-fit, minmax($project-card-min, $fr-unit));
+  align-items: stretch;
+  justify-content: center;
+  gap: $space-wide;
+  width: min($container-page, calc($size-full - $space-section));
+  margin: $space-none auto $project-footer-bottom;
+}
+.projects__card {
+  width: $size-full;
+  min-height: $project-card-min-height;
+  padding: $project-card-padding;
+  @include card-surface($project-card-surface-alpha);
+  background: linear-gradient($gradient-angle, token(surface-card), token(surface-card-deep));
+  transition: transform $project-card-transition $ease-standard,
+    border-color $project-card-transition $ease-standard,
+    box-shadow $project-card-transition $ease-standard;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.projects__card-body {
+  margin-top: $project-card-padding;
+  display: flex;
+  flex-direction: column;
+}
+.projects__card:hover,
+.projects__card:focus-within {
+  transform: translateY($project-card-hover-lift);
+  border-color: token(accent-border);
+  box-shadow: token(shadow);
+}
+.projects__card-head {
+  display: flex;
+  padding: $space-none;
+  width: $size-full;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--accent-strong);
+}
+.projects__card-title {
+  text-align: left;
+  color: var(--text);
+  font-size: $font-card-title;
+  line-height: $line-heading;
+}
+.projects__card-copy {
+  color: var(--text-muted);
+  margin-top: $card-padding-tablet;
+  width: $size-full;
+  font-size: $font-copy-sm;
+  padding: $space-none;
+  line-height: $line-copy;
+  text-align: left;
+}
+.projects__card-footer {
+  display: flex;
+  margin: $project-card-padding $space-none $space-none;
+  color: var(--text);
+  font-family: var(--font-body);
+  align-items: stretch;
+  flex-direction: column;
+  gap: $radius-lg;
+}
+
+.projects__actions {
+  display: flex;
+  gap: $space-small;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.projects__actions a {
+  @include pill-button;
+  font-size: $font-action;
+  padding: $space-tiny $contact-field-padding-y;
+  transition: transform $duration-fast $ease-standard,
+    box-shadow $duration-fast $ease-standard;
+}
+
+.projects__actions a:first-child {
+  @include pill-button(false);
+}
+
+.projects__actions a:hover {
+  transform: translateY($button-hover-lift);
+  box-shadow: token(shadow-action-hover);
+}
+
+@media screen and (max-width: $breakpoint-project) {
+  .projects__grid {
+    grid-template-columns: $fr-unit;
+    width: min($size-full - $space-wide, $project-card-mobile-width);
+    min-height: auto;
+    margin-bottom: $space-stage;
+  }
+
+  .projects__card {
+    min-height: auto;
+  }
+
+  .projects__actions {
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,30 @@
+@use "../../../../styles/mixins" as *;
+@use "../../../../styles/tokens" as *;
+
+.skill-box {
+  @include chip;
+  @include inline-flex-center;
+  padding: $skill-box-padding;
+  font-size: $font-skill;
+  cursor: pointer;
+  max-width: $size-full;
+  text-align: center;
+  overflow-wrap: anywhere;
+  box-shadow: token(shadow-soft);
+  transition: transform $duration-fast $ease-standard,
+    border-color $duration-fast $ease-standard,
+    background-color $duration-fast $ease-standard;
+}
+
+.skill-box:hover {
+  transform: translateY($button-hover-lift);
+  border-color: var(--gold);
+  background-color: var(--gold-soft);
+}
+
+@media screen and (max-width: $breakpoint-about) {
+  .skill-box {
+    font-size: $font-skill-mobile;
+    padding: $skill-box-padding-mobile;
+  }
+}

@@ -1,0 +1,176 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/tokens" as *;
+
+.heading {
+  @include display-heading($heading-section);
+  letter-spacing: $size-none;
+  display: inline-block;
+  font-weight: $font-weight-heavy;
+}
+.head_gold {
+  color: var(--gold);
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: min($nav-link-width, $nav-link-max-width);
+  align-items: center;
+  padding: $space-wide $space-none $nav-padding-bottom $space-none;
+  gap: $space-base;
+}
+
+.nav-wrapper {
+  width: $size-full;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  padding: $space-base $space-large;
+  top: $space-none;
+  z-index: $z-nav;
+  transition-timing-function: ease-in;
+  transition: all $duration-slow $ease-standard;
+  backdrop-filter: blur($blur-md);
+}
+
+/* NAVIGATION */
+
+.navbar {
+  @include flex-center;
+  justify-content: space-between;
+  height: $nav-height;
+  width: min($container-page, $size-full);
+  margin: $space-none auto;
+}
+
+.nav_back {
+  background-color: token(bg-nav);
+  border-bottom: $border-width-thin solid token(border);
+  box-shadow: token(shadow-nav);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-item a {
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: $heading-nav-link;
+  font-weight: $font-weight-semibold;
+  text-decoration: none;
+  transition: color $duration-base ease-out;
+}
+
+.nav-item a:hover {
+  color: var(--accent-strong);
+  cursor: pointer;
+}
+
+.nav-item a.active-nav {
+  color: var(--gold);
+}
+
+.menu-toggle .bar {
+  width: $mobile-menu-bar-width;
+  height: $mobile-menu-bar-height;
+  background-color: var(--text);
+  margin: $space-hairline auto;
+  -webkit-transition: all $duration-base ease-in-out;
+  -o-transition: all $duration-base ease-in-out;
+  transition: all $duration-base ease-in-out;
+}
+
+.menu-toggle {
+  justify-self: end;
+  margin-right: $mobile-menu-bar-width;
+  display: none;
+  border: $size-none;
+  background: transparent;
+  padding: $radius-sm;
+}
+
+.menu-toggle:hover {
+  cursor: pointer;
+}
+
+#mobile-menu.is-active .bar:nth-child(#{$grid-two}) {
+  opacity: $opacity-none;
+}
+
+#mobile-menu.is-active .bar:nth-child(#{$grid-single}) {
+  -webkit-transform: translateY($mobile-menu-bar-shift) rotate($menu-open-rotation);
+  -ms-transform: translateY($mobile-menu-bar-shift) rotate($menu-open-rotation);
+  -o-transform: translateY($mobile-menu-bar-shift) rotate($menu-open-rotation);
+  transform: translateY($mobile-menu-bar-shift) rotate($menu-open-rotation);
+}
+
+#mobile-menu.is-active .bar:nth-child(#{$grid-three}) {
+  -webkit-transform: translateY(-$mobile-menu-bar-shift) rotate($menu-close-rotation);
+  -ms-transform: translateY(-$mobile-menu-bar-shift) rotate($menu-close-rotation);
+  -o-transform: translateY(-$mobile-menu-bar-shift) rotate($menu-close-rotation);
+  transform: translateY(-$mobile-menu-bar-shift) rotate($menu-close-rotation);
+}
+
+@media only screen and (max-width: $breakpoint-nav) {
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .heading {
+    margin-left: $nav-left-space-mobile;
+  }
+
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    justify-content: flex-start;
+    top: $mobile-menu-offset;
+    left: $space-none;
+    width: $size-full;
+    height: calc($viewport-height - $mobile-menu-offset);
+    transform: translate($nav-mobile-menu-shift);
+    transition: all $duration-slow ease-out;
+    text-align: center;
+    overflow-y: auto;
+    padding: $nav-mobile-menu-padding;
+  }
+  .navbar ul {
+    background-color: token(bg-nav-open);
+    border-top: $border-width-thin solid token(border);
+  }
+
+  .navbar li {
+    padding: $nav-mobile-item-padding;
+  }
+
+  .navbar li:first-child {
+    margin-top: $space-none;
+  }
+
+  .navbar li a {
+    font-size: $font-md;
+  }
+
+  .menu-toggle,
+  .bar {
+    display: block;
+    cursor: pointer;
+  }
+
+  .mobile-nav {
+    transform: translate($translate-reset) !important;
+  }
+
+}
+
+@media only screen and (max-width: $breakpoint-xs) {
+  .nav-wrapper {
+    padding: $space-small;
+  }
+
+  .heading {
+    font-size: $font-nav-mobile-brand;
+  }
+}

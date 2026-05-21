@@ -1,0 +1,19 @@
+@use "../../../styles/mixins" as *;
+@use "../../../styles/tokens" as *;
+
+.tech-list {
+  color: var(--text);
+  text-align: left;
+  font-family: var(--font-body);
+  display: flex;
+  gap: $chip-gap;
+  flex-wrap: wrap;
+  width: $size-full;
+}
+
+.tech-list__item {
+  @include chip;
+  @include inline-flex-center;
+  font-size: $font-chip;
+  padding: $chip-padding;
+}

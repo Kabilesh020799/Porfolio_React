@@ -1,22 +1,23 @@
 import React from "react";
-import classes from "./Home.module.css";
-import "./Home.css";
+import "./Home.scss";
 import { Link } from "react-scroll";
 import { TypeAnimation } from "react-type-animation";
 import profile from "../../assets/Dp.JPG";
 import ResumePdf from "../../assets/Kabilesh27Resume.pdf";
+import SocialLinks from "../common/SocialLinks/SocialLinks";
+import { socialLinks } from "../../data";
 
 function Body() {
   return (
-    <div className={classes.body} id="home">
+    <section className="home" id="home" aria-labelledby="home-title">
         <img
           src={profile}
-          className={classes.profile}
+          className="home__profile"
           alt="Kabilesh Ravichandran"
         />
 
-        <h1 className={classes.heading}>KABILESH</h1>
-        <h3 className={classes.heading1}>
+        <h1 className="home__heading" id="home-title">KABILESH</h1>
+        <h3 className="home__subheading">
           Software engineer focused on{" "}
           <TypeAnimation
             repeat={Infinity}
@@ -33,18 +34,18 @@ function Body() {
             ]}
           ></TypeAnimation>
         </h3>
-        <p className={classes.intro}>
+        <p className="home__intro">
           I build thoughtful, production-ready experiences with React, Vue,
           Node.js, cloud tooling, and a strong eye for usability.
         </p>
-        <div className={classes.actions}>
+        <div className="home__actions">
           <Link
             to="projects"
             spy={true}
             smooth={true}
             duration={500}
             offset={-150}
-            className={classes.primaryAction}
+            className="home__primary-action"
           >
             View projects
           </Link>
@@ -53,50 +54,15 @@ function Body() {
             download="Kabilesh_Resume"
             target="_blank"
             rel="noreferrer"
-            className={classes.secondaryAction}
+            className="home__secondary-action"
           >
             Resume
           </a>
         </div>
-        <div className="footer-social-icons">
-          <ul className="social-icons" aria-label="Social profiles">
-            <li>
-              <a
-                href="https://www.linkedin.com/in/kabileshravi27/"
-                className="social-icon"
-                aria-label="LinkedIn"
-                target="_blank"
-                rel="noreferrer"
-              >
-                {" "}
-                <i className="fa fa-linkedin ls"></i>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/Kabilesh020799"
-                className="social-icon"
-                aria-label="GitHub"
-                target="_blank"
-                rel="noreferrer"
-              >
-                {" "}
-                <i className="fa fa-github ls"></i>
-              </a>
-            </li>
-            <li>
-              <a
-                href="mailto:kabilesh020799@gmail.com"
-                className="social-icon"
-                aria-label="Email"
-              >
-                {" "}
-                <i className="fa fa-envelope ls"></i>
-              </a>
-            </li>
-          </ul>
+        <div className="home__social-wrap">
+          <SocialLinks links={socialLinks} className="home__social-list" />
         </div>
-        <div className="container-arrow scroll-to">
+        <div className="home__scroll-cue">
           <Link
             to="about"
             spy={true}
@@ -109,7 +75,7 @@ function Body() {
             </span>
           </Link>
         </div>
-    </div>
+    </section>
   );
 }
 

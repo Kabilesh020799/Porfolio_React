@@ -1,0 +1,181 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/tokens" as *;
+
+.home {
+  min-height: $viewport-height;
+  height: fit-content;
+  text-align: center;
+  @include flex-center(column);
+  padding: $home-padding-top $space-wide $space-section;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient($gradient-angle, token(bg-hero-start), token(bg-glass-strong)),
+    radial-gradient(circle at $home-radial-x $home-radial-y, token(accent-glow), transparent $home-radial-size);
+}
+
+.home__profile {
+  width: min($profile-size, $profile-mobile-size);
+  height: min($profile-size, $profile-mobile-size);
+  object-fit: cover;
+  object-position: center top;
+  border-radius: token(radius-circle);
+  border: $focus-ring-width solid token(accent-profile-border);
+  box-shadow: token(shadow-profile);
+  transition: transform $duration-profile $ease-standard,
+    box-shadow $duration-profile $ease-standard;
+}
+
+.home__profile:hover {
+  transform: scale($profile-hover-scale);
+  box-shadow: token(shadow-profile-hover);
+}
+
+.home__heading {
+  @include display-heading($heading-home);
+  text-align: center;
+  letter-spacing: $size-none;
+  margin-top: $space-section;
+  text-shadow: token(shadow-text);
+}
+
+.home__subheading {
+  @include muted-copy($container-content);
+  font-size: $heading-home-subtitle;
+  min-height: $home-subtitle-height;
+  margin-top: $space-base;
+  line-height: $line-home-subtitle;
+  width: min($container-content, $size-full);
+}
+
+.home__subheading b {
+  color: var(--accent-strong);
+}
+
+.home__intro {
+  @include muted-copy($container-home-copy);
+  font-size: $font-md;
+  margin-top: $space-base;
+}
+
+.home__actions {
+  display: flex;
+  justify-content: center;
+  gap: $space-base;
+  flex-wrap: wrap;
+  margin-top: $home-actions-offset;
+}
+
+.home__primary-action,
+.home__secondary-action {
+  @include pill-button(false);
+  min-width: $home-action-min;
+  padding: $home-button-padding-y $space-large;
+  transition: transform $duration-fast $ease-standard,
+    background-color $duration-fast $ease-standard,
+    border-color $duration-fast $ease-standard;
+}
+
+.home__primary-action {
+  @include pill-button;
+  box-shadow: token(shadow-cta);
+}
+
+.home__secondary-action {
+  color: var(--text);
+  border: $border-width-thin solid token(accent-border-strong);
+  background: token(bg-glass);
+  backdrop-filter: blur($blur-sm);
+}
+
+.home__primary-action:hover,
+.home__secondary-action:hover {
+  transform: translateY($button-hover-lift);
+}
+
+.home__secondary-action:hover {
+  background-color: var(--accent-soft);
+  border-color: var(--accent-strong);
+}
+
+.home__social-wrap {
+  width: min($container-social, $size-full);
+  display: block;
+  margin: $home-social-top $space-none $space-small;
+}
+
+.home__social-list {
+  margin-top: $radius-lg;
+}
+
+.home__scroll-cue {
+  margin-top: $scroll-cue-offset;
+  color: var(--accent-strong);
+  display: inline-block;
+  text-align: center;
+  width: $size-full;
+  cursor: pointer;
+}
+
+.home__scroll-cue span {
+  display: inline-block;
+  font-size: $font-scroll-cue;
+  opacity: $opacity-scroll-cue;
+  transition: transform $duration-fast $ease-standard, opacity $duration-fast $ease-standard;
+}
+
+.home__scroll-cue:hover span,
+.home__scroll-cue:focus-within span {
+  opacity: $opacity-full;
+  transform: translateY($scroll-cue-lift);
+}
+
+@media screen and (max-width: $breakpoint-home) {
+  .home {
+    padding-top: $space-panel;
+  }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .home__social-wrap {
+    margin: $home-social-top-mobile $space-none $space-small;
+  }
+
+  .home__social-list {
+    gap: $radius-sm;
+  }
+
+  .home__scroll-cue {
+    margin-top: $space-none;
+  }
+
+  .home__scroll-cue span {
+    font-size: $font-scroll-cue-mobile;
+  }
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .home {
+    min-height: auto;
+    padding: $home-mobile-padding-top $space-base $space-roomy;
+  }
+
+  .home__heading {
+    font-size: $home-title-mobile;
+    overflow-wrap: anywhere;
+  }
+
+  .home__subheading {
+    min-height: $home-subtitle-height-mobile;
+  }
+
+  .home__intro {
+    font-size: $font-copy-home-mobile;
+  }
+
+  .home__actions,
+  .home__primary-action,
+  .home__secondary-action {
+    width: $size-full;
+  }
+}

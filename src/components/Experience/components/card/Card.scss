@@ -1,0 +1,221 @@
+@use "../../../../styles/mixins" as *;
+@use "../../../../styles/tokens" as *;
+
+.card {
+  color: var(--text-soft);
+  width: $size-full;
+  text-align: left;
+  display: flex;
+  cursor: default;
+  padding: $card-padding;
+  @include card-surface($experience-card-surface-alpha);
+  transition: background-color $duration-fast $ease-standard,
+    transform $duration-fast $ease-standard,
+    border-color $duration-fast $ease-standard;
+  position: relative;
+}
+
+.card-expanded {
+  background: token(surface-expanded);
+}
+
+.card:hover {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  transform: translateY($card-hover-lift);
+  box-shadow: token(shadow);
+}
+
+.card:hover .card-position,
+.card:focus .card-position {
+  color: var(--accent-strong);
+}
+
+.timeline-marker {
+  position: absolute;
+  top: $space-section;
+  left: $timeline-dot-offset;
+  width: $timeline-dot;
+  height: $timeline-dot;
+  border-radius: token(radius-circle);
+  background: var(--bg);
+  border: $focus-ring-width solid var(--accent-strong);
+  box-shadow: $ring-shadow-zero $timeline-ring token(accent-halo);
+}
+
+.card-date {
+  flex: $size-none $size-none $card-date-width;
+  color: var(--text-soft);
+  font-size: $card-date-font;
+  font-weight: $font-weight-bold;
+  line-height: $line-body;
+  padding-top: $card-date-padding-top;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  flex: $grid-single $grid-single auto;
+  min-width: $size-none;
+}
+
+.card-company-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: $space-base;
+}
+
+.card-company {
+  font-size: $font-company;
+  color: var(--text);
+  margin: $space-none;
+  line-height: $line-title;
+}
+
+.milestone-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-tiny;
+  margin-top: $meta-offset;
+}
+
+.milestone-meta span {
+  @include chip(gold);
+  font-size: $font-xs;
+  padding: $meta-chip-padding;
+}
+
+.card-actions {
+  display: flex;
+  gap: $meta-offset;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.expand-button,
+.company-link {
+  @include pill-button;
+  font-size: $font-button;
+  padding: $small-button-padding;
+  white-space: nowrap;
+}
+
+.expand-button {
+  @include pill-button(false);
+}
+
+.milestone-summary {
+  margin-top: $role-summary-offset;
+}
+
+.role-list {
+  display: flex;
+  flex-direction: column;
+  gap: $role-summary-offset;
+  margin-top: $space-wide;
+}
+
+.role-list:not(.show-roles) {
+  display: none;
+}
+
+.role {
+  padding-left: $space-large;
+  border-left: $border-width-thin solid token(border);
+  position: relative;
+}
+
+.role::before {
+  content: "";
+  position: absolute;
+  left: $role-dot-offset;
+  top: $role-dot-top;
+  width: $role-dot;
+  height: $role-dot;
+  border-radius: token(radius-circle);
+  background: var(--gold);
+  box-shadow: $ring-shadow-zero $role-ring token(gold-halo);
+}
+
+.role-meta {
+  color: var(--gold);
+  font-size: $role-meta-font;
+  font-weight: $font-weight-heavy;
+  margin-bottom: $role-meta-offset;
+}
+
+.card-position {
+  color: var(--text);
+  font-size: $font-md;
+  font-weight: $font-weight-bold;
+  line-height: $line-heading;
+  margin: $space-none;
+}
+
+.card-description {
+  margin-top: $subtitle-margin-top;
+  line-height: $line-card-description;
+  text-align: left;
+}
+
+.card-labels {
+  gap: $radius-lg;
+  margin-top: $card-padding-tablet;
+}
+
+@media screen and (max-width: $breakpoint-experience) {
+  .card {
+    font-size: $font-meta;
+    padding: $card-padding-tablet;
+    width: min($container-timeline-card, $size-full);
+    flex-direction: column;
+  }
+
+  .timeline-marker {
+    left: $timeline-dot-mobile-offset;
+  }
+
+  .card-date {
+    width: $size-full;
+    margin-bottom: $space-tiny;
+  }
+  .card-details {
+    width: $size-full;
+  }
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .card {
+    padding: $card-padding-mobile;
+  }
+
+  .card-position {
+    font-size: $font-md;
+  }
+
+  .card-company-row {
+    flex-direction: column;
+  }
+
+  .card-actions {
+    justify-content: flex-start;
+  }
+
+  .card-company {
+    font-size: $font-xl;
+  }
+
+  .role {
+    padding-left: $role-indent-mobile;
+  }
+
+  .card-description {
+    margin-top: $space-base;
+  }
+
+  .card-labels {
+    gap: $radius-md;
+  }
+
+}
