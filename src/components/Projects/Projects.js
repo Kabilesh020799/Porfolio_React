@@ -27,14 +27,20 @@ function Projects() {
                     </div>
                   ))}
                 </div>
-                <div className={classes.actions}>
-                  <a href={proj.giturl} target="_blank" rel="noreferrer">
-                    Source
-                  </a>
-                  <a href={proj.url} target="_blank" rel="noreferrer">
-                    View
-                  </a>
-                </div>
+                {(proj.giturl || proj.url) && (
+                  <div className={classes.actions}>
+                    {proj.giturl && (
+                      <a href={proj.giturl} target="_blank" rel="noreferrer">
+                        Source
+                      </a>
+                    )}
+                    {proj.url && (
+                      <a href={proj.url} target="_blank" rel="noreferrer">
+                        View
+                      </a>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           ))}

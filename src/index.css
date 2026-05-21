@@ -20,6 +20,10 @@
   --font-display: "Playfair Display", Georgia, serif;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background: var(--bg);
