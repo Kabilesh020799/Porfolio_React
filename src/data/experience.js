@@ -1,12 +1,30 @@
 const experience = [
   {
+    position: "Intermediate Software Developer",
+    company: "Global Relay",
+    description:
+      "Developed and enhanced frontend features compliant with WCAG 2.1 AA accessibility guidelines, improving usability for keyboard and screen reader users. Wrote unit tests using Jest and React Testing Library, increasing overall test coverage by 40% and reducing regression issues. Deployed SonarQube for continuous code quality monitoring, improving maintainability and reducing critical issues.",
+    techStack: [
+      "React",
+      "TypeScript",
+      "Python",
+      "Jest",
+      "React Testing Library",
+      "SonarQube",
+      "GitHub Actions",
+    ],
+    startDate: "Jul 2025",
+    endDate: "Present",
+    link: "https://www.globalrelay.com/",
+  },
+  {
     position: "Fullstack Developer (Contract)",
     company: "Duplex | RedBrick",
     description:
       "Engineered a scalable advertisement feature for Shift browser’s landing page using VueJS, TypeScript, and NuxtJS. Implemented comprehensive end-to-end and unit tests with Playwright and Vitest to ensure code quality. Enhanced system reliability through custom Datadog monitors and streamlined deployment using CI/CD pipelines built with AWS CodePipeline. Created a proof-of-concept for automated news summarization by integrating machine learning models from Hugging Face and PyTorch.",
     techStack: ["VueJs", "NuxtJs", "Vitest", "Playwright", "AWS"],
     startDate: "Sept 2024",
-    endDate: "Present",
+    endDate: "Apr 2025",
     link: "https://www.duplex.com/",
   },
   {

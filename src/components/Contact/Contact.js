@@ -1,81 +1,80 @@
-import React, { useState } from "react";
-import Fade from "react-reveal/Fade";
+import React from "react";
 import classes from "./Contact.module.css";
-import emailjs from "@emailjs/browser";
+import useContact from "../../hooks/useContact";
 
-function Contact({ checkedB }) {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [msg, setMsg] = useState("");
-  const [loading, setLoading] = useState(false);
-  const submit = (e) => {
-    e.preventDefault();
-
-    const templateParams = {
-      from_name: email,
-      to_name: name,
-      message: msg,
-    };
-
-    setLoading(true);
-
-    emailjs
-      .send("default_service", "template_yq66kwi", templateParams, {
-        publicKey: "asWnA6RSUG2wRoq6n",
-      })
-      .then(() => {
-        alert("Thanks for the submission!");
-        setName("");
-        setEmail("");
-        setMsg("");
-      })
-      .catch((err) => {
-        console.error(err);
-        alert("Oops! Something went wrong. Please try again later.");
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  };
+function Contact() {
+  const {
+    name,
+    setName,
+    email,
+    setEmail,
+    msg,
+    setMsg,
+    loading,
+    status,
+    onSubmit,
+  } = useContact();
 
   return (
-    <Fade bottom>
-      <div className={classes.Contact} id="contact">
+    <div className={classes.Contact} id="contact">
         <div className={classes.cont}>
-          <h1 className={classes.header1}>Let's build something amazing</h1>
+          <h1 className={classes.header1}>Let's build something useful</h1>
+          <p className={classes.subcopy}>
+            Have an opportunity, product idea, or collaboration in mind? Send a
+            note and I will reply as soon as I can.
+          </p>
 
           <div className={classes.down}>
-            <form className={classes.Form} onSubmit={submit}>
+            <form className={classes.Form} onSubmit={onSubmit}>
+              <label className={classes.label} htmlFor="contact-name">
+                Name
+              </label>
               <input
+                id="contact-name"
                 type="text"
-                placeholder="Your Name"
-                className={`${classes.input} ${
-                  !checkedB ? classes.input_tomato : ""
-                }`}
+                placeholder="Your name"
+                className={classes.input}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                autoComplete="name"
+                required
               />
+              <label className={classes.label} htmlFor="contact-email">
+                Email
+              </label>
               <input
+                id="contact-email"
                 type="email"
-                placeholder="Your Email"
-                className={`${classes.input} ${
-                  !checkedB ? classes.input_tomato : ""
-                }`}
+                placeholder="Your email"
+                className={classes.input}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                autoComplete="email"
+                required
               />
+              <label className={classes.label} htmlFor="contact-message">
+                Message
+              </label>
               <textarea
+                id="contact-message"
                 rows="8"
-                placeholder="Your Message"
-                style={{
-                  backgroundColor: checkedB ? "#0a192f" : "tomato",
-                }}
-                className={`${classes.textarea} ${
-                  !checkedB ? classes.input_tomato : ""
-                }`}
+                placeholder="Tell me a little about what you are building"
+                className={classes.textarea}
                 value={msg}
                 onChange={(e) => setMsg(e.target.value)}
+                required
               />
+              {status && (
+                <p
+                  className={`${classes.status} ${
+                    status.type === "success"
+                      ? classes.statusSuccess
+                      : classes.statusError
+                  }`}
+                >
+                  {status.message}
+                </p>
+              )}
 
               <button
                 type="submit"
@@ -90,14 +89,14 @@ function Contact({ checkedB }) {
               <li className={classes.list}>
                 <i
                   className="fa fa-map-marker fa-2x"
-                  style={{ color: "#5C6BC0" }}
+                  aria-hidden="true"
                 ></i>
                 <span className={classes.tag}>Canada</span>
               </li>
               <li className={classes.list}>
                 <i
                   className="fa fa-envelope fa-2x"
-                  style={{ color: "#5C6BC0" }}
+                  aria-hidden="true"
                 ></i>
                 <a
                   href="mailto:kabilesh020799@gmail.com"
@@ -114,24 +113,11 @@ function Contact({ checkedB }) {
               <ul className="social-icons">
                 <li>
                   <a
-                    href="https://facebook.com/ravichandran.kabilesh/"
-                    className="social-icon"
-                  >
-                    <i className="fa fa-facebook"></i>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://instagram.com/kabilesh_ravichandran/"
-                    className="social-icon"
-                  >
-                    <i className="fab fa-instagram"></i>
-                  </a>
-                </li>
-                <li>
-                  <a
                     href="https://linkedin.com/in/kabileshravi27/"
                     className="social-icon"
+                    aria-label="LinkedIn"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     <i className="fa fa-linkedin"></i>
                   </a>
@@ -140,6 +126,9 @@ function Contact({ checkedB }) {
                   <a
                     href="https://github.com/Kabilesh020799"
                     className="social-icon"
+                    aria-label="GitHub"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     <i className="fa fa-github"></i>
                   </a>
@@ -152,8 +141,7 @@ function Contact({ checkedB }) {
             &copy; {new Date().getFullYear()} All rights reserved
           </div>
         </div>
-      </div>
-    </Fade>
+    </div>
   );
 }
 

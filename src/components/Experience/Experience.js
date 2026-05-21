@@ -1,31 +1,52 @@
 import React from "react";
-import Fade from "react-reveal/Fade";
 import Card from "./components/card/Card";
-import experience from "./constant";
-import './Experience.css'
+import { experience } from "../../data";
+import "./Experience.css";
+
+const groupExperienceByCompany = (items) =>
+  items.reduce((groups, item) => {
+    const existingGroup = groups.find((group) => group.company === item.company);
+
+    if (existingGroup) {
+      existingGroup.roles.push(item);
+      existingGroup.startDate = item.startDate;
+      return groups;
+    }
+
+    return [
+      ...groups,
+      {
+        company: item.company,
+        link: item.link,
+        startDate: item.startDate,
+        endDate: item.endDate,
+        roles: [item],
+      },
+    ];
+  }, []);
 
 function Experience() {
+  const groupedExperience = groupExperienceByCompany(experience).map((group) => ({
+    ...group,
+    roles: [...group.roles].reverse(),
+  }));
+
   return (
-    <Fade bottom>
-      <div className="experience-wrapper">
-        <h1>Journey through my work experiences</h1>
+    <div className="experience-wrapper" id="experience">
+        <h1>Professional experience</h1>
         <div className="experience">
-          {
-            experience?.map((experienceItem) => (
-              <Card
-                position={experienceItem?.position}
-                company={experienceItem?.company}
-                startDate={experienceItem?.startDate}
-                endData={experienceItem?.endDate}
-                description={experienceItem?.description}
-                techStack={experienceItem?.techStack}
-                link={experienceItem?.link}
-              />
-            ))
-          }
+          {groupedExperience?.map((experienceItem) => (
+            <Card
+              key={experienceItem?.company}
+              company={experienceItem?.company}
+              startDate={experienceItem?.startDate}
+              endData={experienceItem?.endDate}
+              link={experienceItem?.link}
+              roles={experienceItem?.roles}
+            />
+          ))}
         </div>
-      </div>
-    </Fade>
+    </div>
   );
 }
 

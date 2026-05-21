@@ -1,8 +1,10 @@
 .About {
   min-height: 100vh;
   padding: 5rem 2rem;
-  font-family: "Roboto", sans-serif;
-  background-color: #0a192f;
+  font-family: var(--font-body);
+  background:
+    linear-gradient(180deg, rgba(13, 27, 46, 0.55), rgba(8, 17, 31, 0.96)),
+    var(--bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,14 +13,15 @@
 .container {
   display: flex;
   align-items: flex-start;
-  gap: 3rem;
-  max-width: 1200px;
+  gap: clamp(2rem, 5vw, 4rem);
+  max-width: 900px;
   width: 100%;
   flex-wrap: wrap;
 }
 
 .wrapper {
-  flex: 1;
+  flex: 1 1 360px;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -32,18 +35,21 @@
 .heading2 {
   font-size: 2rem;
   font-weight: bold;
-  color: #5c6bc0;
+  color: var(--text);
+  font-family: var(--font-display);
+  line-height: 1.1;
+  text-align: left;
 }
 
 .green {
-  color: #5c6bc0;
+  color: var(--gold);
 }
 
 .para {
   font-size: 1rem;
   letter-spacing: 0.8px;
   line-height: 1.8;
-  color: #faf9f6;
+  color: var(--text-muted);
   text-align: left;
 }
 
@@ -56,10 +62,14 @@
 }
 
 @media (max-width: 904px) {
+  .About {
+    padding: 4rem 1rem;
+  }
+
   .container {
     flex-direction: column;
     gap: 2rem;
-    padding: 0 1.5rem;
+    padding: 0;
     align-items: center;
   }
 
@@ -76,6 +86,18 @@
 
   .wrapper {
     align-items: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .heading2 {
+    font-size: 1.65rem;
+  }
+
+  .para {
+    font-size: 0.96rem;
+    line-height: 1.7;
   }
 }
 

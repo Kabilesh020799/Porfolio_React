@@ -1,92 +1,102 @@
 import React from "react";
 import classes from "./Home.module.css";
-import Fade from "react-reveal/Fade";
 import "./Home.css";
 import { Link } from "react-scroll";
 import { TypeAnimation } from "react-type-animation";
 import profile from "../../assets/Dp.JPG";
+import ResumePdf from "../../assets/Kabilesh27Resume.pdf";
 
 function Body() {
   return (
-    <Fade bottom>
-      <div className={classes.body} id="home">
-        <img src={profile} className={classes.profile} alt="profile" />
+    <div className={classes.body} id="home">
+        <img
+          src={profile}
+          className={classes.profile}
+          alt="Kabilesh Ravichandran"
+        />
 
         <h1 className={classes.heading}>KABILESH</h1>
         <h3 className={classes.heading1}>
-          I am a{" "}
+          Software engineer focused on{" "}
           <TypeAnimation
             repeat={Infinity}
             wrapper="b"
             sequence={[
-              "Software Engineer 👨‍💻⚛️",
+              "full-stack products",
               1000,
-              "Fullstack Developer 🤖",
+              "frontend systems",
               1000,
-              "App Developer 📱",
+              "reliable web apps",
               1000,
-              "ML Aspirant 💻",
-              1000,
-              "Graduate Student 👨‍🎓",
+              "ML-enabled tools",
               1000,
             ]}
           ></TypeAnimation>
         </h3>
-        <div class="footer-social-icons">
-          <ul class="social-icons">
-            <li>
-              <a
-                href="https://www.facebook.com/ravichandran.kabilesh/"
-                class="social-icon"
-                style={{ color: "#5C6BC0" }}
-              >
-                {" "}
-                <i class="fa fa-facebook ls"></i>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.instagram.com/kabilesh_ravichandran/"
-                class="social-icon"
-                style={{ color: "#5C6BC0" }}
-              >
-                {" "}
-                <i class="fa fa-instagram ls"></i>
-              </a>
-            </li>
+        <p className={classes.intro}>
+          I build thoughtful, production-ready experiences with React, Vue,
+          Node.js, cloud tooling, and a strong eye for usability.
+        </p>
+        <div className={classes.actions}>
+          <Link
+            to="projects"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-150}
+            className={classes.primaryAction}
+          >
+            View projects
+          </Link>
+          <a
+            href={ResumePdf}
+            download="Kabilesh_Resume"
+            target="_blank"
+            rel="noreferrer"
+            className={classes.secondaryAction}
+          >
+            Resume
+          </a>
+        </div>
+        <div className="footer-social-icons">
+          <ul className="social-icons" aria-label="Social profiles">
             <li>
               <a
                 href="https://www.linkedin.com/in/kabileshravi27/"
-                class="social-icon"
-                style={{ color: "#5C6BC0" }}
+                className="social-icon"
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noreferrer"
               >
                 {" "}
-                <i class="fa fa-linkedin ls"></i>
+                <i className="fa fa-linkedin ls"></i>
               </a>
             </li>
             <li>
               <a
                 href="https://github.com/Kabilesh020799"
-                class="social-icon"
-                style={{ color: "#5C6BC0" }}
+                className="social-icon"
+                aria-label="GitHub"
+                target="_blank"
+                rel="noreferrer"
               >
                 {" "}
-                <i class="fa fa-github ls"></i>
+                <i className="fa fa-github ls"></i>
               </a>
             </li>
-            <li style={{ display: "none" }}>
+            <li>
               <a
-                href="https://leetcode.com/kabilesh020799/"
-                class="social-icon"
-                style={{ color: "#5C6BC0" }}
+                href="mailto:kabilesh020799@gmail.com"
+                className="social-icon"
+                aria-label="Email"
               >
                 {" "}
-                <i class="fa fa-laptop-code ls"></i>
+                <i className="fa fa-envelope ls"></i>
               </a>
             </li>
           </ul>
         </div>
-        <a class="container-arrow scroll-to">
+        <div className="container-arrow scroll-to">
           <Link
             to="about"
             spy={true}
@@ -95,12 +105,11 @@ function Body() {
             offset={-150}
           >
             <span>
-              <i class="fa fa-angle-down" aria-hidden="true"></i>{" "}
+              <i className="fa fa-angle-down" aria-hidden="true"></i>{" "}
             </span>
           </Link>
-        </a>
-      </div>
-    </Fade>
+        </div>
+    </div>
   );
 }
 

@@ -8,6 +8,10 @@ const navigations = [
     path: 'about',
   },
   {
+    name: 'Skills',
+    path: 'skills',
+  },
+  {
     name: 'Experience',
     path: 'experience',
   },
