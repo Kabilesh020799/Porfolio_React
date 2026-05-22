@@ -5,7 +5,7 @@
   min-height: $home-first-view-height;
   height: fit-content;
   @include flex-center(column);
-  padding: $home-padding-top $space-wide $home-padding-bottom;
+  padding: calc($mobile-menu-offset + $space-base) $space-wide $home-padding-bottom;
   position: relative;
   overflow: hidden;
   background:
@@ -151,13 +151,13 @@
 
 @media screen and (max-width: $breakpoint-home) {
   .home {
-    padding-top: $space-panel;
+    padding-top: calc($mobile-menu-offset + $space-base);
   }
 }
 
 @media screen and (max-height: $home-short-viewport) {
   .home {
-    padding-top: $space-wide;
+    padding-top: calc($mobile-menu-offset + $space-tiny);
     padding-bottom: $home-compact-padding-bottom;
   }
 
@@ -224,7 +224,7 @@
 @media screen and (max-width: $breakpoint-sm) {
   .home {
     min-height: $home-first-view-height;
-    padding: $space-wide $space-base $home-compact-padding-bottom;
+    padding: calc($mobile-menu-offset + $space-tiny) $space-base $home-compact-padding-bottom;
   }
 
   .home__profile {

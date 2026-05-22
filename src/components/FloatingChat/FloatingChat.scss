@@ -1,0 +1,176 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/tokens" as *;
+
+.floating-chat {
+  position: fixed;
+  right: $space-wide;
+  bottom: $space-wide;
+  z-index: $z-nav;
+  @include flex-center(column);
+  align-items: flex-end;
+  gap: $space-small;
+  pointer-events: none;
+}
+
+.floating-chat__panel,
+.floating-chat__trigger {
+  pointer-events: auto;
+}
+
+.floating-chat__panel {
+  width: min(340px, calc($viewport-width - $space-section));
+  padding: $space-base;
+  @include card-surface(0.92);
+  background:
+    linear-gradient(145deg, token(bg-glass-strong), token(surface-card-deep)),
+    token(surface-card);
+  box-shadow: token(shadow);
+  animation: soft-reveal 0.24s $ease-standard both;
+}
+
+.floating-chat__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: $space-base;
+}
+
+.floating-chat__eyebrow {
+  @include eyebrow;
+  margin: $space-none;
+}
+
+.floating-chat__title {
+  color: var(--text);
+  font-size: $font-lg;
+  line-height: $line-heading;
+  margin: $space-tiny $space-none $space-none;
+}
+
+.floating-chat__close {
+  @include icon-button($space-section);
+  flex: $size-none $size-none auto;
+  font-size: $font-xl;
+  line-height: $line-body;
+  cursor: pointer;
+}
+
+.floating-chat__identity {
+  display: grid;
+  grid-template-columns: repeat(2, minmax($size-none, $fr-unit));
+  gap: $space-small;
+  margin-top: $space-base;
+}
+
+.floating-chat__input,
+.floating-chat__message {
+  @include form-control;
+}
+
+.floating-chat__input {
+  min-width: $size-none;
+}
+
+.floating-chat__message {
+  min-height: 110px;
+  margin-top: $space-base;
+  resize: vertical;
+}
+
+.floating-chat__actions {
+  display: flex;
+  gap: $space-small;
+  margin-top: $space-base;
+}
+
+.floating-chat__action {
+  @include pill-button(false);
+  @include inline-flex-center;
+  flex: $grid-single $grid-single $size-none;
+  gap: $space-tiny;
+  padding: $space-small $space-base;
+  font-family: var(--font-body);
+  font-weight: $font-weight-heavy;
+  cursor: pointer;
+  transition: transform $duration-fast $ease-standard,
+    background $duration-fast $ease-standard,
+    border-color $duration-fast $ease-standard,
+    box-shadow $duration-fast $ease-standard;
+}
+
+.floating-chat__action--sms {
+  @include pill-button;
+}
+
+.floating-chat__action:hover,
+.floating-chat__action:focus-visible {
+  border-color: token(accent-border-strong);
+  box-shadow: token(shadow-action-hover);
+  transform: translateY($button-hover-lift);
+}
+
+.floating-chat__action--sms:hover,
+.floating-chat__action--sms:focus-visible {
+  background: linear-gradient($cta-gradient-angle, token(button-primary-hover-start), token(button-primary-hover-end));
+}
+
+.floating-chat__action-icon {
+  width: $font-lg;
+  height: $font-lg;
+  fill: currentColor;
+}
+
+.floating-chat__status {
+  color: var(--accent-strong);
+  font-size: $font-xs;
+  font-weight: $font-weight-heavy;
+  line-height: $line-body;
+  margin: $space-small $space-none $space-none;
+}
+
+.floating-chat__trigger {
+  @include pill-button;
+  @include inline-flex-center;
+  gap: $space-tiny;
+  padding: $space-small $space-large;
+  box-shadow: token(shadow-cta);
+  transition: transform $duration-fast $ease-standard,
+    box-shadow $duration-fast $ease-standard,
+    background $duration-fast $ease-standard;
+}
+
+.floating-chat__trigger:hover,
+.floating-chat__trigger:focus-visible {
+  background: linear-gradient($cta-gradient-angle, token(button-primary-hover-start), token(button-primary-hover-end));
+  box-shadow: token(shadow-action-hover);
+  transform: translateY($button-hover-lift);
+}
+
+.floating-chat__icon {
+  width: $font-lg;
+  height: $font-lg;
+  fill: currentColor;
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+  .floating-chat {
+    right: $space-base;
+    bottom: $space-base;
+  }
+
+  .floating-chat__panel {
+    width: calc($viewport-width - $space-section);
+  }
+
+  .floating-chat__actions {
+    flex-direction: column;
+  }
+
+  .floating-chat__identity {
+    grid-template-columns: $fr-unit;
+  }
+
+  .floating-chat__trigger {
+    padding: $space-small $space-base;
+  }
+}

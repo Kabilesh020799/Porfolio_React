@@ -49,6 +49,22 @@
   border: $focus-ring-width solid var(--accent-strong);
   box-shadow: $ring-shadow-zero $timeline-ring token(accent-halo);
   animation: soft-pulse 3.4s $ease-standard infinite;
+  transition: background $duration-fast $ease-standard,
+    border-color $duration-fast $ease-standard,
+    box-shadow $duration-fast $ease-standard,
+    transform $duration-fast $ease-standard;
+}
+
+.card:hover .timeline-marker,
+.card:focus-within .timeline-marker,
+.card-expanded .timeline-marker {
+  background: linear-gradient($cta-gradient-angle, token(button-primary-start), token(button-primary-end));
+  border-color: token(button-text);
+  box-shadow:
+    $ring-shadow-zero $timeline-ring token(accent-halo),
+    $ring-shadow-zero calc($timeline-ring + 5px) token(gold-halo),
+    0 10px 24px token(accent-radial-soft);
+  transform: scale(1.18);
 }
 
 .card-date {

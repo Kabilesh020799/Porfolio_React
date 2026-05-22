@@ -186,7 +186,7 @@ $contact-radial-y: 18%;
 $skip-padding-y: 0.7rem;
 $home-padding-top: 5.25rem;
 $home-padding-bottom: 1.25rem;
-$home-first-view-height: calc($viewport-height - $mobile-menu-offset);
+$home-first-view-height: $viewport-height;
 $home-compact-padding-top: 3rem;
 $home-compact-padding-bottom: 1rem;
 $home-compact-heading: 4rem;

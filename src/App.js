@@ -2,6 +2,7 @@ import React, { lazy, Suspense, useCallback, useEffect, useState } from "react";
 import "./App.scss";
 import Navigation from "./components/Navigation/Navigation";
 import Home from "./components/Home/Home";
+import FloatingChat from "./components/FloatingChat/FloatingChat";
 
 const About = lazy(() => import("./components/About/About"));
 const Skills = lazy(() => import("./components/Skills/Skills"));
@@ -37,6 +38,7 @@ function App() {
         Skip to main content
       </a>
       <Navigation className="cls" theme={theme} onThemeToggle={toggleTheme} />
+      <FloatingChat />
       <main>
         <Home className="cls" />
         <Suspense fallback={null}>
