@@ -66,6 +66,13 @@
   --accent-profile-border: rgba(19, 143, 133, 0.68);
   --accent-timeline: rgba(19, 143, 133, 0.76);
   --accent-scroll: rgba(19, 143, 133, 0.48);
+  --button-text: #fffdf9;
+  --button-primary-start: #0f766e;
+  --button-primary-end: #14b8a6;
+  --button-primary-hover-start: #115e59;
+  --button-primary-hover-end: #0f766e;
+  --button-outline-bg: rgba(255, 253, 249, 0.86);
+  --button-outline-hover: rgba(15, 118, 110, 0.1);
   --gold: #b86b10;
   --gold-soft: rgba(238, 159, 65, 0.19);
   --gold-radial: rgba(238, 159, 65, 0.25);
@@ -122,6 +129,51 @@ input:focus-visible,
 textarea:focus-visible {
   outline: $focus-ring-width solid var(--gold);
   outline-offset: $space-hairline;
+}
+
+@keyframes soft-reveal {
+  from {
+    opacity: $opacity-none;
+    transform: translateY($space-base);
+  }
+
+  to {
+    opacity: $opacity-full;
+    transform: translateY($space-none);
+  }
+}
+
+@keyframes gentle-float {
+  0%,
+  100% {
+    transform: translateY($space-none);
+  }
+
+  50% {
+    transform: translateY(-$space-tiny);
+  }
+}
+
+@keyframes soft-pulse {
+  0%,
+  100% {
+    box-shadow: $ring-shadow-zero $timeline-ring token(accent-halo);
+  }
+
+  50% {
+    box-shadow: $ring-shadow-zero $space-base token(accent-halo);
+  }
+}
+
+@keyframes gradient-drift {
+  0%,
+  100% {
+    background-position: 0% 0%, 100% 0%, 50% 50%, 0% 0%;
+  }
+
+  50% {
+    background-position: 8% 4%, 92% 8%, 48% 54%, 0% 0%;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

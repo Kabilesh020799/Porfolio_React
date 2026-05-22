@@ -16,15 +16,26 @@ function Navigation({ theme, onThemeToggle }) {
   };
 
   useEffect(() => {
+    let frameId = null;
+
     const onScroll = () => {
-      if (window.scrollY > 100) {
-        handleShow(true);
-      } else handleShow(false);
+      if (frameId) return;
+
+      frameId = window.requestAnimationFrame(() => {
+        handleShow((isShown) => {
+          const shouldShow = window.scrollY > 100;
+          return isShown === shouldShow ? isShown : shouldShow;
+        });
+        frameId = null;
+      });
     };
 
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => {
       window.removeEventListener("scroll", onScroll);
+      if (frameId) {
+        window.cancelAnimationFrame(frameId);
+      }
     };
   }, []);
 

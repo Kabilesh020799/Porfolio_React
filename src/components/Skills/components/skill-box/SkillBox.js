@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import "./SkillBox.scss";
 
 const SkillBox = (props) => {
@@ -13,4 +13,4 @@ const SkillBox = (props) => {
   );
 }
 
-export default SkillBox;
+export default memo(SkillBox);

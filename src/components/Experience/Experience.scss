@@ -12,6 +12,8 @@
     radial-gradient(circle at 88% 12%, token(accent-radial-soft), transparent 22rem),
     linear-gradient(145deg, token(gold-soft), transparent 46%, token(accent-soft)),
     linear-gradient($gradient-angle, token(bg-section-timeline), token(bg-section));
+  background-size: 120% 120%, 120% 120%, 100% 100%;
+  animation: gradient-drift 22s $ease-standard infinite;
 }
 
 .experience-heading {
@@ -25,6 +27,7 @@
 .experience-title {
   @include display-heading;
   margin: $space-none;
+  animation: soft-reveal 0.65s $ease-standard both;
 }
 
 .experience-view-toggle {
@@ -32,12 +35,14 @@
   box-shadow: var(--shadow-cta);
   padding: $space-small $space-large;
   font-size: $font-action;
+  animation: soft-reveal 0.65s $ease-standard 0.1s both;
   transition: transform $duration-fast $ease-standard,
     box-shadow $duration-fast $ease-standard;
 }
 
 .experience-view-toggle:hover,
 .experience-view-toggle:focus-visible {
+  background: linear-gradient($cta-gradient-angle, token(button-primary-hover-start), token(button-primary-hover-end));
   box-shadow: var(--shadow-action-hover);
   transform: translateY($button-hover-lift);
 }

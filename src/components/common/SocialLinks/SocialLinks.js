@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import "./SocialLinks.scss";
 
 const socialIcons = {
@@ -42,4 +42,4 @@ function SocialLinks({ links, className = "" }) {
   );
 }
 
-export default SocialLinks;
+export default memo(SocialLinks);

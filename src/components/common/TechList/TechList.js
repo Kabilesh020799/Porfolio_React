@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import "./TechList.scss";
 
 function TechList({ items = [], className = "" }) {
@@ -17,4 +17,4 @@ function TechList({ items = [], className = "" }) {
   );
 }
 
-export default TechList;
+export default memo(TechList);

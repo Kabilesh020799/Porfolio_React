@@ -7,6 +7,8 @@
     linear-gradient(120deg, token(accent-soft), transparent 48%, token(gold-soft)),
     radial-gradient(circle at $skills-radial-x $skills-radial-y, token(gold-radial), transparent $section-radial-size),
     linear-gradient($gradient-angle, token(bg-section-strong), token(bg-section));
+  background-size: 120% 120%, 120% 120%, 100% 100%;
+  animation: gradient-drift 20s $ease-standard infinite;
 }
 
 .SkillsIntro {
@@ -16,16 +18,19 @@
 
 .SkillsEyebrow {
   @include eyebrow;
+  animation: soft-reveal 0.6s $ease-standard both;
 }
 
 .SkillsTitle {
   @include display-heading;
   margin-top: $title-margin-top;
+  animation: soft-reveal 0.6s $ease-standard 0.06s both;
 }
 
 .SkillsIntro p {
   font-size: $font-md;
   margin: $subtitle-margin-top auto $space-none;
+  animation: soft-reveal 0.6s $ease-standard 0.12s both;
 }
 
 .Skills {
@@ -37,8 +42,17 @@
 
 .skill-group {
   @include card-surface($skill-card-surface-alpha);
+  animation: soft-reveal 0.6s $ease-standard both;
   gap: $space-small;
   padding: $space-base;
+}
+
+.skill-group:nth-child(2n) {
+  animation-delay: 0.06s;
+}
+
+.skill-group:nth-child(3n) {
+  animation-delay: 0.12s;
 }
 
 .skill-category {

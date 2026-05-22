@@ -81,12 +81,14 @@
   transition: background $duration-fast $ease-standard,
     border-color $duration-fast $ease-standard,
     color $duration-fast $ease-standard,
-    transform $duration-fast $ease-standard;
+    transform $duration-fast $ease-standard,
+    box-shadow $duration-fast $ease-standard;
 }
 
 .theme-toggle:hover,
 .theme-toggle:focus-visible {
   border-color: token(accent-border-strong);
+  box-shadow: token(shadow-action-hover);
   transform: translateY($button-hover-lift);
 }
 
@@ -115,7 +117,13 @@
   background: linear-gradient(135deg, var(--accent-strong), var(--gold));
   box-shadow: $ring-shadow-zero $scroll-cue-lift token(accent-halo);
   transform: translateY($center-shift);
-  transition: left $duration-fast $ease-standard;
+  transition: left $duration-fast $ease-standard,
+    transform $duration-fast $ease-standard;
+}
+
+.theme-toggle:hover .theme-toggle__thumb,
+.theme-toggle:focus-visible .theme-toggle__thumb {
+  transform: translateY($center-shift) scale(1.08);
 }
 
 .theme-toggle--light .theme-toggle__thumb {

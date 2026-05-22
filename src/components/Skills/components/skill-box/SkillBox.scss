@@ -12,13 +12,15 @@
   box-shadow: token(shadow-soft);
   transition: transform $duration-fast $ease-standard,
     border-color $duration-fast $ease-standard,
-    background-color $duration-fast $ease-standard;
+    background-color $duration-fast $ease-standard,
+    box-shadow $duration-fast $ease-standard;
 }
 
 .skill-box:hover {
   transform: translateY($button-hover-lift);
   border-color: var(--gold);
   background-color: var(--gold-soft);
+  box-shadow: token(shadow-action-hover);
 }
 
 @media screen and (max-width: $breakpoint-about) {

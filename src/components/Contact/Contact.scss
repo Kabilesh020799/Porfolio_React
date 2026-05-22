@@ -9,6 +9,8 @@
     linear-gradient(130deg, token(gold-soft), transparent 44%, token(accent-soft)),
     radial-gradient(circle at $home-radial-x $contact-radial-y, token(accent-radial-soft), transparent $section-radial-size),
     linear-gradient($gradient-angle, token(bg-section-contact), token(bg));
+  background-size: 120% 120%, 120% 120%, 100% 100%;
+  animation: gradient-drift 20s $ease-standard infinite;
 }
 
 .contact__container {
@@ -19,11 +21,13 @@
 .contact__heading {
   @include display-heading($heading-contact);
   margin-bottom: $space-small;
+  animation: soft-reveal 0.6s $ease-standard both;
 }
 
 .contact__subcopy {
   max-width: $container-contact-copy;
   margin-bottom: $space-section;
+  animation: soft-reveal 0.6s $ease-standard 0.08s both;
 }
 
 .contact__content {
@@ -37,6 +41,7 @@
   gap: $space-small;
   padding: $space-large;
   box-shadow: token(shadow);
+  animation: soft-reveal 0.65s $ease-standard 0.14s both;
 }
 
 .contact__label {
@@ -86,7 +91,7 @@
 
 .contact__send:hover {
   transform: translateY($button-hover-lift);
-  background: linear-gradient($cta-gradient-angle, var(--gold), var(--accent-strong));
+  background: linear-gradient($cta-gradient-angle, token(button-primary-hover-start), token(button-primary-hover-end));
 }
 
 .contact__send:disabled {
@@ -108,6 +113,18 @@
   gap: $space-base;
   color: var(--accent-strong);
   padding: $space-base;
+  animation: soft-reveal 0.6s $ease-standard 0.2s both;
+}
+
+.contact__icon {
+  flex: $size-none $size-none auto;
+  width: $space-section;
+  height: $space-section;
+  fill: currentColor;
+}
+
+.contact__list-item:nth-child(2n) {
+  animation-delay: 0.26s;
 }
 
 .contact__tag {
@@ -119,6 +136,7 @@
 
 .contact__socials {
   margin-top: $space-section;
+  animation: soft-reveal 0.6s $ease-standard 0.3s both;
 }
 
 .contact__social-list {

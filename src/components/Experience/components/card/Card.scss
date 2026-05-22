@@ -6,10 +6,20 @@
   cursor: default;
   padding: $card-padding;
   @include card-surface($experience-card-surface-alpha);
+  animation: soft-reveal 0.6s $ease-standard both;
   transition: background-color $duration-fast $ease-standard,
     transform $duration-fast $ease-standard,
-    border-color $duration-fast $ease-standard;
+    border-color $duration-fast $ease-standard,
+    box-shadow $duration-fast $ease-standard;
   position: relative;
+}
+
+.card:nth-child(2n) {
+  animation-delay: 0.05s;
+}
+
+.card:nth-child(3n) {
+  animation-delay: 0.1s;
 }
 
 .card-expanded {
@@ -38,6 +48,7 @@
   background: var(--bg);
   border: $focus-ring-width solid var(--accent-strong);
   box-shadow: $ring-shadow-zero $timeline-ring token(accent-halo);
+  animation: soft-pulse 3.4s $ease-standard infinite;
 }
 
 .card-date {
@@ -99,6 +110,17 @@
   @include pill-button(false);
 }
 
+.expand-button:hover,
+.expand-button:focus-visible {
+  background: token(button-outline-hover);
+  border-color: token(accent-border-strong);
+}
+
+.company-link:hover,
+.company-link:focus-visible {
+  background: linear-gradient($cta-gradient-angle, token(button-primary-hover-start), token(button-primary-hover-end));
+}
+
 .milestone-summary {
   margin-top: $role-summary-offset;
 }
@@ -106,6 +128,10 @@
 .role-list {
   gap: $role-summary-offset;
   margin-top: $space-wide;
+}
+
+.role-list.show-roles {
+  animation: soft-reveal 0.35s $ease-standard both;
 }
 
 .role-list:not(.show-roles) {

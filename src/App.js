@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { lazy, Suspense, useCallback, useEffect, useState } from "react";
 import "./App.scss";
 import Navigation from "./components/Navigation/Navigation";
 import Home from "./components/Home/Home";
-import About from "./components/About/About";
-import Skills from "./components/Skills/Skills";
-import Experience from "./components/Experience/Experience";
-import Projects from "./components/Projects/Projects";
-import Contact from "./components/Contact/Contact";
+
+const About = lazy(() => import("./components/About/About"));
+const Skills = lazy(() => import("./components/Skills/Skills"));
+const Experience = lazy(() => import("./components/Experience/Experience"));
+const Projects = lazy(() => import("./components/Projects/Projects"));
+const Contact = lazy(() => import("./components/Contact/Contact"));
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -26,9 +27,9 @@ function App() {
     window.localStorage.setItem("theme", theme);
   }, [theme]);
 
-  const toggleTheme = () => {
+  const toggleTheme = useCallback(() => {
     setTheme((currentTheme) => (currentTheme === "dark" ? "light" : "dark"));
-  };
+  }, []);
 
   return (
     <div className="App_black u-text-center">
@@ -38,11 +39,13 @@ function App() {
       <Navigation className="cls" theme={theme} onThemeToggle={toggleTheme} />
       <main>
         <Home className="cls" />
-        <About className="cls" />
-        <Skills className="cls" />
-        <Experience className="cls" />
-        <Projects className="cls" />
-        <Contact className="cls" />
+        <Suspense fallback={null}>
+          <About className="cls" />
+          <Skills className="cls" />
+          <Experience className="cls" />
+          <Projects className="cls" />
+          <Contact className="cls" />
+        </Suspense>
       </main>
     </div>
   );

@@ -10,6 +10,8 @@
     linear-gradient(140deg, token(accent-soft), transparent 52%),
     linear-gradient($gradient-angle, token(bg-section-soft), token(bg-section-strong)),
     token(bg);
+  background-size: 120% 120%, 120% 120%, 100% 100%, 100% 100%;
+  animation: gradient-drift 18s $ease-standard infinite;
   @include flex-center;
 }
 
@@ -32,6 +34,7 @@
 .about__heading {
   @include display-heading($space-section);
   font-weight: $font-weight-bold;
+  animation: soft-reveal 0.65s $ease-standard both;
 }
 
 .about__highlight {
@@ -43,6 +46,7 @@
   font-size: $font-md;
   letter-spacing: $tracking-copy;
   line-height: $line-relaxed;
+  animation: soft-reveal 0.65s $ease-standard 0.1s both;
 }
 
 @media (max-width: $breakpoint-about) {

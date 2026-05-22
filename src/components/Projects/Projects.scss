@@ -11,15 +11,18 @@
 
 .projects__eyebrow {
   @include eyebrow;
+  animation: soft-reveal 0.6s $ease-standard both;
 }
 
 .projects__title {
   @include display-heading;
   margin: $title-margin-top $space-none $space-none;
+  animation: soft-reveal 0.6s $ease-standard 0.06s both;
 }
 
 .projects__subtitle {
   margin: $subtitle-margin-top auto $space-none;
+  animation: soft-reveal 0.6s $ease-standard 0.12s both;
 }
 
 .projects__grid {
@@ -36,9 +39,18 @@
   padding: $project-card-padding;
   @include card-surface($project-card-surface-alpha);
   background: linear-gradient($gradient-angle, token(surface-card), token(surface-card-deep));
+  animation: soft-reveal 0.65s $ease-standard both;
   transition: transform $project-card-transition $ease-standard,
     border-color $project-card-transition $ease-standard,
     box-shadow $project-card-transition $ease-standard;
+}
+
+.projects__card:nth-child(2n) {
+  animation-delay: 0.06s;
+}
+
+.projects__card:nth-child(3n) {
+  animation-delay: 0.12s;
 }
 .projects__card-body {
   margin-top: $project-card-padding;
@@ -53,6 +65,13 @@
   padding: $space-none;
   color: var(--accent-strong);
 }
+
+.projects__folder-icon {
+  width: $space-section;
+  height: $space-section;
+  fill: currentColor;
+}
+
 .projects__card-title {
   color: var(--text);
   font-size: $font-card-title;
@@ -81,7 +100,8 @@
   font-size: $font-action;
   padding: $space-tiny $contact-field-padding-y;
   transition: transform $duration-fast $ease-standard,
-    box-shadow $duration-fast $ease-standard;
+    box-shadow $duration-fast $ease-standard,
+    background $duration-fast $ease-standard;
 }
 
 .projects__actions a:first-child {
@@ -89,8 +109,13 @@
 }
 
 .projects__actions a:hover {
+  background: linear-gradient($cta-gradient-angle, token(button-primary-hover-start), token(button-primary-hover-end));
   transform: translateY($button-hover-lift);
   box-shadow: token(shadow-action-hover);
+}
+
+.projects__actions a:first-child:hover {
+  background: token(button-outline-hover);
 }
 
 @media screen and (max-width: $breakpoint-project) {

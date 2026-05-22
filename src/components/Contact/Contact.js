@@ -25,6 +25,18 @@ const contactFields = [
 
 const contactSocialLinks = socialLinks.filter(({ label }) => label !== "Email");
 
+const LocationIcon = () => (
+  <svg className="contact__icon" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M12 2.75a7.25 7.25 0 0 0-7.25 7.25c0 5.1 6.35 10.86 6.62 11.1.36.32.9.32 1.26 0 .27-.24 6.62-6 6.62-11.1A7.25 7.25 0 0 0 12 2.75Zm0 10.1A2.85 2.85 0 1 1 12 7.15a2.85 2.85 0 0 1 0 5.7Z" />
+  </svg>
+);
+
+const MailIcon = () => (
+  <svg className="contact__icon" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M3.75 5.5h16.5c.96 0 1.75.79 1.75 1.75v9.5c0 .96-.79 1.75-1.75 1.75H3.75A1.75 1.75 0 0 1 2 16.75v-9.5c0-.96.79-1.75 1.75-1.75Zm.05 2.2v.22l8.2 5.03 8.2-5.03V7.7H3.8Zm16.4 8.83v-6.2l-7.55 4.63a1.25 1.25 0 0 1-1.3 0L3.8 10.33v6.2h16.4Z" />
+  </svg>
+);
+
 function Contact() {
   const {
     name,
@@ -107,17 +119,11 @@ function Contact() {
 
             <ul className="contact__list u-grid u-full-width">
               <li className="contact__list-item u-flex u-align-center">
-                <i
-                  className="fa fa-map-marker fa-2x"
-                  aria-hidden="true"
-                ></i>
+                <LocationIcon />
                 <span className="contact__tag">Halifax, Canada</span>
               </li>
               <li className="contact__list-item u-flex u-align-center">
-                <i
-                  className="fa fa-envelope fa-2x"
-                  aria-hidden="true"
-                ></i>
+                <MailIcon />
                 <a
                   href="mailto:kabilesh020799@gmail.com"
                   className="contact__tag"

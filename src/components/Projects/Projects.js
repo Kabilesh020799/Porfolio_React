@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import "./Projects.scss";
 import { projects } from "../../data";
 import TechList from "../common/TechList/TechList";
@@ -17,13 +17,19 @@ const getProjectActions = (project) =>
     },
   ].filter(Boolean);
 
-function ProjectCard({ project }) {
+const FolderIcon = () => (
+  <svg className="projects__folder-icon" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M3.75 5.25h6.05l1.75 2h8.7c1.1 0 2 .9 2 2v7.5c0 1.1-.9 2-2 2H3.75c-1.1 0-2-.9-2-2v-9.5c0-1.1.9-2 2-2Zm0 2v9.5h16.5v-7.5h-9.6l-1.75-2H3.75Z" />
+  </svg>
+);
+
+const ProjectCard = memo(function ProjectCard({ project }) {
   const actions = getProjectActions(project);
 
   return (
     <article className="projects__card u-flex u-flex-column u-justify-between u-full-width">
       <div className="projects__card-head u-flex u-align-center u-justify-between u-full-width u-text-center">
-        <i className="far fa-folder-open fa-3x" aria-hidden="true"></i>
+        <FolderIcon />
       </div>
       <div className="projects__card-body u-flex u-flex-column">
         <h3 className="projects__card-title u-text-left">{project.title}</h3>
@@ -49,7 +55,7 @@ function ProjectCard({ project }) {
       </div>
     </article>
   );
-}
+});
 
 function Projects() {
   return (

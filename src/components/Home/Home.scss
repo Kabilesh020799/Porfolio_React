@@ -23,6 +23,8 @@
   border-radius: token(radius-circle);
   border: $focus-ring-width solid token(accent-profile-border);
   box-shadow: token(shadow-profile);
+  animation: soft-reveal 0.7s $ease-standard both,
+    gentle-float 6s $ease-standard 1.2s infinite;
   transition: transform $duration-profile $ease-standard,
     box-shadow $duration-profile $ease-standard;
 }
@@ -38,6 +40,7 @@
   margin-top: $space-large;
   margin-bottom: $space-none;
   text-shadow: token(shadow-text);
+  animation: soft-reveal 0.7s $ease-standard 0.08s both;
 }
 
 .home__subheading {
@@ -48,6 +51,7 @@
   margin-bottom: $space-none;
   line-height: $line-home-subtitle;
   width: min($container-content, $size-full);
+  animation: soft-reveal 0.7s $ease-standard 0.16s both;
 }
 
 .home__subheading b {
@@ -59,11 +63,13 @@
   font-size: $font-md;
   margin-top: $space-tiny;
   margin-bottom: $space-none;
+  animation: soft-reveal 0.7s $ease-standard 0.24s both;
 }
 
 .home__actions {
   gap: $space-base;
   margin-top: $home-actions-offset;
+  animation: soft-reveal 0.7s $ease-standard 0.32s both;
 }
 
 .home__primary-action,
@@ -73,7 +79,8 @@
   padding: $home-button-padding-y $space-large;
   transition: transform $duration-fast $ease-standard,
     background-color $duration-fast $ease-standard,
-    border-color $duration-fast $ease-standard;
+    border-color $duration-fast $ease-standard,
+    box-shadow $duration-fast $ease-standard;
 }
 
 .home__primary-action {
@@ -91,17 +98,23 @@
 .home__primary-action:hover,
 .home__secondary-action:hover {
   transform: translateY($button-hover-lift);
+  box-shadow: token(shadow-action-hover);
 }
 
 .home__secondary-action:hover {
-  background-color: var(--accent-soft);
+  background-color: var(--button-outline-hover);
   border-color: var(--accent-strong);
+}
+
+.home__primary-action:hover {
+  background: linear-gradient($cta-gradient-angle, token(button-primary-hover-start), token(button-primary-hover-end));
 }
 
 .home__social-wrap {
   width: min($container-social, $size-full);
   display: block;
   margin: $home-social-top $space-none $space-small;
+  animation: soft-reveal 0.7s $ease-standard 0.4s both;
 }
 
 .home__social-list {

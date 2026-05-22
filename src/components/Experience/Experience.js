@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import Card from "./components/card/Card";
 import { experience } from "../../data";
 import "./Experience.scss";
@@ -27,10 +27,14 @@ const groupExperienceByCompany = (items) =>
 
 function Experience() {
   const [showDetailedTimeline, setShowDetailedTimeline] = useState(false);
-  const groupedExperience = groupExperienceByCompany(experience).map((group) => ({
-    ...group,
-    roles: [...group.roles].reverse(),
-  }));
+  const groupedExperience = useMemo(
+    () =>
+      groupExperienceByCompany(experience).map((group) => ({
+        ...group,
+        roles: [...group.roles].reverse(),
+      })),
+    []
+  );
   const timelineItems = showDetailedTimeline ? groupedExperience : experience;
 
   return (

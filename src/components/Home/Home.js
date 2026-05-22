@@ -2,7 +2,7 @@ import React from "react";
 import "./Home.scss";
 import { Link } from "react-scroll";
 import { TypeAnimation } from "react-type-animation";
-import profile from "../../assets/Dp.JPG";
+import profile from "../../assets/Dp-optimized.jpg";
 import ResumePdf from "../../assets/Kabilesh27Resume.pdf";
 import SocialLinks from "../common/SocialLinks/SocialLinks";
 import { socialLinks } from "../../data";
@@ -14,6 +14,10 @@ function Body() {
           src={profile}
           className="home__profile"
           alt="Kabilesh Ravichandran"
+          width="487"
+          height="640"
+          decoding="async"
+          fetchPriority="high"
         />
 
         <h1 className="home__heading u-text-center" id="home-title">KABILESH</h1>

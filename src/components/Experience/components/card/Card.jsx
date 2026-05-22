@@ -1,4 +1,4 @@
-import React, { useId, useState } from "react";
+import React, { memo, useId, useMemo, useState } from "react";
 import "./Card.scss";
 import TechList from "../../../common/TechList/TechList";
 
@@ -21,9 +21,12 @@ const Card = (props) => {
   const roleCount = roles?.length || 0;
   const firstRole = roles?.[0];
   const latestRole = roles?.[roles.length - 1];
-  const uniqueTechStack = [
-    ...new Set(roles?.flatMap((role) => role.techStack || []) || []),
-  ].slice(0, 8);
+  const uniqueTechStack = useMemo(
+    () => [
+      ...new Set(roles?.flatMap((role) => role.techStack || []) || []),
+    ].slice(0, 8),
+    [roles]
+  );
   const roleTitles =
     roleCount > 1
       ? roles?.map((role) => role.position).join(" to ")
@@ -124,4 +127,4 @@ const Card = (props) => {
   );
 };
 
-export default Card;
+export default memo(Card);

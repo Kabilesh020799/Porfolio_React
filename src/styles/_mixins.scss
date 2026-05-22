@@ -59,12 +59,12 @@
   cursor: pointer;
 
   @if $filled {
-    color: token(bg);
-    background: linear-gradient($cta-gradient-angle, token(accent-strong), token(gold));
+    color: token(button-text);
+    background: linear-gradient($cta-gradient-angle, token(button-primary-start), token(button-primary-end));
     border: $size-none;
   } @else {
     color: token(text);
-    background: token(bg-button-outline);
+    background: token(button-outline-bg);
     border: $border-width-thin solid token(accent-border);
   }
 }
