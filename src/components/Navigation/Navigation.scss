@@ -19,14 +19,18 @@
 
 .nav-wrapper {
   width: $size-full;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
+  position: fixed;
   padding: $space-base $space-large;
   top: $space-none;
+  left: $space-none;
   z-index: $z-nav;
-  transition-timing-function: ease-in;
-  transition: all $duration-slow $ease-standard;
+  background-color: token(bg-nav);
+  border-bottom: $border-width-thin solid token(border);
+  box-shadow: token(shadow-nav);
   backdrop-filter: blur($blur-md);
+  transition: background-color $duration-slow $ease-standard,
+    border-color $duration-slow $ease-standard,
+    box-shadow $duration-slow $ease-standard;
 }
 
 /* NAVIGATION */
@@ -37,10 +41,13 @@
   margin: $space-none auto;
 }
 
+.navbar__mobile-actions {
+  display: none;
+  gap: $space-small;
+}
+
 .nav_back {
   background-color: token(bg-nav);
-  border-bottom: $border-width-thin solid token(border);
-  box-shadow: token(shadow-nav);
 }
 
 .nav-item a {
@@ -135,6 +142,10 @@
   text-align: left;
 }
 
+.theme-toggle--mobile {
+  display: none;
+}
+
 .menu-toggle .bar {
   width: $mobile-menu-bar-width;
   height: $mobile-menu-bar-height;
@@ -147,7 +158,7 @@
 
 .menu-toggle {
   justify-self: end;
-  margin-right: $mobile-menu-bar-width;
+  margin-right: $space-none;
   display: none;
   border: $size-none;
   background: transparent;
@@ -195,6 +206,14 @@
     border-top: $border-width-thin solid token(border);
   }
 
+  .navbar__mobile-actions {
+    display: flex;
+  }
+
+  .nav-item--theme {
+    display: none;
+  }
+
   .navbar li {
     padding: $nav-mobile-item-padding;
   }
@@ -208,10 +227,25 @@
   }
 
   .theme-toggle {
-    justify-content: center;
-    width: min($container-xs, $size-full);
-    font-size: $font-md;
-    padding: $space-small $space-base;
+    min-width: auto;
+    padding: $space-hairline $space-small;
+  }
+
+  .theme-toggle--mobile {
+    display: inline-flex;
+  }
+
+  .theme-toggle--mobile .theme-toggle__label {
+    display: none;
+  }
+
+  .theme-toggle--mobile .theme-toggle__icon {
+    width: $space-large;
+  }
+
+  .theme-toggle--mobile .theme-toggle__track {
+    width: $space-section;
+    height: $space-large;
   }
 
   .menu-toggle,

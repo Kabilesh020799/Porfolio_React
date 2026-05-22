@@ -3,6 +3,26 @@ import "./Navigation.scss";
 import { Link } from "react-scroll";
 import { navigations } from "../../data";
 
+const ThemeToggle = ({ theme, onThemeToggle, className = "" }) => (
+  <button
+    type="button"
+    className={`theme-toggle theme-toggle--${theme} ${className}`.trim()}
+    onClick={onThemeToggle}
+    aria-pressed={theme === "light"}
+    aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
+  >
+    <span className="theme-toggle__icon" aria-hidden="true">
+      {theme === "dark" ? "☾" : "☀"}
+    </span>
+    <span className="theme-toggle__track" aria-hidden="true">
+      <span className="theme-toggle__thumb"></span>
+    </span>
+    <span className="theme-toggle__label">
+      {theme === "dark" ? "Dark" : "Light"}
+    </span>
+  </button>
+);
+
 function Navigation({ theme, onThemeToggle }) {
   const [click, setClick] = useState(false);
   const [show, handleShow] = useState(false);
@@ -56,18 +76,25 @@ function Navigation({ theme, onThemeToggle }) {
             KABILESH
           </span>
         </Link>
-        <button
-          type="button"
-          className={`menu-toggle ${click ? "is-active" : ""}`}
-          id="mobile-menu"
-          onClick={toggleMenu}
-          aria-label="Toggle navigation menu"
-          aria-expanded={click}
-        >
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
-        </button>
+        <div className="navbar__mobile-actions u-flex u-align-center">
+          <ThemeToggle
+            theme={theme}
+            onThemeToggle={onThemeToggle}
+            className="theme-toggle--mobile"
+          />
+          <button
+            type="button"
+            className={`menu-toggle ${click ? "is-active" : ""}`}
+            id="mobile-menu"
+            onClick={toggleMenu}
+            aria-label="Toggle navigation menu"
+            aria-expanded={click}
+          >
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </button>
+        </div>
         <ul className={`nav no-search u-list-reset u-flex u-align-center u-justify-between u-stack-on-nav u-justify-start-on-nav u-text-center-on-nav ${click ? "mobile-nav" : ""}`}>
           {navigations?.map((navigation) => (
             <li className="nav-item" key={navigation.path}>
@@ -85,23 +112,7 @@ function Navigation({ theme, onThemeToggle }) {
             </li>
           ))}
           <li className="nav-item nav-item--theme">
-            <button
-              type="button"
-              className={`theme-toggle theme-toggle--${theme}`}
-              onClick={onThemeToggle}
-              aria-pressed={theme === "light"}
-              aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
-            >
-              <span className="theme-toggle__icon" aria-hidden="true">
-                {theme === "dark" ? "☾" : "☀"}
-              </span>
-              <span className="theme-toggle__track" aria-hidden="true">
-                <span className="theme-toggle__thumb"></span>
-              </span>
-              <span className="theme-toggle__label">
-                {theme === "dark" ? "Dark" : "Light"}
-              </span>
-            </button>
+            <ThemeToggle theme={theme} onThemeToggle={onThemeToggle} />
           </li>
         </ul>
       </nav>
