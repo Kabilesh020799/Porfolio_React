@@ -12,7 +12,7 @@
   color: var(--gold);
 }
 .nav {
-  width: min($nav-link-width, $nav-link-max-width);
+  width: min(calc($nav-link-width + $space-stage), $size-full);
   padding: $space-wide $space-none $nav-padding-bottom $space-none;
   gap: $space-base;
 }
@@ -59,6 +59,72 @@
 
 .nav-item a.active-nav {
   color: var(--gold);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-tiny;
+  min-width: 118px;
+  color: var(--text);
+  font-size: $font-button;
+  font-family: var(--font-body);
+  font-weight: $font-weight-heavy;
+  padding: $space-hairline $space-small;
+  border: $border-width-thin solid token(border-soft);
+  border-radius: token(radius-pill);
+  background:
+    linear-gradient(135deg, token(bg-glass-strong), token(surface-icon)),
+    token(bg-button-outline);
+  box-shadow: token(shadow-icon);
+  cursor: pointer;
+  transition: background $duration-fast $ease-standard,
+    border-color $duration-fast $ease-standard,
+    color $duration-fast $ease-standard,
+    transform $duration-fast $ease-standard;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  border-color: token(accent-border-strong);
+  transform: translateY($button-hover-lift);
+}
+
+.theme-toggle__icon {
+  width: $space-wide;
+  color: var(--gold);
+  line-height: $line-body;
+}
+
+.theme-toggle__track {
+  position: relative;
+  width: $space-comfortable;
+  height: $space-large;
+  border-radius: token(radius-pill);
+  background: linear-gradient(135deg, token(accent-soft), token(gold-soft));
+  border: $border-width-thin solid token(border);
+}
+
+.theme-toggle__thumb {
+  position: absolute;
+  top: 50%;
+  left: $space-hairline;
+  width: $space-base;
+  height: $space-base;
+  border-radius: token(radius-circle);
+  background: linear-gradient(135deg, var(--accent-strong), var(--gold));
+  box-shadow: $ring-shadow-zero $scroll-cue-lift token(accent-halo);
+  transform: translateY($center-shift);
+  transition: left $duration-fast $ease-standard;
+}
+
+.theme-toggle--light .theme-toggle__thumb {
+  left: calc(100% - #{$space-base} - #{$space-hairline});
+}
+
+.theme-toggle__label {
+  min-width: $space-section;
+  text-align: left;
 }
 
 .menu-toggle .bar {
@@ -131,6 +197,13 @@
 
   .navbar li a {
     font-size: $font-md;
+  }
+
+  .theme-toggle {
+    justify-content: center;
+    width: min($container-xs, $size-full);
+    font-size: $font-md;
+    padding: $space-small $space-base;
   }
 
   .menu-toggle,

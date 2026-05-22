@@ -9,6 +9,8 @@
   position: relative;
   overflow: hidden;
   background:
+    radial-gradient(circle at 18% 30%, token(gold-radial), transparent 24rem),
+    linear-gradient(135deg, token(accent-soft), transparent 42%, token(gold-soft)),
     linear-gradient($gradient-angle, token(bg-hero-start), token(bg-glass-strong)),
     radial-gradient(circle at $home-radial-x $home-radial-y, token(accent-glow), transparent $home-radial-size);
 }

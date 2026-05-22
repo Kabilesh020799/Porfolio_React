@@ -6,6 +6,7 @@
   @include section-shell($space-page $space-base);
   @include flex-center;
   background:
+    linear-gradient(130deg, token(gold-soft), transparent 44%, token(accent-soft)),
     radial-gradient(circle at $home-radial-x $contact-radial-y, token(accent-radial-soft), transparent $section-radial-size),
     linear-gradient($gradient-angle, token(bg-section-contact), token(bg));
 }

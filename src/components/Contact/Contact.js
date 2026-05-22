@@ -111,7 +111,7 @@ function Contact() {
                   className="fa fa-map-marker fa-2x"
                   aria-hidden="true"
                 ></i>
-                <span className="contact__tag">Canada</span>
+                <span className="contact__tag">Halifax, Canada</span>
               </li>
               <li className="contact__list-item u-flex u-align-center">
                 <i

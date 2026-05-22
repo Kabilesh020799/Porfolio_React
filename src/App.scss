@@ -3,9 +3,13 @@
 .App_black {
   width: $size-full;
   background:
+    linear-gradient(135deg, token(accent-soft), transparent 32%, token(gold-soft) 72%, transparent),
     radial-gradient(circle at $app-bg-accent-x $app-bg-accent-y, token(accent-radial), transparent $app-radial-accent-size),
     radial-gradient(circle at $app-bg-gold-x $app-bg-gold-y, token(gold-halo), transparent $app-radial-gold-size),
-    linear-gradient($gradient-angle, token(bg) $size-none, token(bg-depth) $app-bg-depth-stop, token(bg) $size-full);
+    linear-gradient($gradient-angle, token(bg) $size-none, token(bg-depth) $app-bg-depth-stop, token(bg-soft) $size-full);
+  color: var(--text);
+  transition: background-color $duration-base $ease-standard,
+    color $duration-base $ease-standard;
 }
 
 .skip-link {

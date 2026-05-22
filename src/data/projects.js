@@ -43,15 +43,6 @@ const projects = [
     type: "done",
   },
   {
-    title: "Netflix Clone",
-    content:
-      "Created a responsive Netflix-inspired interface using React, TMDB data, trailer playback, and polished CSS interactions.",
-    tile: ["HTML5", "CSS3", "React JS"],
-    giturl: "https://github.com/Kabilesh020799/Web-App-Clones-in-React/tree/master/Netflix%20UI%20Clone",
-    url: "https://netflix-clone-6401b.web.app/",
-    type: "done",
-  },
-  {
     title: "NutriNova",
     content:
       "Built a health and nutrition application with personalized dashboards, activity tracking, and meal planning workflows.",

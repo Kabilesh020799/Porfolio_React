@@ -20,7 +20,7 @@ $colors: (
   "surface-card-deep": rgba(12, 26, 45, 0.86),
   "surface-expanded": rgba(16, 30, 49, 0.62),
   "surface-icon": rgba(15, 31, 51, 0.68),
-  "surface-rgb": "16, 30, 49",
+  "surface-rgb": unquote("16, 30, 49"),
   "border": rgba(148, 163, 184, 0.18),
   "border-soft": rgba(148, 163, 184, 0.26),
   "border-medium": rgba(148, 163, 184, 0.28),

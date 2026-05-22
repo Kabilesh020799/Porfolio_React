@@ -6,6 +6,8 @@
   @include section-shell($space-panel $space-section);
   font-family: var(--font-body);
   background:
+    radial-gradient(circle at 82% 18%, token(gold-radial), transparent 24rem),
+    linear-gradient(140deg, token(accent-soft), transparent 52%),
     linear-gradient($gradient-angle, token(bg-section-soft), token(bg-section-strong)),
     token(bg);
   @include flex-center;

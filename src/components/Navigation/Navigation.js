@@ -3,7 +3,7 @@ import "./Navigation.scss";
 import { Link } from "react-scroll";
 import { navigations } from "../../data";
 
-function Navigation() {
+function Navigation({ theme, onThemeToggle }) {
   const [click, setClick] = useState(false);
   const [show, handleShow] = useState(false);
 
@@ -73,6 +73,25 @@ function Navigation() {
               </Link>
             </li>
           ))}
+          <li className="nav-item nav-item--theme">
+            <button
+              type="button"
+              className={`theme-toggle theme-toggle--${theme}`}
+              onClick={onThemeToggle}
+              aria-pressed={theme === "light"}
+              aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
+            >
+              <span className="theme-toggle__icon" aria-hidden="true">
+                {theme === "dark" ? "☾" : "☀"}
+              </span>
+              <span className="theme-toggle__track" aria-hidden="true">
+                <span className="theme-toggle__thumb"></span>
+              </span>
+              <span className="theme-toggle__label">
+                {theme === "dark" ? "Dark" : "Light"}
+              </span>
+            </button>
+          </li>
         </ul>
       </nav>
     </div>

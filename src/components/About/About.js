@@ -14,7 +14,7 @@ function About() {
               <br />
               {aboutContent.sentence2}{" "}
               <b className="about__highlight">Software Development</b>
-              {aboutContent.sentence3} <b className="about__highlight"> Canada </b>,
+              {aboutContent.sentence3} <b className="about__highlight"> Halifax, Canada </b>,
               {aboutContent.sentence4}
               <br />
               <br />
