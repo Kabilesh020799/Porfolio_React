@@ -59,10 +59,17 @@
 }
 
 .card-company {
-  font-size: $font-company;
-  color: var(--text);
-  margin: $space-none;
+  color: var(--text-muted);
+  font-size: $font-md;
+  font-weight: $font-weight-semibold;
+  margin: $space-tiny $space-none $space-none;
   line-height: $line-title;
+}
+
+.card-company-title {
+  color: var(--text);
+  font-size: $font-company;
+  margin: $space-none;
 }
 
 .milestone-meta {
@@ -106,13 +113,25 @@
 }
 
 .role {
-  padding-left: $space-large;
-  border-left: $border-width-thin solid token(border);
+  padding-top: $space-wide;
+  border-top: $border-width-thin solid token(border);
   position: relative;
 }
 
 .role::before {
+  display: none;
+}
+
+.role-milestone {
+  padding-left: $space-large;
+  padding-top: $space-none;
+  border-top: $size-none;
+  border-left: $border-width-thin solid token(border);
+}
+
+.role-milestone::before {
   content: "";
+  display: block;
   position: absolute;
   left: $role-dot-offset;
   top: $role-dot-top;
@@ -132,7 +151,7 @@
 
 .card-position {
   color: var(--text);
-  font-size: $font-md;
+  font-size: $font-company;
   font-weight: $font-weight-bold;
   line-height: $line-heading;
   margin: $space-none;
@@ -177,6 +196,10 @@
     box-shadow: var(--shadow-soft);
   }
 
+  .card-collapsed {
+    padding-bottom: $space-base;
+  }
+
   .card:hover {
     transform: none;
   }
@@ -208,6 +231,10 @@
     gap: $space-base;
   }
 
+  .card-collapsed .card-company-row {
+    gap: $space-small;
+  }
+
   .milestone-meta {
     gap: $space-tiny;
     margin-top: $space-tiny;
@@ -226,10 +253,14 @@
   }
 
   .card-position {
-    font-size: $font-copy-mobile;
+    font-size: $font-xl;
   }
 
   .card-company {
+    font-size: $font-meta;
+  }
+
+  .card-company-title {
     font-size: $font-xl;
   }
 
@@ -243,6 +274,11 @@
   }
 
   .role {
+    padding-top: $space-base;
+  }
+
+  .role-milestone {
+    padding-top: $space-none;
     padding-left: $role-indent-mobile;
   }
 

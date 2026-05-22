@@ -11,12 +11,37 @@
   background: linear-gradient($gradient-angle, token(bg-section-timeline), token(bg-section));
 }
 
-.experience-title {
+.experience-heading {
   padding-top: $experience-title-offset;
-  @include display-heading;
   position: sticky;
   top: $space-stage;
   height: fit-content;
+  gap: $space-wide;
+}
+
+.experience-title {
+  @include display-heading;
+  margin: $space-none;
+}
+
+.experience-view-toggle {
+  @include pill-button;
+  box-shadow: var(--shadow-cta);
+  padding: $space-small $space-large;
+  font-size: $font-action;
+  transition: transform $duration-fast $ease-standard,
+    box-shadow $duration-fast $ease-standard;
+}
+
+.experience-view-toggle:hover,
+.experience-view-toggle:focus-visible {
+  box-shadow: var(--shadow-action-hover);
+  transform: translateY($button-hover-lift);
+}
+
+.experience-content {
+  gap: $space-base;
+  min-width: $size-none;
 }
 
 .experience {
@@ -30,7 +55,7 @@
 .experience::before {
   content: "";
   position: absolute;
-  top: $space-large;
+  top: $space-base;
   bottom: $space-large;
   left: $timeline-left;
   width: $timeline-line-width;
@@ -55,16 +80,24 @@
   .experience {
     height: fit-content;
     width: $size-full;
-    gap: $space-wide;
+    gap: $space-base;
     padding-left: $space-wide;
     align-items: stretch;
   }
 
-  .experience-title {
-    font-size: $font-experience-mobile-heading;
+  .experience-content {
+    align-items: stretch;
+  }
+
+  .experience-heading {
     padding-top: $space-none;
     position: static;
     width: $size-full;
+    align-items: center;
+  }
+
+  .experience-title {
+    font-size: $font-experience-mobile-heading;
   }
 }
 
@@ -84,6 +117,16 @@
     top: $space-tiny;
     bottom: $space-tiny;
     left: $timeline-left;
+  }
+
+  .experience-heading {
+    align-items: flex-start;
+    gap: $space-base;
+  }
+
+  .experience-view-toggle {
+    width: $size-full;
+    padding: $space-small $space-base;
   }
 
   .experience-title {

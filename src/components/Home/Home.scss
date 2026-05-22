@@ -33,15 +33,17 @@
 .home__heading {
   @include display-heading($heading-home);
   letter-spacing: $size-none;
-  margin-top: $space-section;
+  margin-top: $space-large;
+  margin-bottom: $space-none;
   text-shadow: token(shadow-text);
 }
 
 .home__subheading {
   @include muted-copy($container-content);
   font-size: $heading-home-subtitle;
-  min-height: $home-subtitle-height;
-  margin-top: $space-base;
+  min-height: $home-compact-subtitle-height;
+  margin-top: $space-tiny;
+  margin-bottom: $space-none;
   line-height: $line-home-subtitle;
   width: min($container-content, $size-full);
 }
@@ -53,7 +55,8 @@
 .home__intro {
   @include muted-copy($container-home-copy);
   font-size: $font-md;
-  margin-top: $space-base;
+  margin-top: $space-tiny;
+  margin-bottom: $space-none;
 }
 
 .home__actions {
@@ -139,35 +142,44 @@
 
 @media screen and (max-height: $home-short-viewport) {
   .home {
-    padding-top: $home-compact-padding-top;
+    padding-top: $space-wide;
     padding-bottom: $home-compact-padding-bottom;
   }
 
   .home__profile {
-    width: min($home-compact-profile, $profile-mobile-size);
-    height: min($home-compact-profile, $profile-mobile-size);
+    width: min(160px, $profile-mobile-size);
+    height: min(160px, $profile-mobile-size);
   }
 
   .home__heading {
-    font-size: $home-compact-heading;
-    margin-top: $space-large;
+    font-size: $space-roomy;
+    margin-top: $space-small;
   }
 
   .home__subheading {
-    min-height: $home-compact-subtitle-height;
-    margin-top: $space-small;
+    min-height: 44px;
+    margin-top: $space-hairline;
   }
 
   .home__intro {
-    margin-top: $space-small;
+    margin-top: $space-hairline;
   }
 
   .home__actions {
-    margin-top: $home-compact-actions-offset;
+    margin-top: $space-base;
   }
 
   .home__social-wrap {
-    margin-top: $home-compact-social-top;
+    margin: $space-tiny $space-none $space-none;
+  }
+
+  .home__social-list {
+    margin-top: $space-tiny;
+  }
+
+  .home__scroll-icon {
+    width: $space-roomy;
+    height: $space-roomy;
   }
 }
 
@@ -197,20 +209,32 @@
 @media screen and (max-width: $breakpoint-sm) {
   .home {
     min-height: $home-first-view-height;
-    padding: $home-compact-padding-top $space-base $home-compact-padding-bottom;
+    padding: $space-wide $space-base $home-compact-padding-bottom;
+  }
+
+  .home__profile {
+    width: min(145px, $profile-mobile-size);
+    height: min(145px, $profile-mobile-size);
   }
 
   .home__heading {
-    font-size: $home-title-mobile;
+    font-size: $space-roomy;
+    margin-top: $space-small;
     overflow-wrap: anywhere;
   }
 
   .home__subheading {
-    min-height: $home-subtitle-height-mobile;
+    min-height: 52px;
+    margin-top: $space-hairline;
   }
 
   .home__intro {
     font-size: $font-copy-home-mobile;
+    margin-top: $space-hairline;
+  }
+
+  .home__actions {
+    margin-top: $space-small;
   }
 
   .home__actions,
