@@ -152,7 +152,7 @@
   .card {
     font-size: $font-meta;
     padding: $card-padding-tablet;
-    width: min($container-timeline-card, $size-full);
+    width: $size-full;
   }
 
   .timeline-marker {
@@ -162,7 +162,9 @@
   .card-date {
     width: $size-full;
     margin-bottom: $space-tiny;
+    flex-basis: auto;
   }
+
   .card-details {
     width: $size-full;
   }
@@ -171,26 +173,91 @@
 @media screen and (max-width: $breakpoint-sm) {
   .card {
     padding: $card-padding-mobile;
+    background: token(surface-card-deep);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .card-date {
+    align-self: flex-start;
+    width: auto;
+    margin-bottom: $space-base;
+    padding: $meta-chip-padding;
+    border: $border-width-thin solid token(gold-border);
+    border-radius: token(radius-pill);
+    background: token(gold-soft);
+    color: var(--gold);
+    font-size: $font-xs;
+    line-height: $line-body;
+  }
+
+  .timeline-marker {
+    display: block;
+    top: $space-wide;
+    left: $timeline-dot-mobile-offset;
+    width: $space-base;
+    height: $space-base;
+    border-width: $border-width-thin;
+    box-shadow: $ring-shadow-zero $scroll-cue-lift token(accent-halo);
+  }
+
+  .card-company-row {
+    gap: $space-base;
+  }
+
+  .milestone-meta {
+    gap: $space-tiny;
+    margin-top: $space-tiny;
+  }
+
+  .card-actions {
+    width: $size-full;
+    gap: $space-tiny;
+  }
+
+  .expand-button,
+  .company-link {
+    flex: $grid-single $grid-single $size-none;
+    text-align: center;
+    padding: $space-small $space-base;
   }
 
   .card-position {
-    font-size: $font-md;
+    font-size: $font-copy-mobile;
   }
 
   .card-company {
     font-size: $font-xl;
   }
 
+  .milestone-summary {
+    margin-top: $space-wide;
+  }
+
+  .role-list {
+    gap: $space-wide;
+    margin-top: $space-wide;
+  }
+
   .role {
     padding-left: $role-indent-mobile;
   }
 
+  .role-meta {
+    font-size: $font-xs;
+  }
+
   .card-description {
     margin-top: $space-base;
+    font-size: $font-copy-sm;
+    line-height: $line-copy;
   }
 
   .card-labels {
     gap: $radius-md;
+    margin-top: $space-base;
   }
-
 }

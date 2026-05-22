@@ -44,27 +44,49 @@
 
 @media screen and (max-width: $breakpoint-experience) {
   .experience-wrapper {
+    grid-template-columns: $fr-unit;
     height: fit-content;
     gap: $space-section;
     margin-bottom: $space-stage;
     padding: $space-page $space-base $space-none;
+    justify-items: stretch;
   }
+
   .experience {
     height: fit-content;
     width: $size-full;
     gap: $space-wide;
     padding-left: $space-wide;
+    align-items: stretch;
   }
+
   .experience-title {
     font-size: $font-experience-mobile-heading;
     padding-top: $space-none;
     position: static;
+    width: $size-full;
   }
 }
 
 @media screen and (max-width: $breakpoint-sm) {
   .experience-wrapper {
-    padding: $space-roomy $space-small $space-none;
+    gap: $space-wide;
+    padding: $space-roomy $space-base $space-none;
     margin-bottom: $space-stage;
+  }
+
+  .experience {
+    gap: $space-base;
+    padding-left: $space-wide;
+  }
+
+  .experience::before {
+    top: $space-tiny;
+    bottom: $space-tiny;
+    left: $timeline-left;
+  }
+
+  .experience-title {
+    text-align: left;
   }
 }

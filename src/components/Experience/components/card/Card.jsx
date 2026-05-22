@@ -11,7 +11,7 @@ const Card = (props) => {
     roles,
   } = props;
 
-  const [expanded, setExpanded] = useState(roles?.length > 1);
+  const [expanded, setExpanded] = useState(false);
   const roleListId = useId();
   const roleCount = roles?.length || 0;
   const firstRole = roles?.[0];
