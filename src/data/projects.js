@@ -18,13 +18,6 @@ const projects = [
     type: "done",
   },
   {
-    title: "Obstacle Detector",
-    content:
-      "Designed an Arduino-based assistive device that uses ultrasonic sensing to detect nearby obstacles and warn visually impaired users.",
-    tile: ["IoT", "C++"],
-    type: "done",
-  },
-  {
     title: "Object Detection",
     content:
       "Developed a video object detection model using OpenCV and a pretrained YOLO model to identify common objects across real-world footage.",
