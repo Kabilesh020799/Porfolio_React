@@ -37,6 +37,12 @@ const MailIcon = () => (
   </svg>
 );
 
+const LinkedInIcon = () => (
+  <svg className="contact__icon" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M6.94 8.98H2.82v12.39h4.12V8.98ZM4.88 7.28c1.32 0 2.14-.88 2.14-1.98-.02-1.13-.82-1.98-2.11-1.98-1.3 0-2.15.85-2.15 1.98 0 1.1.82 1.98 2.1 1.98h.02ZM21.24 14.27c0-3.8-2.03-5.57-4.74-5.57-2.18 0-3.16 1.2-3.71 2.04V8.98H8.67c.05 1.16 0 12.39 0 12.39h4.12v-6.92c0-.37.03-.74.14-1 .3-.74.98-1.51 2.12-1.51 1.5 0 2.1 1.14 2.1 2.82v6.61h4.12v-7.1h-.03Z" />
+  </svg>
+);
+
 function Contact() {
   const {
     name,
@@ -62,6 +68,31 @@ function Contact() {
             Have an opportunity, product idea, or collaboration in mind? Send a
             note and I will reply as soon as I can.
           </p>
+
+          <div className="contact__primary-links u-flex u-flex-wrap u-justify-center">
+            <a
+              href="mailto:kabilesh020799@gmail.com"
+              className="contact__primary-link contact__primary-link--email u-flex u-align-center"
+            >
+              <MailIcon />
+              <span>
+                <strong>Email me</strong>
+                <small>kabilesh020799@gmail.com</small>
+              </span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/kabileshravi27/"
+              target="_blank"
+              rel="noreferrer"
+              className="contact__primary-link u-flex u-align-center"
+            >
+              <LinkedInIcon />
+              <span>
+                <strong>Connect on LinkedIn</strong>
+                <small>Kabilesh Ravichandran</small>
+              </span>
+            </a>
+          </div>
 
           <div className="contact__content u-grid u-full-width">
             <form className="contact__form u-flex u-flex-column u-full-width" onSubmit={onSubmit}>
@@ -103,6 +134,8 @@ function Contact() {
                       ? "contact__status--success"
                       : "contact__status--error"
                   }`}
+                  role={status.type === "error" ? "alert" : "status"}
+                  aria-live="polite"
                 >
                   {status.message}
                 </p>
@@ -113,7 +146,7 @@ function Contact() {
                 className="contact__send"
                 disabled={!name || !email || !msg || loading}
               >
-                {loading ? "Sending..." : "SEND"}
+                {loading ? "Sending…" : "Send message"}
               </button>
             </form>
 
@@ -121,15 +154,6 @@ function Contact() {
               <li className="contact__list-item u-flex u-align-center">
                 <LocationIcon />
                 <span className="contact__tag">Halifax, Canada</span>
-              </li>
-              <li className="contact__list-item u-flex u-align-center">
-                <MailIcon />
-                <a
-                  href="mailto:kabilesh020799@gmail.com"
-                  className="contact__tag"
-                >
-                  kabilesh020799@gmail.com
-                </a>
               </li>
             </ul>
           </div>
@@ -142,7 +166,7 @@ function Contact() {
           </div>
 
           <div className="contact__copyright u-text-center">
-            &copy; {new Date().getFullYear()} All rights reserved
+            &copy; {new Date().getFullYear()} Kabilesh Ravichandran
           </div>
         </div>
     </section>

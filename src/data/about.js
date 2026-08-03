@@ -1,15 +1,25 @@
 const aboutContent = {
-  sentence1:
-    "I am a full-stack software engineer with experience building customer-facing web products, internal tools, and data-informed features across startups and product teams.",
-  sentence2:
-    "My work sits at the intersection of product thinking, clean user interfaces, and dependable",
-  sentence3: ". I am currently pursuing graduate studies in computer science in",
-  sentence4:
-    "while continuing to strengthen my engineering fundamentals and ship practical solutions.",
-  sentence5:
-    "I care about readable code, thoughtful collaboration, testing, and turning ambiguous ideas into simple, useful software.",
-  sentence6:
-    "I am especially interested in product teams, social-impact work, and selective",
+  paragraphs: [
+    "I’m a full-stack software engineer who builds reliable customer-facing products, internal tools, and scalable systems across the frontend, backend, and cloud.",
+    "I combine product thinking, thoughtful user experiences, and dependable engineering. I’m based in Halifax, Canada.",
+    "I value readable code, effective collaboration, and comprehensive testing. I’m particularly interested in product-focused teams, social-impact initiatives, and selective freelance collaborations.",
+  ],
+  highlights: [
+    "full-stack software engineer",
+    "frontend, backend, and cloud",
+    "Halifax, Canada",
+    "readable code",
+    "comprehensive testing",
+    "product-focused teams",
+    "social-impact initiatives",
+    "freelance collaborations",
+  ],
+  education: {
+    degree: "Master’s in Applied Computer Science (Co-op)",
+    institution: "Dalhousie University",
+    location: "Nova Scotia, Canada",
+    graduation: "December 2024",
+  },
 };
 
 export { aboutContent };

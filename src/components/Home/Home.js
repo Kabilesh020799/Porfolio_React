@@ -1,13 +1,19 @@
 import React from "react";
 import "./Home.scss";
 import { Link } from "react-scroll";
-import { TypeAnimation } from "react-type-animation";
-import profile from "../../assets/Dp-optimized.jpg";
+import profile from "../../assets/profile.webp";
 import ResumePdf from "../../assets/Kabilesh27Resume.pdf";
 import SocialLinks from "../common/SocialLinks/SocialLinks";
 import { socialLinks } from "../../data";
 
-function Body() {
+const activateScrollLinkFromKeyboard = (event) => {
+  if (event.key === "Enter" || event.key === " ") {
+    event.preventDefault();
+    event.currentTarget.click();
+  }
+};
+
+function Home() {
   return (
     <section className="home u-text-center" id="home" aria-labelledby="home-title">
         <img
@@ -20,27 +26,16 @@ function Body() {
           fetchPriority="high"
         />
 
-        <h1 className="home__heading u-text-center" id="home-title">KABILESH</h1>
-        <h3 className="home__subheading">
-          Software engineer focused on{" "}
-          <TypeAnimation
-            repeat={Infinity}
-            wrapper="b"
-            sequence={[
-              "full-stack products",
-              1000,
-              "frontend systems",
-              1000,
-              "reliable web apps",
-              1000,
-              "ML-enabled tools",
-              1000,
-            ]}
-          ></TypeAnimation>
-        </h3>
+        <h1 className="home__heading u-text-center" id="home-title">
+          Kabilesh Ravichandran
+        </h1>
+        <p className="home__subheading">
+          Full-stack software engineer building reliable products from
+          interface to infrastructure.
+        </p>
         <p className="home__intro">
-          I build thoughtful, production-ready experiences with React, Vue,
-          Node.js, cloud tooling, and a strong eye for usability.
+          I design and build reliable full-stack products—from thoughtful user
+          experiences to backend systems and production delivery.
         </p>
         <div className="home__actions u-flex u-justify-center u-flex-wrap">
           <Link
@@ -50,14 +45,15 @@ function Body() {
             duration={500}
             offset={-150}
             className="home__primary-action"
+            role="button"
+            tabIndex={0}
+            onKeyDown={activateScrollLinkFromKeyboard}
           >
             View projects
           </Link>
           <a
             href={ResumePdf}
-            download="Kabilesh_Resume"
-            target="_blank"
-            rel="noreferrer"
+            download="Kabilesh-Ravichandran-Resume.pdf"
             className="home__secondary-action"
           >
             Resume
@@ -73,6 +69,10 @@ function Body() {
             smooth={true}
             duration={500}
             offset={-150}
+            role="button"
+            tabIndex={0}
+            aria-label="Continue to About section"
+            onKeyDown={activateScrollLinkFromKeyboard}
         >
             <span>
               <svg className="home__scroll-icon" viewBox="0 0 24 24" aria-hidden="true">
@@ -85,4 +85,4 @@ function Body() {
   );
 }
 
-export default Body;
+export default Home;

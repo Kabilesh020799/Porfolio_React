@@ -1,68 +1,68 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Kabilesh Ravichandran — Portfolio
 
-## Available Scripts
+A responsive portfolio presenting my full-stack engineering experience, selected projects, technical toolkit, and contact information.
 
-In the project directory, you can run:
+## Highlights
 
-### `yarn start`
+- Responsive single-page experience
+- Light and dark themes with saved preferences
+- Keyboard navigation, visible focus states, and reduced-motion support
+- Expandable professional timeline
+- Project cards with honest live-site and source-code availability
+- EmailJS contact form with direct-email fallback
+- SEO and social-sharing metadata
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Built with
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+React, Sass, React Scroll, React Testing Library, and EmailJS. The site is currently built with Create React App and deployed as a static application.
 
-### `yarn test`
+## Run locally
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Requirements: Node.js 18 or newer and npm.
 
-### `yarn build`
+```bash
+npm install
+cp .env.example .env
+npm start
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The development server opens at `http://localhost:3000`.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Environment variables
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The contact form needs an EmailJS service, template, and public key:
 
-### `yarn eject`
+```text
+REACT_APP_EMAILJS_SERVICE_ID=
+REACT_APP_EMAILJS_TEMPLATE_ID=
+REACT_APP_EMAILJS_PUBLIC_KEY=
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Do not commit `.env`. If EmailJS is not configured, the interface directs visitors to email me directly.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Quality checks
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+npm test -- --watchAll=false
+npm run build
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Project structure
 
-## Learn More
+```text
+src/
+  components/  Page sections and shared UI
+  data/        Portfolio content
+  hooks/       Contact-form behavior
+  styles/      Design tokens, mixins, and utilities
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Deployment
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`npm run deploy` creates a production build and publishes the `build` directory to GitHub Pages. Firebase Hosting configuration is also present for deployments using Firebase.
 
-### Code Splitting
+## Contact
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- [LinkedIn](https://www.linkedin.com/in/kabileshravi27/)
+- [GitHub](https://github.com/Kabilesh020799)
+- [Email](mailto:kabilesh020799@gmail.com)

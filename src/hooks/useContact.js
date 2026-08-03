@@ -1,12 +1,9 @@
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 
-const EMAILJS_SERVICE_ID =
-  process.env.REACT_APP_EMAILJS_SERVICE_ID || "default_service";
-const EMAILJS_TEMPLATE_ID =
-  process.env.REACT_APP_EMAILJS_TEMPLATE_ID || "template_yq66kwi";
-const EMAILJS_PUBLIC_KEY =
-  process.env.REACT_APP_EMAILJS_PUBLIC_KEY || "asWnA6RSUG2wRoq6n";
+const EMAILJS_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
 const useContact = () => {
   const [name, setName] = useState("");
@@ -27,6 +24,15 @@ const useContact = () => {
       setStatus({
         type: "error",
         message: "Please complete all fields before sending your message.",
+      });
+      return;
+    }
+
+    if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+      setStatus({
+        type: "error",
+        message:
+          "The contact form is temporarily unavailable. Please email me directly at kabilesh020799@gmail.com.",
       });
       return;
     }

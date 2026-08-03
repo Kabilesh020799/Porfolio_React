@@ -1,40 +1,34 @@
 const skillsData = [
   {
-    category: "Programming Languages",
-    skills: ["Java", "JavaScript (ES6)", "TypeScript", "C++", "Python", "Golang"],
-  },
-  {
-    category: "Databases",
-    skills: ["MySQL", "PostgreSQL", "MongoDB", "DynamoDB", "Firebase"],
+    category: "Core Languages",
+    skills: ["TypeScript", "JavaScript", "Python", "Java", "Go"],
   },
   {
     category: "Frontend",
-    skills: ["React", "Vue.js", "React Native", "Nuxt.js", "HTML", "CSS", "SCSS"],
+    skills: ["React", "Vue.js", "Nuxt.js", "HTML", "CSS", "Sass"],
   },
   {
-    category: "Backend and Testing",
+    category: "Backend and Data",
+    skills: ["Node.js", "Django", "Spring Boot", "PostgreSQL", "MongoDB", "DynamoDB"],
+  },
+  {
+    category: "Testing and Quality",
     skills: [
-      "Node.js",
-      "Django",
-      "Spring Boot",
-      "Ruby on Rails",
       "Playwright",
       "Jest",
       "Vitest",
       "Testing Library",
+      "SonarQube",
     ],
   },
   {
-    category: "DevOps and Cloud",
+    category: "Cloud and Delivery",
     skills: [
-      "Git",
-      "GitHub",
+      "AWS",
       "Docker",
       "Kubernetes",
-      "Jenkins",
-      "Terraform",
       "Datadog",
-      "AWS",
+      "GitHub Actions",
     ],
   },
 ];

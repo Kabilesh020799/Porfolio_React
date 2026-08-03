@@ -26,8 +26,66 @@
 
 .contact__subcopy {
   max-width: $container-contact-copy;
-  margin-bottom: $space-section;
+  margin-bottom: $space-wide;
   animation: soft-reveal 0.6s $ease-standard 0.08s both;
+}
+
+.contact__primary-links {
+  width: $size-full;
+  gap: $space-base;
+  margin-bottom: $space-section;
+  animation: soft-reveal 0.6s $ease-standard 0.12s both;
+}
+
+.contact__primary-link {
+  flex: 1 1 280px;
+  max-width: 360px;
+  gap: $space-base;
+  padding: $space-base $space-large;
+  color: var(--text);
+  text-align: left;
+  text-decoration: none;
+  border: $border-width-thin solid token(accent-border);
+  border-radius: token(radius-md);
+  background: token(surface-card);
+  box-shadow: token(shadow-soft);
+  transition: transform $duration-fast $ease-standard,
+    border-color $duration-fast $ease-standard,
+    box-shadow $duration-fast $ease-standard;
+}
+
+.contact__primary-link--email {
+  border-color: token(accent-border-strong);
+}
+
+.contact__primary-link:hover,
+.contact__primary-link:focus-visible {
+  transform: translateY($button-hover-lift);
+  border-color: var(--accent-strong);
+  box-shadow: token(shadow-action-hover);
+}
+
+.contact__primary-link .contact__icon {
+  width: $space-roomy;
+  height: $space-roomy;
+  color: var(--accent-strong);
+}
+
+.contact__primary-link span,
+.contact__primary-link strong,
+.contact__primary-link small {
+  display: block;
+}
+
+.contact__primary-link strong {
+  font-size: $font-md;
+}
+
+.contact__primary-link small {
+  margin-top: $space-hairline;
+  color: var(--text-muted);
+  font-size: $font-sm;
+  overflow-wrap: anywhere;
 }
 
 .contact__content {
@@ -103,7 +161,7 @@
 
 .contact__list {
   margin-top: $space-none;
-  grid-template-columns: repeat($contact-grid-columns, minmax($size-none, $fr-unit));
+  grid-template-columns: minmax($size-none, $fr-unit);
   align-items: stretch;
   gap: $space-base;
 }
@@ -161,6 +219,11 @@
 
   .contact__send {
     width: $size-full;
+  }
+
+  .contact__primary-link {
+    flex-basis: $size-full;
+    max-width: $size-full;
   }
 
   .contact__list {

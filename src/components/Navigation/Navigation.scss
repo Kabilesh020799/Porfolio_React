@@ -2,19 +2,24 @@
 @use "../../styles/tokens" as *;
 
 .heading {
-  @include display-heading($heading-section);
-  letter-spacing: $size-none;
+  color: var(--text);
   display: inline-block;
-  font-weight: $font-weight-heavy;
+  font-family: var(--font-body);
+  font-size: 1.3rem;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
   cursor: pointer;
 }
 .head_gold {
   color: var(--gold);
 }
 .nav {
-  width: min(calc($nav-link-width + $space-stage), $size-full);
-  padding: $space-wide $space-none $nav-padding-bottom $space-none;
-  gap: $space-base;
+  width: auto;
+  margin: $space-none;
+  padding: $space-none;
+  gap: $space-large;
 }
 
 .nav-wrapper {
@@ -36,9 +41,20 @@
 /* NAVIGATION */
 
 .navbar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
   height: $nav-height;
-  width: min($container-page, $size-full);
-  margin: $space-none auto;
+  width: $size-full;
+  margin: $space-none;
+}
+
+.navbar__brand {
+  justify-self: start;
+}
+
+.theme-toggle--desktop {
+  justify-self: end;
 }
 
 .navbar__mobile-actions {
@@ -188,8 +204,12 @@
 }
 
 @media only screen and (max-width: $breakpoint-nav) {
+  .navbar {
+    display: flex;
+  }
+
   .heading {
-    margin-left: $nav-left-space-mobile;
+    margin-left: $space-none;
   }
 
   .navbar ul {
@@ -208,9 +228,10 @@
 
   .navbar__mobile-actions {
     display: flex;
+    margin-left: auto;
   }
 
-  .nav-item--theme {
+  .theme-toggle--desktop {
     display: none;
   }
 
@@ -266,6 +287,6 @@
   }
 
   .heading {
-    font-size: $font-nav-mobile-brand;
+    font-size: 1.05rem;
   }
 }

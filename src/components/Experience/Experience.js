@@ -38,16 +38,20 @@ function Experience() {
   const timelineItems = showDetailedTimeline ? groupedExperience : experience;
 
   return (
-    <div className="experience-wrapper u-grid u-stack-on-tablet u-center-on-tablet u-full-width" id="experience">
+    <section
+      className="experience-wrapper u-grid u-stack-on-tablet u-center-on-tablet u-full-width"
+      id="experience"
+      aria-labelledby="experience-title"
+    >
         <div className="experience-heading u-flex u-flex-column u-align-start">
-          <h2 className="experience-title u-flex u-align-start u-justify-start u-text-left u-text-center-on-tablet">Professional experience</h2>
+          <h2 className="experience-title u-flex u-align-start u-justify-start u-text-left u-text-center-on-tablet" id="experience-title">Professional experience</h2>
           <button
             className="experience-view-toggle"
             type="button"
             onClick={() => setShowDetailedTimeline((isDetailed) => !isDetailed)}
             aria-pressed={showDetailedTimeline}
           >
-            {showDetailedTimeline ? "Compact view" : "Detailed view"}
+            {showDetailedTimeline ? "Show all roles" : "Group by company"}
           </button>
         </div>
         <div className="experience u-flex u-flex-column u-align-stretch u-center-on-tablet u-full-width">
@@ -77,7 +81,7 @@ function Experience() {
             )
           )}
         </div>
-    </div>
+    </section>
   );
 }
 

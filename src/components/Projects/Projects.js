@@ -9,11 +9,13 @@ const getProjectActions = (project) =>
       href: project.giturl,
       label: "Source",
       ariaLabel: `View ${project.title} source code`,
+      kind: "source",
     },
     project.url && {
       href: project.url,
-      label: "View",
-      ariaLabel: `Open ${project.title}`,
+      label: "Live site",
+      ariaLabel: `Open ${project.title} live site`,
+      kind: "live",
     },
   ].filter(Boolean);
 
@@ -34,6 +36,13 @@ const ProjectCard = memo(function ProjectCard({ project }) {
       <div className="projects__card-body u-flex u-flex-column">
         <h3 className="projects__card-title u-text-left">{project.title}</h3>
         <p className="projects__card-copy u-full-width u-text-left">{project.content}</p>
+        {project.highlights?.length > 0 && (
+          <ul className="projects__highlights u-text-left">
+            {project.highlights.map((highlight) => (
+              <li key={highlight}>{highlight}</li>
+            ))}
+          </ul>
+        )}
       </div>
       <div className="projects__card-footer u-flex u-flex-column u-align-stretch">
         <TechList items={project.tile} className="projects__tech-list" />
@@ -46,6 +55,7 @@ const ProjectCard = memo(function ProjectCard({ project }) {
                 rel="noreferrer"
                 aria-label={action.ariaLabel}
                 key={action.label}
+                className={`projects__action projects__action--${action.kind}`}
               >
                 {action.label}
               </a>

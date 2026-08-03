@@ -38,7 +38,8 @@
 }
 
 .about__highlight {
-  color: var(--gold);
+  color: var(--accent-strong);
+  font-weight: $font-weight-semibold;
 }
 
 .about__copy {
@@ -47,6 +48,40 @@
   letter-spacing: $tracking-copy;
   line-height: $line-relaxed;
   animation: soft-reveal 0.65s $ease-standard 0.1s both;
+}
+
+.about__education {
+  padding: $space-large;
+  border: $border-width-thin solid token(border-soft);
+  border-left: $space-hairline solid var(--accent);
+  border-radius: token(radius-md);
+  background: token(surface-card);
+  box-shadow: token(shadow-soft);
+}
+
+.about__education-header {
+  gap: $space-small;
+  color: var(--text-soft);
+  font-size: $font-sm;
+}
+
+.about__education-eyebrow {
+  color: var(--accent-strong);
+  font-weight: $font-weight-bold;
+  letter-spacing: $tracking-eyebrow;
+  text-transform: uppercase;
+}
+
+.about__education h3 {
+  margin: $space-small $space-none $space-tiny;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: $font-lg;
+}
+
+.about__education p {
+  margin: $space-none;
+  color: var(--text-muted);
 }
 
 @media (max-width: $breakpoint-about) {

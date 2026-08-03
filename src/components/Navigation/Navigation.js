@@ -35,6 +35,13 @@ function Navigation({ theme, onThemeToggle }) {
     setClick(false);
   };
 
+  const activateLinkFromKeyboard = (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      event.currentTarget.click();
+    }
+  };
+
   useEffect(() => {
     let frameId = null;
 
@@ -63,12 +70,17 @@ function Navigation({ theme, onThemeToggle }) {
     <div className={`nav-wrapper ${show ? "nav_back" : ""}`}>
       <nav className="navbar u-flex u-align-center u-justify-between">
         <Link
+          className="navbar__brand"
           to="home"
           spy={true}
           smooth={true}
           duration={500}
           offset={-150}
           onClick={closeMenu}
+          role="button"
+          tabIndex={0}
+          onKeyDown={activateLinkFromKeyboard}
+          aria-label="Go to the top of the page"
         >
           <span
             className={`heading ${show && "head_gold"}`}
@@ -106,15 +118,20 @@ function Navigation({ theme, onThemeToggle }) {
                 duration={500}
                 offset={navigation?.path === "projects" ? -180 : -110}
                 onClick={closeMenu}
+                role="button"
+                tabIndex={0}
+                onKeyDown={activateLinkFromKeyboard}
               >
                 {navigation?.name}
               </Link>
             </li>
           ))}
-          <li className="nav-item nav-item--theme">
-            <ThemeToggle theme={theme} onThemeToggle={onThemeToggle} />
-          </li>
         </ul>
+        <ThemeToggle
+          theme={theme}
+          onThemeToggle={onThemeToggle}
+          className="theme-toggle--desktop"
+        />
       </nav>
     </div>
   );

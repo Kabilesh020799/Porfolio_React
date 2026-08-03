@@ -84,6 +84,18 @@
   padding: $space-none;
   line-height: $line-copy;
 }
+
+.projects__highlights {
+  margin: $space-base $space-none $space-none;
+  padding-left: $space-large;
+  color: var(--text-muted);
+  font-size: $font-copy-sm;
+  line-height: $line-copy;
+}
+
+.projects__highlights li::marker {
+  color: var(--accent-strong);
+}
 .projects__card-footer {
   margin: $project-card-padding $space-none $space-none;
   color: var(--text);
@@ -104,7 +116,7 @@
     background $duration-fast $ease-standard;
 }
 
-.projects__actions a:first-child {
+.projects__action--source {
   @include pill-button(false);
 }
 
@@ -114,7 +126,7 @@
   box-shadow: token(shadow-action-hover);
 }
 
-.projects__actions a:first-child:hover {
+.projects__action--source:hover {
   background: token(button-outline-hover);
 }
 

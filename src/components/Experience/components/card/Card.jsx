@@ -15,9 +15,9 @@ const Card = (props) => {
     roles,
   } = props;
 
-  const [expanded, setExpanded] = useState(false);
-  const detailsId = useId();
   const isCompanyTimeline = variant === "company";
+  const [expanded, setExpanded] = useState(!isCompanyTimeline);
+  const detailsId = useId();
   const roleCount = roles?.length || 0;
   const firstRole = roles?.[0];
   const latestRole = roles?.[roles.length - 1];
