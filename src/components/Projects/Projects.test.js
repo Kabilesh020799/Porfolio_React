@@ -9,9 +9,6 @@ describe("Projects", () => {
       screen.getByRole("heading", { name: /selected projects/i })
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("link", { name: /open ace website live site/i })
-    ).toHaveAttribute("href", "https://acesvce.in/");
-    expect(
       screen.getByRole("link", { name: /view kill a watt source code/i })
     ).toHaveAttribute(
       "href",
@@ -24,6 +21,9 @@ describe("Projects", () => {
 
     expect(
       screen.queryByRole("link", { name: /open kill a watt live site/i })
+    ).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole("link", { name: /ace website/i })
     ).not.toBeInTheDocument();
   });
 });

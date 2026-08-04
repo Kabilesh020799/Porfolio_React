@@ -11,25 +11,30 @@ const projects = [
     title: "ACE Website",
     content:
       "Built a website for the Association of Computer Engineers at SVCE to showcase events, publish results, and improve communication with students.",
-    url: "https://acesvce.in/",
     tile: ["HTML5", "CSS3", "React JS", "Next.js", "GraphQL"],
     highlights: ["Event publishing", "Student-facing results"],
   },
   {
-    title: "Object Detection",
+    title: "TradeCards",
     content:
-      "Developed a video object detection model using OpenCV and a pretrained YOLO model to identify common objects across real-world footage.",
-    tile: ["Computer Vision", "Python"],
-    giturl: "https://github.com/Kabilesh020799/Object-Detection1",
-    highlights: ["Video inference", "Pretrained YOLO model"],
+      "Contributed to a full-stack coupon marketplace with listing discovery, seller reviews, account workflows, and real-time buyer–seller messaging.",
+    tile: ["React", "Spring Boot", "Java", "MySQL", "Firebase", "JWT"],
+    giturl: "https://github.com/Kabilesh020799/Tradecards",
+    highlights: [
+      "Real-time marketplace messaging",
+      "Frontend, API, testing, and CI contributions",
+    ],
   },
   {
-    title: "Credit Card Fraud Predictor",
+    title: "DalVacationHome",
     content:
-      "Built a machine-learning classifier with scikit-learn, NumPy, and pandas to identify potentially fraudulent credit card transactions.",
-    tile: ["Machine Learning"],
-    giturl: "https://github.com/Kabilesh020799/Credit-Card-Fraud-Predictor",
-    highlights: ["Transaction classification", "Data preprocessing"],
+      "Contributed to a serverless vacation-rental platform with authentication, booking workflows, support tickets, feedback analysis, and cloud-based messaging.",
+    tile: ["React", "AWS Lambda", "Cognito", "DynamoDB", "Terraform", "Docker"],
+    giturl: "https://github.com/Kabilesh020799/DalVacationHome",
+    highlights: [
+      "Event-driven serverless workflows",
+      "Infrastructure as code and cloud integration",
+    ],
   },
   {
     title: "NutriNova",
