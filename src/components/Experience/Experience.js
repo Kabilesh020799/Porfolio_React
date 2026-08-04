@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo } from "react";
 import Card from "./components/card/Card";
 import { experience } from "../../data";
 import "./Experience.scss";
@@ -26,7 +26,6 @@ const groupExperienceByCompany = (items) =>
   }, []);
 
 function Experience() {
-  const [showDetailedTimeline, setShowDetailedTimeline] = useState(false);
   const groupedExperience = useMemo(
     () =>
       groupExperienceByCompany(experience).map((group) => ({
@@ -35,7 +34,6 @@ function Experience() {
       })),
     []
   );
-  const timelineItems = showDetailedTimeline ? groupedExperience : experience;
 
   return (
     <section
@@ -45,41 +43,19 @@ function Experience() {
     >
         <div className="experience-heading u-flex u-flex-column u-align-start">
           <h2 className="experience-title u-flex u-align-start u-justify-start u-text-left u-text-center-on-tablet" id="experience-title">Professional experience</h2>
-          <button
-            className="experience-view-toggle"
-            type="button"
-            onClick={() => setShowDetailedTimeline((isDetailed) => !isDetailed)}
-            aria-pressed={showDetailedTimeline}
-          >
-            {showDetailedTimeline ? "Show all roles" : "Group by company"}
-          </button>
         </div>
         <div className="experience u-flex u-flex-column u-align-stretch u-center-on-tablet u-full-width">
-          {timelineItems?.map((experienceItem) =>
-            showDetailedTimeline ? (
-              <Card
-                key={experienceItem?.company}
-                variant="company"
-                company={experienceItem?.company}
-                startDate={experienceItem?.startDate}
-                endDate={experienceItem?.endDate}
-                link={experienceItem?.link}
-                roles={experienceItem?.roles}
-              />
-            ) : (
-              <Card
-                key={`${experienceItem?.company}-${experienceItem?.position}-${experienceItem?.startDate}`}
-                variant="role"
-                company={experienceItem?.company}
-                startDate={experienceItem?.startDate}
-                endDate={experienceItem?.endDate}
-                link={experienceItem?.link}
-                position={experienceItem?.position}
-                description={experienceItem?.description}
-                techStack={experienceItem?.techStack}
-              />
-            )
-          )}
+          {groupedExperience.map((experienceItem) => (
+            <Card
+              key={experienceItem.company}
+              variant="company"
+              company={experienceItem.company}
+              startDate={experienceItem.startDate}
+              endDate={experienceItem.endDate}
+              link={experienceItem.link}
+              roles={experienceItem.roles}
+            />
+          ))}
         </div>
     </section>
   );

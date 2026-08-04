@@ -109,6 +109,11 @@
 
 .projects__actions a {
   @include pill-button;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
   font-size: $font-action;
   padding: $space-tiny $contact-field-padding-y;
   transition: transform $duration-fast $ease-standard,

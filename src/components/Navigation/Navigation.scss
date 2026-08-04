@@ -51,6 +51,9 @@
 
 .navbar__brand {
   justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
 }
 
 .theme-toggle--desktop {
@@ -87,8 +90,10 @@
 .theme-toggle {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: $space-tiny;
   min-width: 118px;
+  min-height: 44px;
   color: var(--text);
   font-size: $font-button;
   font-family: var(--font-body);
@@ -179,6 +184,10 @@
   border: $size-none;
   background: transparent;
   padding: $radius-sm;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu-toggle:hover {
@@ -236,7 +245,7 @@
   }
 
   .navbar li {
-    padding: $nav-mobile-item-padding;
+    padding: $space-none;
   }
 
   .navbar li:first-child {
@@ -244,11 +253,17 @@
   }
 
   .navbar li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $size-full;
+    min-height: 44px;
+    padding: $nav-mobile-item-padding;
     font-size: $font-md;
   }
 
   .theme-toggle {
-    min-width: auto;
+    min-width: 44px;
     padding: $space-hairline $space-small;
   }
 
@@ -269,7 +284,12 @@
     height: $space-large;
   }
 
-  .menu-toggle,
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
   .bar {
     display: block;
     cursor: pointer;
