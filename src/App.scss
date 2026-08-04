@@ -14,6 +14,9 @@
 
 .skip-link {
   position: fixed;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   top: $space-base;
   left: $space-base;
   z-index: $z-skip-link;
