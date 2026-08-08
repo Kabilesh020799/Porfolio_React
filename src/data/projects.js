@@ -8,11 +8,15 @@ const projects = [
     highlights: ["Automated meter readings", "Mobile usage visibility"],
   },
   {
-    title: "ACE Website",
+    title: "Job Application Tracker",
     content:
-      "Built a website for the Association of Computer Engineers at SVCE to showcase events, publish results, and improve communication with students.",
-    tile: ["HTML5", "CSS3", "React JS", "Next.js", "GraphQL"],
-    highlights: ["Event publishing", "Student-facing results"],
+      "Built a full-stack platform for tracking job applications through every stage, with secure account-based access and persistent application data.",
+    tile: ["React", "TypeScript", "Express", "PostgreSQL", "Prisma", "Docker"],
+    giturl: "https://github.com/Kabilesh020799/JobApplicationTracker",
+    highlights: [
+      "Authenticated, user-scoped application tracking",
+      "Validated CRUD workflows and status management",
+    ],
   },
   {
     title: "TradeCards",
