@@ -10,12 +10,23 @@ const projects = [
   {
     title: "Job Application Tracker",
     content:
-      "Built a full-stack platform for tracking job applications through every stage, with secure account-based access and persistent application data.",
-    tile: ["React", "TypeScript", "Express", "PostgreSQL", "Prisma", "Docker"],
+      "Built an account-private job search workspace for managing applications, resumes, timelines, reminders, Gmail updates, and outcome analytics, with a browser extension for capturing job postings.",
+    tile: [
+      "React",
+      "TypeScript",
+      "Chakra UI",
+      "Express",
+      "PostgreSQL",
+      "Prisma",
+      "Redis",
+      "AWS",
+      "Terraform",
+      "Docker",
+    ],
     giturl: "https://github.com/Kabilesh020799/JobApplicationTracker",
     highlights: [
-      "Authenticated, user-scoped application tracking",
-      "Validated CRUD workflows and status management",
+      "Private resume, reminder, and application workflows",
+      "Gmail automation, job capture, and pipeline analytics",
     ],
   },
   {
