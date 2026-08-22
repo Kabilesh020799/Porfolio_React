@@ -8,6 +8,13 @@ describe("Projects", () => {
     expect(
       screen.getByRole("heading", { name: /selected projects/i })
     ).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "CareerLedger" })).toBeInTheDocument();
+    expect(
+      screen.getByRole("link", { name: /view careerledger source code/i })
+    ).toHaveAttribute(
+      "href",
+      "https://github.com/Kabilesh020799/CareerLedger"
+    );
     expect(
       screen.getByRole("link", { name: /view kill a watt source code/i })
     ).toHaveAttribute(

@@ -8,9 +8,9 @@ const projects = [
     highlights: ["Automated meter readings", "Mobile usage visibility"],
   },
   {
-    title: "Job Application Tracker",
+    title: "CareerLedger",
     content:
-      "Built an account-private job search workspace for managing applications, resumes, timelines, reminders, Gmail updates, and outcome analytics, with a browser extension for capturing job postings.",
+      "Built CareerLedger, an account-private job search workspace for managing applications, resumes, timelines, reminders, Gmail updates, and outcome analytics, with a browser extension for capturing job postings.",
     tile: [
       "React",
       "TypeScript",
@@ -23,7 +23,7 @@ const projects = [
       "Terraform",
       "Docker",
     ],
-    giturl: "https://github.com/Kabilesh020799/JobApplicationTracker",
+    giturl: "https://github.com/Kabilesh020799/CareerLedger",
     highlights: [
       "Private resume, reminder, and application workflows",
       "Gmail automation, job capture, and pipeline analytics",
