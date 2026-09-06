@@ -59,6 +59,12 @@
   box-shadow: token(shadow-soft);
 }
 
+.about__education-item + .about__education-item {
+  margin-top: $space-large;
+  padding-top: $space-large;
+  border-top: $border-width-thin solid token(border-soft);
+}
+
 .about__education-header {
   gap: $space-small;
   color: var(--text-soft);

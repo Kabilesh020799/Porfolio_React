@@ -14,12 +14,19 @@ const aboutContent = {
     "social-impact initiatives",
     "freelance collaborations",
   ],
-  education: {
-    degree: "Master’s in Applied Computer Science (Co-op)",
-    institution: "Dalhousie University",
-    location: "Nova Scotia, Canada",
-    graduation: "December 2024",
-  },
+  education: [
+    {
+      degree: "Master’s in Applied Computer Science (Co-op)",
+      institution: "Dalhousie University",
+      location: "Nova Scotia, Canada",
+      graduation: "December 2024",
+      dateTime: "2024-12",
+    },
+    {
+      degree: "Bachelor of Engineering in Computer Science",
+      institution: "Sri Venkateswara College of Engineering",
+    },
+  ],
 };
 
 export { aboutContent };

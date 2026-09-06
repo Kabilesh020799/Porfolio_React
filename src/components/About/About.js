@@ -29,15 +29,21 @@ function About() {
                 </p>
               ))}
             </div>
-            <section className="about__education u-full-width u-text-left" aria-labelledby="education-title">
-              <div className="about__education-header u-flex u-align-center u-justify-between u-flex-wrap">
-                <span className="about__education-eyebrow">Education</span>
-                <time dateTime="2024-12">{aboutContent.education.graduation}</time>
-              </div>
-              <h3 id="education-title">{aboutContent.education.degree}</h3>
-              <p>
-                {aboutContent.education.institution} · {aboutContent.education.location}
-              </p>
+            <section className="about__education u-full-width u-text-left" aria-label="Education">
+              {aboutContent.education.map((entry) => (
+                <article className="about__education-item" key={entry.degree}>
+                  <div className="about__education-header u-flex u-align-center u-justify-between u-flex-wrap">
+                    <span className="about__education-eyebrow">Education</span>
+                    {entry.graduation && (
+                      <time dateTime={entry.dateTime}>{entry.graduation}</time>
+                    )}
+                  </div>
+                  <h3>{entry.degree}</h3>
+                  <p>
+                    {[entry.institution, entry.location].filter(Boolean).join(" · ")}
+                  </p>
+                </article>
+              ))}
             </section>
           </div>
         </div>
