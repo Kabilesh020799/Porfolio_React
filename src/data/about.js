@@ -25,6 +25,8 @@ const aboutContent = {
     {
       degree: "Bachelor of Engineering in Computer Science",
       institution: "Sri Venkateswara College of Engineering",
+      graduation: "June 2021",
+      dateTime: "2021-06",
     },
   ],
 };
